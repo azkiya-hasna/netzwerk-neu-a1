@@ -34,7 +34,6 @@
             padding-bottom: 80px;
         }
 
-        /* Top Cloud Sync Utility Bar */
         .sync-banner {
             background-color: #292524;
             color: #f5f5f4;
@@ -197,7 +196,24 @@
         .ch-num { font-size: 0.78rem; font-weight: 700; color: var(--text-muted); }
         .ch-name { font-size: 1.05rem; font-weight: 700; margin-bottom: 12px; }
 
-        /* Flashcard Elements */
+        .ch-badge {
+            display: inline-block;
+            margin-top: 12px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+            background-color: var(--bg-base);
+            color: var(--text-muted);
+            border: 1px solid var(--border);
+        }
+
+        .ch-badge.completed {
+            background-color: var(--success-light);
+            color: var(--success);
+            border-color: transparent;
+        }
+
         .screen-control-row {
             display: flex;
             align-items: center;
@@ -267,7 +283,7 @@
         .panel-back { background-color: #1c1917; color: #ffffff; transform: rotateY(180deg); }
 
         .term-display { font-family: 'Space Grotesk', sans-serif; font-size: 2.3rem; font-weight: 700; text-align: center; }
-        .context-display { font-size: 0.95rem; color: var(--text-muted); font-style: italic; }
+        .context-display { font-size: 0.95rem; color: var(--text-muted); font-style: italic; text-align: center; margin-top: 10px;}
 
         .srs-row { display: none; gap: 12px; justify-content: center; }
         .srs-btn { padding: 16px; border-radius: var(--radius-md); border: none; font-weight: 700; cursor: pointer; flex: 1; }
@@ -281,8 +297,21 @@
         .matrix-btn.correct { background-color: var(--success-light); border-color: var(--success); color: var(--success); }
         .matrix-btn.wrong { background-color: var(--danger-light); border-color: var(--danger); color: var(--danger); }
 
+        /* Input Typing UI Elements */
+        .quiz-type-badge { display: inline-block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; padding: 4px 10px; border-radius: 6px; background-color: var(--primary-light); color: var(--primary); margin-bottom: 16px; }
+        .quiz-prompt-lbl { font-size: 0.9rem; color: var(--text-muted); font-weight: 500; margin-bottom: 8px; display: block; }
+        .text-input-field-row { display: flex; gap: 12px; margin-top: 24px; }
+        .input-box-control { flex: 1; padding: 16px; border: 2px solid var(--border); border-radius: var(--radius-md); font-family: inherit; font-size: 1.05rem; font-weight: 600; outline: none; }
+        .input-box-control.correct { border-color: var(--success); background-color: var(--success-light); color: var(--success); }
+        .input-box-control.wrong { border-color: var(--danger); background-color: var(--danger-light); color: var(--danger); }
+        .btn-verify { background-color: var(--text-main); color: #ffffff; border: none; padding: 0 24px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; font-family: inherit; }
+        .btn-verify:hover { background-color: var(--primary); }
+        .typing-feedback-banner { margin-top: 16px; padding: 16px; border-radius: var(--radius-md); font-size: 0.95rem; font-weight: 600; display: none; }
+        .typing-feedback-banner.correct { display: block; background-color: var(--success-light); color: var(--success); }
+        .typing-feedback-banner.wrong { display: block; background-color: var(--danger-light); color: var(--danger); }
+
         .results-modal-box { background-color: var(--bg-surface); padding: 48px; border-radius: var(--radius-lg); text-align: center; max-width: 500px; margin: 40px auto; }
-        .score-radial { width: 130px; height: 130px; border-radius: 50%; background-color: var(--primary-light); color: var(--primary); font-size: 2.6rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin:  0 auto 28px;}
+        .score-radial { width: 130px; height: 130px; border-radius: 50%; background-color: var(--primary-light); color: var(--primary); font-size: 2.6rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 28px;}
     </style>
 </head>
 <body>
@@ -341,6 +370,7 @@
                 <div class="card-pivot">
                     <div class="card-panel panel-front">
                         <div class="term-display" id="ui-fc-front-word">...</div>
+                        <div class="context-display" id="ui-fc-front-context">...</div>
                     </div>
                     <div class="card-panel panel-back">
                         <div class="term-display" id="ui-fc-back-word">...</div>
@@ -358,9 +388,24 @@
         </div>
 
         <div id="screen-quiz" class="screen">
+            <div class="screen-control-row">
+                <h2 style="font-family:'Space Grotesk', sans-serif; font-weight:700;" id="ui-quiz-title">Chapter Assessment</h2>
+                <div class="view-meta-counter" id="ui-quiz-counter">Question 1 of 10</div>
+            </div>
             <div class="quiz-panel-wrapper">
-                <div class="term-display" style="font-size:2rem; text-align:left;" id="ui-quiz-prompt-word">...</div>
+                <div class="quiz-type-badge" id="ui-quiz-type-badge">Multiple Choice</div>
+                <span class="quiz-prompt-lbl" id="ui-quiz-instruction-label">Identify the correct translation:</span>
+                <div class="term-display" style="font-size:2rem; text-align:left; margin-top:4px;" id="ui-quiz-prompt-word">...</div>
+                
                 <div class="matrix-options" id="ui-quiz-options-box"></div>
+
+                <div id="ui-quiz-typing-box" style="display: none;">
+                    <div class="text-input-field-row">
+                        <input type="text" class="input-box-control" id="ui-quiz-text-input" placeholder="Type the German entry..." autocomplete="off">
+                        <button class="btn-verify" id="ui-quiz-verify-btn" onclick="checkTypingAnswer()">Verify</button>
+                    </div>
+                    <div class="typing-feedback-banner" id="ui-quiz-typing-feedback"></div>
+                </div>
             </div>
             <div class="footer-action-align" style="margin-top:20px;">
                 <button class="sync-btn" id="ui-quiz-next-btn" onclick="stepQuizSequence()" style="display:none; padding:12px 24px;">Next Question →</button>
@@ -387,9 +432,7 @@
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
         import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
-        // =========================================================================
-        // ⚠️ INSTRUCTION STEP: PLACE YOUR EMIBEDDED FIREBASE CONFIGURATION OBJECT HERE
-        // =========================================================================
+        // Firebase Configuration (Ganti dengan key aslimu jika sudah membuat database Firebase)
         const firebaseConfig = {
             apiKey: "YOUR_API_KEY",
             authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
@@ -399,7 +442,6 @@
             appId: "YOUR_APP_ID"
         };
 
-        // Initialize connection instances variables
         let db = null;
         try {
             if(firebaseConfig.apiKey !== "YOUR_API_KEY") {
@@ -408,20 +450,186 @@
             }
         } catch(e) { console.error("Firebase startup failure:", e); }
 
-        // Core App Data Object Matrix Mapping Definition Layout Configuration
+        // DATA KOSAKATA LENGKAP KAPITEL 1 - 12 (BERDASARKAN PDF GLOSSARY ANDA)
         const NETZWERK_DATA_MAPPING = [
             {
                 id: "kapitel-1", num: "Kapitel 1", name: "Guten Tag!",
                 items: [
-                    { de: "Bulgarisch", en: "Bulgarian" }, { de: "Deutsch", en: "German" },
-                    { de: "die Autobahn, -en", en: "highway" }, { de: "das Butterbrot, -e", en: "sandwich" }
+                    { de: "Bulgarisch", en: "Bulgarian", hint: "Länder und Sprachen" },
+                    { de: "Deutsch", en: "German", hint: "Ich spreche Deutsch." },
+                    { de: "Englisch", en: "English", hint: "Sprachoptionen" },
+                    { de: "gut", en: "good", hint: "Guten Tag!" },
+                    { de: "die Autobahn, -en", en: "highway", hint: "Verkehrsmittel" },
+                    { de: "das Butterbrot, -e", en: "sandwich", hint: "Essen" },
+                    { de: "das Handtuch, \"-er", en: "towel", hint: "Im Badezimmer" },
+                    { de: "der Kindergarten, \"-", en: "kindergarten", hint: "Kinderbetreuung" },
+                    { de: "der Koffer, -", en: "suitcase", hint: "Auf Reisen" },
+                    { de: "die Flasche, -n", en: "bottle", hint: "Getränkebehälter" }
                 ]
             },
             {
-                id: "kapitel-2", num: "Kapitel 2", name: "Freunde und ich",
+                id: "kapitel-2", num: "Kapitel 2", name: "Freunde, Kollegen und ich",
                 items: [
-                    { de: "gern", en: "gladly" }, { de: "der Freund, -e", en: "friend (m)" },
-                    { de: "die Freundin, -nen", en: "friend (f)" }, { de: "joggen", en: "to jog" }
+                    { de: "gern", en: "gladly / likes to", hint: "Vorlieben ausdrücken" },
+                    { de: "die Leute (Pl.)", en: "people", hint: "Personengruppen" },
+                    { de: "fotografieren", en: "to photograph", hint: "Hobbys und Freizeit" },
+                    { de: "der Freund, -e", en: "friend (m)", hint: "Soziale Kontakte" },
+                    { de: "die Freundin, -nen", en: "female friend / girlfriend", hint: "Soziale Kontakte" },
+                    { de: "joggen", en: "to jog", hint: "Sportliche Aktivitäten" },
+                    { de: "der Kollege, -n", en: "colleague (m)", hint: "Am Arbeitsplatz" },
+                    { de: "die Kollegin, -nen", en: "colleague (f)", hint: "Am Arbeitsplatz" },
+                    { de: "das Kino, -s", en: "movie theater", hint: "Gehst du gern ins Kino?" },
+                    { de: "das Wochenende, -n", en: "weekend", hint: "Kochen wir am Wochenende Spaghetti?" }
+                ]
+            },
+            {
+                id: "kapitel-3", num: "Kapitel 3", name: "In Hamburg",
+                items: [
+                    { de: "der Bahnhof, \"-e", en: "train station", hint: "Verkehr und Logistik" },
+                    { de: "die Kirche, -n", en: "church", hint: "Sehenswürdigkeiten" },
+                    { de: "das Konzert, -e", en: "concert", hint: "Kulturelle Events" },
+                    { de: "das Rathaus, \"-er", en: "town hall", hint: "Öffentliche Gebäude" },
+                    { de: "der Turm, \"-e", en: "tower", hint: "Architektur" },
+                    { de: "der Fluss, \"-e", en: "river", hint: "Die Schiffe fahren auf dem Fluss." },
+                    { de: "der Hafen, \"-", en: "harbour", hint: "In Küstenstädten" },
+                    { de: "das Schiff, -e", en: "ship", hint: "Wassertransport" },
+                    { de: "das Flugzeug, -e", en: "airplane", hint: "Luftverkehr" },
+                    { de: "die S-Bahn, -en", en: "suburban train", hint: "Nahverkehr" }
+                ]
+            },
+            {
+                id: "kapitel-4", num: "Kapitel 4", name: "Guten Appetit!",
+                items: [
+                    { de: "der Apfelsaft, \"-e", en: "apple juice", hint: "Getränke" },
+                    { de: "die Banane, -n", en: "banana", hint: "Obst und Früchte" },
+                    { de: "das Brötchen, -", en: "bread roll", hint: "Zum Frühstück" },
+                    { de: "die Butter (Sg.)", en: "butter", hint: "Streichfett" },
+                    { de: "das Ei, -er", en: "egg", hint: "Lebensmittel" },
+                    { de: "das Fleisch (Sg.)", en: "meat", hint: "Lebensmittel" },
+                    { de: "das Gemüse, -", en: "vegetable", hint: "Gesunde Ernährung" },
+                    { de: "die Milch (Sg.)", en: "milk", hint: "Molkereiprodukte" },
+                    { de: "der Kuchen, -", en: "cake", hint: "Süßwaren" },
+                    { de: "die Suppe, -n", en: "soup", hint: "Vorspeise" }
+                ]
+            },
+            {
+                id: "kapitel-5", num: "Kapitel 5", name: "Alltag und Familie",
+                items: [
+                    { de: "der Alltag (Sg.)", en: "everyday life", hint: "Tagesablauf" },
+                    { de: "die Bibliothek, -en", en: "library", hint: "An der Universität" },
+                    { de: "duschen", en: "to shower", hint: "Körperpflege" },
+                    { de: "die Familie, -n", en: "family", hint: "Verwandtschaft" },
+                    { de: "die Zeitung, -en", en: "newspaper", hint: "Medienkonsum" },
+                    { de: "der Geburtstag, -e", en: "birthday", hint: "Persönliche Feste" },
+                    { de: "die Eltern (Pl.)", en: "parents", hint: "Familie" },
+                    { de: "das Kind, -er", en: "child", hint: "Familie" },
+                    { de: "der Sohn, \"-e", en: "son", hint: "Eigene Kinder" },
+                    { de: "die Tochter, \"-", en: "daughter", hint: "Eigene Kinder" }
+                ]
+            },
+            {
+                id: "kapitel-6", num: "Kapitel 6", name: "Zeit mit Freunden",
+                items: [
+                    { de: "feiern", en: "to celebrate", hint: "Partys und Events" },
+                    { de: "das Fitness-Studio, -s", en: "gym", hint: "Sport und Freizeit" },
+                    { de: "klettern", en: "to climb", hint: "Freizeitaktivitäten" },
+                    { de: "wandern", en: "to hike", hint: "In der Natur" },
+                    { de: "das Geschenk, -e", en: "present", hint: "Überraschungen für Freunde" },
+                    { de: "bestellen", en: "to order", hint: "Im Restaurant" },
+                    { de: "die Speisekarte, -n", en: "menu", hint: "Im Restaurant" },
+                    { de: "das Schnitzel, -", en: "schnitzel", hint: "Typische Gerichte" },
+                    { de: "bezahlen", en: "to pay", hint: "Geldtransaktionen" },
+                    { de: "das Trinkgeld, -er", en: "tip", hint: "Für den Kellner" }
+                ]
+            },
+            {
+                id: "kapitel-7", num: "Kapitel 7", name: "Arbeitsalltag",
+                items: [
+                    { de: "der Arbeitsalltag (Sg.)", en: "workday", hint: "Berufsleben" },
+                    { de: "das Paket, -e", en: "package", hint: "Post und Logistik" },
+                    { de: "der Nachbar, -n", en: "neighbour (m)", hint: "Umfeld und Wohnen" },
+                    { de: "das Praktikum, Praktika", en: "internship", hint: "Berufserfahrung sammeln" },
+                    { de: "der Fehler, -", en: "mistake", hint: "Arbeitsorganisation" },
+                    { de: "erklären", en: "to explain", hint: "Kommunikation" },
+                    { de: "die Bank, -en", en: "bank", hint: "Finanzinstitution" },
+                    { de: "das Passwort, \"-er", en: "password", hint: "Datenschutz am PC" },
+                    { de: "das WLAN (Sg.)", en: "Wi-Fi", hint: "Internetverbindung" },
+                    { de: "speichern", en: "to save", hint: "Computerarbeit" }
+                ]
+            },
+            {
+                id: "kapitel-8", num: "Kapitel 8", name: "Fit und gesund",
+                items: [
+                    { de: "müde", en: "tired", hint: "Körperliches Befinden" },
+                    { de: "hungrig", en: "hungry", hint: "Körperliches Befinden" },
+                    { de: "der Bauch, \"-e", en: "stomach", hint: "Körperteile" },
+                    { de: "das Bein, -e", en: "leg", hint: "Körperteile" },
+                    { de: "der Fuß, \"-e", en: "foot", hint: "Körperteile" },
+                    { de: "die Hand, \"-e", en: "hand", hint: "Körperteile" },
+                    { de: "der Kopf, \"-e", en: "head", hint: "Körperteile" },
+                    { de: "der Rücken, -", en: "back", hint: "Körperteile" },
+                    { de: "der Unfall, \"-e", en: "accident", hint: "Notfälle" },
+                    { de: "die Apotheke, -n", en: "pharmacy", hint: "Medikamente kaufen" }
+                ]
+            },
+            {
+                id: "kapitel-9", num: "Kapitel 9", name: "Meine Wohnung",
+                items: [
+                    { de: "das Bad, \"-er", en: "bath", hint: "Zimmer della Wohnung" },
+                    { de: "der Balkon, -e", en: "balcony", hint: "Außenbereich" },
+                    { de: "die Küche, -n", en: "kitchen", hint: "Zimmer della Wohnung" },
+                    { de: "der Kühlschrank, \"-e", en: "refrigerator", hint: "Küchengeräte" },
+                    { de: "die Lampe, -n", en: "lamp", hint: "Möbel und Einrichtung" },
+                    { de: "der Schrank, \"-e", en: "wardrobe, cupboard", hint: "Möbel" },
+                    { de: "das Sofa, -s", en: "sofa, couch", hint: "Wohnzimmer" },
+                    { de: "der Stuhl, \"-e", en: "chair", hint: "Möbel" },
+                    { de: "die Wohnung, -en", en: "flat / apartment", hint: "Immobilien" },
+                    { de: "die Miete, -n", en: "rent", hint: "Monatliche Kosten" }
+                ]
+            },
+            {
+                id: "kapitel-10", num: "Kapitel 10", name: "Studium und Beruf",
+                items: [
+                    { de: "das Studium, Studien", en: "studies", hint: "An der Universität" },
+                    { de: "die Karriere, -n", en: "career", hint: "Ziele im Berufsleben" },
+                    { de: "verdienen", en: "to earn", hint: "Geld und Arbeit" },
+                    { de: "der Feierabend", en: "closing time, home time", hint: "Nach der Arbeit" },
+                    { de: "fleißig", en: "hardworking", hint: "Eigenschaften" },
+                    { de: "die Prüfung, -en", en: "test, exam", hint: "Akademische Hürden" },
+                    { de: "früher", en: "formerly, in the past", hint: "Zeitangaben" },
+                    { de: "die Bewerbung, -en", en: "application", hint: "Einen Job suchen" },
+                    { de: "der Job, -s", en: "job", hint: "Erwerbstätigkeit" },
+                    { de: "der Weihnachtsmarkt, \"-e", en: "Christmas market", hint: "Saisonale Arbeit" }
+                ]
+            },
+            {
+                id: "kapitel-11", num: "Kapitel 11", name: "Die Jacke gefällt mir!",
+                items: [
+                    { de: "gefallen, er gefällt", en: "to please / to like", hint: "Geschmack ausdrücken" },
+                    { de: "die Jacke, -n", en: "jacket", hint: "Kleidungsstücke" },
+                    { de: "eng", en: "tight", hint: "Passform von Kleidern" },
+                    { de: "das Hemd, -en", en: "shirt", hint: "Herrenmode" },
+                    { de: "die Hose, -n", en: "trousers", hint: "Kleidung" },
+                    { de: "der Rock, \"-e", en: "skirt", hint: "Damenmode" },
+                    { de: "der Anzug, \"-e", en: "suit", hint: "Formelle Kleidung" },
+                    { de: "das Kleid, -er", en: "dress", hint: "Kleidung" },
+                    { de: "der Pullover, -", en: "jumper", hint: "Wintermode" },
+                    { de: "tragen, er trägt", en: "to wear", hint: "Kleidung am Körper" }
+                ]
+            },
+            {
+                id: "kapitel-12", num: "Kapitel 12", name: "Ab in den Urlaub!",
+                items: [
+                    { de: "das Gepäck (Sg.)", en: "luggage", hint: "Reisevorbereitung" },
+                    { de: "der Reiseführer, -", en: "travel guide", hint: "Informationsmedien" },
+                    { de: "das Doppelzimmer, -", en: "twin room", hint: "Im Hotel" },
+                    { de: "das Einzelzimmer, -", en: "single room", hint: "Im Hotel" },
+                    { de: "der Pass, \"-e", en: "passport", hint: "Reisedokumente" },
+                    { de: "reservieren", en: "to book", hint: "Unterkunft sichern" },
+                    { de: "die Sehenswürdigkeit, -en", en: "tourist attraction", hint: "Städtetrip Highlights" },
+                    { de: "der Berg, -e", en: "mountain", hint: "Landschaften" },
+                    { de: "schneien", en: "to snow", hint: "Wetterbedingungen" },
+                    { de: "sonnig", en: "sunny", hint: "Wetterberichte" }
                 ]
             }
         ];
@@ -436,7 +644,6 @@
                 document.getElementById('sync-key-input').value = activeSyncKeyStr;
                 loadCloudProgressFromKey();
             } else {
-                // Autogenerate a fallback local random key string profile asset sequence definition pattern
                 activeSyncKeyStr = "user-" + Math.random().toString(36).substring(2, 7).toUpperCase();
                 localStorage.setItem('lf_cloud_sync_key', activeSyncKeyStr);
                 document.getElementById('sync-key-input').value = activeSyncKeyStr;
@@ -462,6 +669,7 @@
 
             if(!db) {
                 document.getElementById('sync-status').textContent = "Offline Backup Active";
+                renderDashboardUi();
                 return;
             }
 
@@ -498,7 +706,6 @@
             } catch(e) { console.error("Cloud push anomaly:", e); }
         }
 
-        // Dashboard View Management Logic Matrix Engine execution pipelines control arrays blocks
         window.switchScreen = (id) => {
             document.querySelectorAll('.screen').forEach(el => el.classList.remove('active'));
             document.querySelectorAll('.tab-trigger').forEach(btn => btn.classList.remove('active'));
@@ -562,6 +769,7 @@
             document.getElementById('ui-fc-counter').textContent = `Term ${fcIndex + 1} of ${currentDeckContext.items.length}`;
             document.getElementById('ui-fc-progress-bar').style.width = `${(fcIndex / currentDeckContext.items.length) * 100}%`;
             document.getElementById('ui-fc-front-word').textContent = activeWord.de;
+            document.getElementById('ui-fc-front-context').textContent = `Focus Area: ${activeWord.hint || 'N/A'}`;
             document.getElementById('ui-fc-back-word').textContent = activeWord.en;
         }
 
@@ -590,10 +798,17 @@
 
         function startQuizSequence() {
             quizIdx = 0; runningQuizScore = 0; quizQuestions = [];
-            currentDeckContext.items.forEach(item => {
+            currentDeckContext.items.forEach((item, index) => {
                 const incorrectOptions = currentDeckContext.items.filter(x => x.en !== item.en).map(x => x.en);
                 let combinedChoices = [item.en, ...incorrectOptions].slice(0,4).sort(() => Math.random() - 0.5);
-                quizQuestions.push({ prompt: item.de, answer: item.en, options: combinedChoices });
+                const exerciseType = (index % 2 === 0) ? 'mc' : 'type';
+
+                quizQuestions.push({ 
+                    type: exerciseType,
+                    germanWord: item.de, 
+                    englishWord: item.en, 
+                    choices: combinedChoices 
+                });
             });
             switchScreen('quiz');
             renderQuizQuestion();
@@ -602,16 +817,46 @@
         function renderQuizQuestion() {
             document.getElementById('ui-quiz-next-btn').style.display = 'none';
             const q = quizQuestions[quizIdx];
-            document.getElementById('ui-quiz-prompt-word').textContent = q.prompt;
-            const container = document.getElementById('ui-quiz-options-box');
-            container.innerHTML = '';
-            q.options.forEach(opt => {
-                const btn = document.createElement('button');
-                btn.className = 'matrix-btn';
-                btn.textContent = opt;
-                btn.onclick = () => parseSelection(btn, opt, q.answer);
-                container.appendChild(btn);
-            });
+            document.getElementById('ui-quiz-counter').textContent = `Question ${quizIdx + 1} of ${quizQuestions.length}`;
+            
+            const typeBadge = document.getElementById('ui-quiz-type-badge');
+            const instructionLabel = document.getElementById('ui-quiz-instruction-label');
+            const promptHeader = document.getElementById('ui-quiz-prompt-word');
+            const mcOptionsBox = document.getElementById('ui-quiz-options-box');
+            const typingInputBox = document.getElementById('ui-quiz-typing-box');
+
+            mcOptionsBox.innerHTML = '';
+            typingInputBox.style.display = 'none';
+            document.getElementById('ui-quiz-text-input').value = '';
+            document.getElementById('ui-quiz-text-input').className = 'input-box-control';
+            document.getElementById('ui-quiz-verify-btn').disabled = false;
+            document.getElementById('ui-quiz-typing-feedback').style.display = 'none';
+
+            if (q.type === 'mc') {
+                typeBadge.textContent = "Recognition Stage";
+                typeBadge.style.backgroundColor = "var(--primary-light)";
+                typeBadge.style.color = "var(--primary)";
+                instructionLabel.textContent = "Identify the correct English meaning:";
+                promptHeader.textContent = q.germanWord;
+                mcOptionsBox.style.display = 'grid';
+
+                q.choices.forEach(opt => {
+                    const btn = document.createElement('button');
+                    btn.className = 'matrix-btn';
+                    btn.textContent = opt;
+                    btn.onclick = () => parseSelection(btn, opt, q.englishWord);
+                    mcOptionsBox.appendChild(btn);
+                });
+            } else {
+                typeBadge.textContent = "Active Recall Stage";
+                typeBadge.style.backgroundColor = "var(--success-light)";
+                typeBadge.style.color = "var(--success)";
+                instructionLabel.textContent = "Translate this term into German:";
+                promptHeader.textContent = q.englishWord;
+                mcOptionsBox.style.display = 'none';
+                typingInputBox.style.display = 'block';
+                setTimeout(() => document.getElementById('ui-quiz-text-input').focus(), 50);
+            }
         }
 
         function parseSelection(btn, selected, correct) {
@@ -621,7 +866,44 @@
             document.getElementById('ui-quiz-next-btn').style.display = 'block';
         }
 
+        function cleanStringForLooseMatching(str) {
+            return str.toLowerCase()
+                      .replace(/^(der|die|das)\s+/, '')
+                      .replace(/,\s*["-].*$/, '')
+                      .trim();
+        }
+
+        window.checkTypingAnswer = () => {
+            const inputField = document.getElementById('ui-quiz-text-input');
+            const userString = inputField.value.trim();
+            if (!userString) return;
+
+            const q = quizQuestions[quizIdx];
+            document.getElementById('ui-quiz-verify-btn').disabled = true;
+            inputField.disabled = true;
+
+            const baseCorrectAnswer = q.germanWord;
+            const isMatchExact = userString.toLowerCase() === baseCorrectAnswer.toLowerCase();
+            const isMatchLoose = cleanStringForLooseMatching(userString) === cleanStringForLooseMatching(baseCorrectAnswer);
+
+            const feedbackBanner = document.getElementById('ui-quiz-typing-feedback');
+            feedbackBanner.style.display = 'block';
+
+            if (isMatchExact || isMatchLoose) {
+                inputField.className = 'input-box-control correct';
+                feedbackBanner.className = 'typing-feedback-banner correct';
+                feedbackBanner.textContent = `Richtig! Perfect active recall match.`;
+                runningQuizScore++;
+            } else {
+                inputField.className = 'input-box-control wrong';
+                feedbackBanner.className = 'typing-feedback-banner wrong';
+                feedbackBanner.textContent = `Correct form: ${baseCorrectAnswer}`;
+            }
+            document.getElementById('ui-quiz-next-btn').style.display = 'block';
+        };
+
         window.stepQuizSequence = async () => {
+            document.getElementById('ui-quiz-text-input').disabled = false;
             quizIdx++;
             if(quizIdx >= quizQuestions.length) {
                 const finalScore = Math.round((runningQuizScore / quizQuestions.length) * 100);
@@ -632,7 +914,6 @@
             } else { renderQuizQuestion(); }
         };
 
-        // Kick off tracking logic structures pipeline components execution sequences definition mappings
         window.initGlobalState();
     </script>
 </body>
