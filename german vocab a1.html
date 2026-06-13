@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netzwerk neu A1 — Cloud Sync Trainer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-base: #fbfbf9;
+            --bg-surface: #ffffff;
+            --text-main: #1c1917;
+            --text-muted: #78716c;
+            --primary: #dd5e28;
+            --primary-dark: #b84318;
+            --primary-light: #ffedd5;
+            --success: #16a34a;
+            --success-light: #dcfce7;
+            --danger: #dc2626;
+            --danger-light: #fee2e2;
+            --border: #e7e5e4;
+            --radius-lg: 20px;
+            --radius-md: 12px;
+            --shadow: 0 4px 20px -2px rgba(28, 25, 23, 0.06);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 80px;
+        }
+
+        /* Top Cloud Sync Utility Bar */
+        .sync-banner {
+            background-color: #292524;
+            color: #f5f5f4;
+            padding: 10px 24px;
+            font-size: 0.85rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .sync-controls {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sync-input {
+            background-color: #44403c;
+            border: 1px solid #57534e;
+            color: #ffffff;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-family: inherit;
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+
+        .sync-btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 4px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+
+        .sync-btn:hover { background-color: var(--primary-dark); }
+
+        header {
+            background-color: #1c1917;
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .nav-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+            height: 68px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .brand span { color: var(--primary); }
+
+        .nav-tabs { display: flex; gap: 6px; }
+
+        .tab-trigger {
+            background: none;
+            border: none;
+            padding: 8px 16px;
+            font-family: inherit;
+            font-weight: 600;
+            font-size: 0.88rem;
+            color: #a8a29e;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: all 0.2s;
+        }
+
+        .tab-trigger:hover, .tab-trigger.active {
+            color: #ffffff;
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        .tab-trigger.active { background-color: var(--primary); }
+
+        main {
+            max-width: 860px;
+            margin: 40px auto;
+            padding: 0 24px;
+        }
+
+        .screen { display: none; }
+        .screen.active { display: block; }
+
+        .welcome-hero { margin-bottom: 36px; }
+        .welcome-hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .metrics-bar {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .metric-tile {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .metric-tile .value {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: block;
+        }
+
+        .metric-tile .lbl {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .chapters-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 18px;
+        }
+
+        .chapter-node {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.25s, border-color 0.25s;
+        }
+
+        .chapter-node:hover {
+            transform: translateY(-3px);
+            border-color: var(--primary);
+        }
+
+        .ch-num { font-size: 0.78rem; font-weight: 700; color: var(--text-muted); }
+        .ch-name { font-size: 1.05rem; font-weight: 700; margin-bottom: 12px; }
+
+        /* Flashcard Elements */
+        .screen-control-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 28px;
+        }
+
+        .action-back {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            padding: 10px 20px;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .progress-track {
+            height: 6px;
+            background-color: var(--border);
+            border-radius: 3px;
+            margin-bottom: 36px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: var(--primary);
+            width: 0%;
+            transition: width 0.3s;
+        }
+
+        .card-container {
+            perspective: 1200px;
+            width: 100%;
+            max-width: 520px;
+            height: 320px;
+            margin: 0 auto 36px;
+            cursor: pointer;
+        }
+
+        .card-pivot {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.5s ease;
+        }
+
+        .card-container.flipped .card-pivot { transform: rotateY(180deg); }
+
+        .card-panel {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 28px;
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            box-shadow: var(--shadow);
+        }
+
+        .panel-front { background-color: var(--bg-surface); }
+        .panel-back { background-color: #1c1917; color: #ffffff; transform: rotateY(180deg); }
+
+        .term-display { font-family: 'Space Grotesk', sans-serif; font-size: 2.3rem; font-weight: 700; text-align: center; }
+        .context-display { font-size: 0.95rem; color: var(--text-muted); font-style: italic; }
+
+        .srs-row { display: none; gap: 12px; justify-content: center; }
+        .srs-btn { padding: 16px; border-radius: var(--radius-md); border: none; font-weight: 700; cursor: pointer; flex: 1; }
+        .srs-hard { background-color: var(--danger-light); color: var(--danger); }
+        .srs-good { background-color: var(--warning-light); color: var(--warning); }
+        .srs-easy { background-color: var(--success-light); color: var(--success); }
+
+        .quiz-panel-wrapper { background: var(--bg-surface); padding: 40px; border-radius: var(--radius-lg); border: 1px solid var(--border); }
+        .matrix-options { display: grid; gap: 12px; margin-top: 24px; }
+        .matrix-btn { padding: 18px; text-align: left; border: 2px solid var(--border); border-radius: var(--radius-md); font-weight: 600; cursor: pointer; }
+        .matrix-btn.correct { background-color: var(--success-light); border-color: var(--success); color: var(--success); }
+        .matrix-btn.wrong { background-color: var(--danger-light); border-color: var(--danger); color: var(--danger); }
+
+        .results-modal-box { background-color: var(--bg-surface); padding: 48px; border-radius: var(--radius-lg); text-align: center; max-width: 500px; margin: 40px auto; }
+        .score-radial { width: 130px; height: 130px; border-radius: 50%; background-color: var(--primary-light); color: var(--primary); font-size: 2.6rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin:  0 auto 28px;}
+    </style>
+</head>
+<body>
+
+    <div class="sync-banner">
+        <div>Cloud Sync Status: <span id="sync-status" style="font-weight: 700; color: #f59e0b;">Offline (Local Mode)</span></div>
+        <div class="sync-controls">
+            <label for="sync-key-input">Your Sync Key:</label>
+            <input type="text" id="sync-key-input" class="sync-input" placeholder="Enter key to load progress...">
+            <button class="sync-btn" onclick="loadCloudProgressFromKey()">Connect & Sync</button>
+        </div>
+    </div>
+
+    <header>
+        <div class="nav-inner">
+            <div class="brand">Netzwerk<span>neuA1</span></div>
+            <div class="nav-tabs">
+                <button class="tab-trigger active" onclick="switchScreen('home')">Kapitel</button>
+                <button class="tab-trigger" onclick="switchScreen('progress')">Fortschritt</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div id="screen-home" class="screen active">
+            <div class="welcome-hero">
+                <h1>Guten Tag! 🇩🇪</h1>
+                <p>Review custom vocabulary modules across all your active devices synced in real time.</p>
+            </div>
+
+            <div class="metrics-bar">
+                <div class="metric-tile">
+                    <span class="value" id="ui-metric-mastered">0</span>
+                    <span class="lbl">Words Mastered</span>
+                </div>
+                <div class="metric-tile">
+                    <span class="value" id="ui-metric-reviews">0</span>
+                    <span class="lbl">Total Reviews</span>
+                </div>
+                <div class="metric-tile">
+                    <span class="value" id="ui-metric-completion">0%</span>
+                    <span class="lbl">Quiz Completion</span>
+                </div>
+            </div>
+
+            <div class="chapters-layout" id="chapters-grid-container"></div>
+        </div>
+
+        <div id="screen-flashcards" class="screen">
+            <div class="screen-control-row">
+                <button class="action-back" onclick="switchScreen('home')">← Dashboard</button>
+                <div class="view-meta-counter" id="ui-fc-counter">Card 1 of 10</div>
+            </div>
+            <div class="progress-track"><div class="progress-fill" id="ui-fc-progress-bar"></div></div>
+            <div class="card-container" id="ui-interactive-card" onclick="flipActiveCard()">
+                <div class="card-pivot">
+                    <div class="card-panel panel-front">
+                        <div class="term-display" id="ui-fc-front-word">...</div>
+                    </div>
+                    <div class="card-panel panel-back">
+                        <div class="term-display" id="ui-fc-back-word">...</div>
+                    </div>
+                </div>
+            </div>
+            <div class="interactive-footer">
+                <p class="help-tip" id="ui-fc-hint">Click the card surface to reveal standard English translation</p>
+                <div class="srs-row" id="ui-fc-srs-controls">
+                    <button class="srs-btn srs-hard" onclick="rateVocabItem(1)">Hard</button>
+                    <button class="srs-btn srs-good" onclick="rateVocabItem(3)">Good</button>
+                    <button class="srs-btn srs-easy" onclick="rateVocabItem(5)">Easy</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="screen-quiz" class="screen">
+            <div class="quiz-panel-wrapper">
+                <div class="term-display" style="font-size:2rem; text-align:left;" id="ui-quiz-prompt-word">...</div>
+                <div class="matrix-options" id="ui-quiz-options-box"></div>
+            </div>
+            <div class="footer-action-align" style="margin-top:20px;">
+                <button class="sync-btn" id="ui-quiz-next-btn" onclick="stepQuizSequence()" style="display:none; padding:12px 24px;">Next Question →</button>
+            </div>
+        </div>
+
+        <div id="screen-results" class="screen">
+            <div class="results-modal-box">
+                <div class="score-radial" id="ui-results-percentage">0%</div>
+                <h2>Evaluation Complete</h2>
+                <button class="sync-btn" style="margin-top:20px;" onclick="switchScreen('home')">Return to Dashboard</button>
+            </div>
+        </div>
+
+        <div id="screen-progress" class="screen">
+            <div class="quiz-panel-wrapper">
+                <h3>Cloud Operations Management</h3>
+                <p style="color:var(--text-muted); margin-top:8px;">Your data is instantly synchronized to cloud servers when using an active configuration Sync Key.</p>
+            </div>
+        </div>
+    </main>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+        // =========================================================================
+        // ⚠️ INSTRUCTION STEP: PLACE YOUR EMIBEDDED FIREBASE CONFIGURATION OBJECT HERE
+        // =========================================================================
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_PROJECT_ID.appspot.com",
+            messagingSenderId: "YOUR_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+
+        // Initialize connection instances variables
+        let db = null;
+        try {
+            if(firebaseConfig.apiKey !== "YOUR_API_KEY") {
+                const app = initializeApp(firebaseConfig);
+                db = getFirestore(app);
+            }
+        } catch(e) { console.error("Firebase startup failure:", e); }
+
+        // Core App Data Object Matrix Mapping Definition Layout Configuration
+        const NETZWERK_DATA_MAPPING = [
+            {
+                id: "kapitel-1", num: "Kapitel 1", name: "Guten Tag!",
+                items: [
+                    { de: "Bulgarisch", en: "Bulgarian" }, { de: "Deutsch", en: "German" },
+                    { de: "die Autobahn, -en", en: "highway" }, { de: "das Butterbrot, -e", en: "sandwich" }
+                ]
+            },
+            {
+                id: "kapitel-2", num: "Kapitel 2", name: "Freunde und ich",
+                items: [
+                    { de: "gern", en: "gladly" }, { de: "der Freund, -e", en: "friend (m)" },
+                    { de: "die Freundin, -nen", en: "friend (f)" }, { de: "joggen", en: "to jog" }
+                ]
+            }
+        ];
+
+        let memoryLedger = { masteredKeys: {}, reviewTotals: 0, quizScores: {} };
+        let activeSyncKeyStr = "";
+
+        window.initGlobalState = () => {
+            const locallyStoredKey = localStorage.getItem('lf_cloud_sync_key');
+            if(locallyStoredKey) {
+                activeSyncKeyStr = locallyStoredKey;
+                document.getElementById('sync-key-input').value = activeSyncKeyStr;
+                loadCloudProgressFromKey();
+            } else {
+                // Autogenerate a fallback local random key string profile asset sequence definition pattern
+                activeSyncKeyStr = "user-" + Math.random().toString(36).substring(2, 7).toUpperCase();
+                localStorage.setItem('lf_cloud_sync_key', activeSyncKeyStr);
+                document.getElementById('sync-key-input').value = activeSyncKeyStr;
+                readLocalStorageBackupData();
+                renderDashboardUi();
+            }
+        };
+
+        function readLocalStorageBackupData() {
+            const localKeys = localStorage.getItem('nw_mastered_map');
+            const localTotals = localStorage.getItem('nw_review_count');
+            const localQuizzes = localStorage.getItem('nw_quiz_scores');
+            if (localKeys) memoryLedger.masteredKeys = JSON.parse(localKeys);
+            if (localTotals) memoryLedger.reviewTotals = parseInt(localTotals, 10);
+            if (localQuizzes) memoryLedger.quizScores = JSON.parse(localQuizzes);
+        }
+
+        window.loadCloudProgressFromKey = async () => {
+            const inputVal = document.getElementById('sync-key-input').value.trim();
+            if(!inputVal) return;
+            activeSyncKeyStr = inputVal;
+            localStorage.setItem('lf_cloud_sync_key', activeSyncKeyStr);
+
+            if(!db) {
+                document.getElementById('sync-status').textContent = "Offline Backup Active";
+                return;
+            }
+
+            document.getElementById('sync-status').textContent = "Connecting...";
+            try {
+                const recordRef = doc(db, "user_progress", activeSyncKeyStr);
+                const querySnapshot = await getDoc(recordRef);
+                
+                if(querySnapshot.exists()) {
+                    memoryLedger = querySnapshot.data();
+                    document.getElementById('sync-status').textContent = "Connected & Synced ✅";
+                    document.getElementById('sync-status').style.color = "#10b981";
+                } else {
+                    document.getElementById('sync-status').textContent = "New Key Activated (Cloud Set) 🌱";
+                    document.getElementById('sync-status').style.color = "#3b82f6";
+                    await setDoc(recordRef, memoryLedger);
+                }
+                renderDashboardUi();
+            } catch(error) {
+                console.error(error);
+                document.getElementById('sync-status').textContent = "Sync Connection Error ❌";
+            }
+        };
+
+        async function pushProgressUpdateToCloud() {
+            localStorage.setItem('nw_mastered_map', JSON.stringify(memoryLedger.masteredKeys));
+            localStorage.setItem('nw_review_count', memoryLedger.reviewTotals.toString());
+            localStorage.setItem('nw_quiz_scores', JSON.stringify(memoryLedger.quizScores));
+
+            if(!db) return;
+            try {
+                const targetDocRef = doc(db, "user_progress", activeSyncKeyStr);
+                await setDoc(targetDocRef, memoryLedger);
+            } catch(e) { console.error("Cloud push anomaly:", e); }
+        }
+
+        // Dashboard View Management Logic Matrix Engine execution pipelines control arrays blocks
+        window.switchScreen = (id) => {
+            document.querySelectorAll('.screen').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab-trigger').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(`screen-${id}`).classList.add('active');
+            if(id === 'home') renderDashboardUi();
+        };
+
+        function renderDashboardUi() {
+            let totalMasteredCount = 0;
+            Object.values(memoryLedger.masteredKeys).forEach(val => { if (val === 'mastered') totalMasteredCount++; });
+            const completedCount = Object.keys(memoryLedger.quizScores).length;
+            const completionPercent = Math.round((completedCount / NETZWERK_DATA_MAPPING.length) * 100);
+
+            document.getElementById('ui-metric-mastered').textContent = totalMasteredCount;
+            document.getElementById('ui-metric-reviews').textContent = memoryLedger.reviewTotals;
+            document.getElementById('ui-metric-completion').textContent = `${completionPercent}%`;
+
+            const container = document.getElementById('chapters-grid-container');
+            container.innerHTML = '';
+
+            NETZWERK_DATA_MAPPING.forEach(deck => {
+                let masteredInsideDeck = 0;
+                deck.items.forEach(item => {
+                    if (memoryLedger.masteredKeys[`${deck.id}-${item.de}`] === 'mastered') masteredInsideDeck++;
+                });
+                const scores = memoryLedger.quizScores[deck.id];
+                let badge = `<span class="ch-badge">Quiz Locked</span>`;
+                if(scores !== undefined) badge = `<span class="ch-badge completed">Score: ${scores}%</span>`;
+
+                const node = document.createElement('div');
+                node.className = 'chapter-node';
+                node.onclick = () => initFlashcardSession(deck);
+                node.innerHTML = `
+                    <div class="ch-num">${deck.num}</div>
+                    <div class="ch-name">${deck.name}</div>
+                    <div class="ch-meta"><span>${deck.items.length} items</span><span>${masteredInsideDeck} clear</span></div>
+                    ${badge}
+                `;
+                container.appendChild(node);
+            });
+        }
+
+        let currentDeckContext = null;
+        let fcIndex = 0;
+        let isFlipped = false;
+
+        function initFlashcardSession(deckObj) {
+            currentDeckContext = deckObj;
+            fcIndex = 0;
+            switchScreen('flashcards');
+            updateFlashcardUi();
+        }
+
+        function updateFlashcardUi() {
+            document.getElementById('ui-interactive-card').classList.remove('flipped');
+            isFlipped = false;
+            document.getElementById('ui-fc-srs-controls').style.display = 'none';
+            document.getElementById('ui-fc-hint').style.display = 'block';
+
+            const activeWord = currentDeckContext.items[fcIndex];
+            document.getElementById('ui-fc-counter').textContent = `Term ${fcIndex + 1} of ${currentDeckContext.items.length}`;
+            document.getElementById('ui-fc-progress-bar').style.width = `${(fcIndex / currentDeckContext.items.length) * 100}%`;
+            document.getElementById('ui-fc-front-word').textContent = activeWord.de;
+            document.getElementById('ui-fc-back-word').textContent = activeWord.en;
+        }
+
+        window.flipActiveCard = () => {
+            if(isFlipped) return;
+            document.getElementById('ui-interactive-card').classList.add('flipped');
+            isFlipped = true;
+            document.getElementById('ui-fc-hint').style.display = 'none';
+            document.getElementById('ui-fc-srs-controls').style.display = 'flex';
+        };
+
+        window.rateVocabItem = async (val) => {
+            const activeItemWord = currentDeckContext.items[fcIndex];
+            const compKey = `${currentDeckContext.id}-${activeItemWord.de}`;
+            memoryLedger.reviewTotals++;
+            if(val === 5) memoryLedger.masteredKeys[compKey] = 'mastered';
+            
+            await pushProgressUpdateToCloud();
+            fcIndex++;
+            if(fcIndex >= currentDeckContext.items.length) { startQuizSequence(); } else { updateFlashcardUi(); }
+        };
+
+        let quizQuestions = [];
+        let quizIdx = 0;
+        let runningQuizScore = 0;
+
+        function startQuizSequence() {
+            quizIdx = 0; runningQuizScore = 0; quizQuestions = [];
+            currentDeckContext.items.forEach(item => {
+                const incorrectOptions = currentDeckContext.items.filter(x => x.en !== item.en).map(x => x.en);
+                let combinedChoices = [item.en, ...incorrectOptions].slice(0,4).sort(() => Math.random() - 0.5);
+                quizQuestions.push({ prompt: item.de, answer: item.en, options: combinedChoices });
+            });
+            switchScreen('quiz');
+            renderQuizQuestion();
+        }
+
+        function renderQuizQuestion() {
+            document.getElementById('ui-quiz-next-btn').style.display = 'none';
+            const q = quizQuestions[quizIdx];
+            document.getElementById('ui-quiz-prompt-word').textContent = q.prompt;
+            const container = document.getElementById('ui-quiz-options-box');
+            container.innerHTML = '';
+            q.options.forEach(opt => {
+                const btn = document.createElement('button');
+                btn.className = 'matrix-btn';
+                btn.textContent = opt;
+                btn.onclick = () => parseSelection(btn, opt, q.answer);
+                container.appendChild(btn);
+            });
+        }
+
+        function parseSelection(btn, selected, correct) {
+            document.querySelectorAll('.matrix-btn').forEach(b => b.disabled = true);
+            if(selected === correct) { btn.classList.add('correct'); runningQuizScore++; }
+            else { btn.classList.add('wrong'); document.querySelectorAll('.matrix-btn').forEach(b => { if(b.textContent === correct) b.classList.add('correct'); }); }
+            document.getElementById('ui-quiz-next-btn').style.display = 'block';
+        }
+
+        window.stepQuizSequence = async () => {
+            quizIdx++;
+            if(quizIdx >= quizQuestions.length) {
+                const finalScore = Math.round((runningQuizScore / quizQuestions.length) * 100);
+                memoryLedger.quizScores[currentDeckContext.id] = finalScore;
+                await pushProgressUpdateToCloud();
+                document.getElementById('ui-results-percentage').textContent = `${finalScore}%`;
+                switchScreen('results');
+            } else { renderQuizQuestion(); }
+        };
+
+        // Kick off tracking logic structures pipeline components execution sequences definition mappings
+        window.initGlobalState();
+    </script>
+</body>
+</html>
