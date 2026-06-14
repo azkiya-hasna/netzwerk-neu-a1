@@ -761,8 +761,7 @@
                 node.innerHTML = `
                     <div class="ch-num">${deck.num}</div>
                     <div class="ch-name">${deck.emoji || ' Let\'s Learn! '} ${deck.name}</div>
-                    <div class="ch-meta"><span>${deck.items.length} items</span><span>${masteredInsideDeck} clear</span></div>
-                    ${badge}
+                    <div class="ch-meta"><span>${deck.items.length} items • </span><span>${masteredInsideDeck} clear</span></div>
                 `;
                 container.appendChild(node);
             });
