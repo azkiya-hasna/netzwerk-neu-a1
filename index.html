@@ -307,7 +307,8 @@
         .term-display { font-family: 'Space Grotesk', sans-serif; font-size: 2.3rem; font-weight: 700; text-align: center; }
         .context-display { font-size: 0.95rem; color: var(--text-muted); font-style: italic; text-align: center; margin-top: 10px;}
 
-        .srs-row { display: flex; gap: 12px; justify-content: center; var(--warning-light): hidden; }
+        /* Rating Row Layout */
+        .srs-row { display: flex; gap: 12px; justify-content: center; visibility: hidden; }
         .srs-btn { padding: 16px; border-radius: var(--radius-md); border: none; font-weight: 700; cursor: pointer; flex: 1; }
         .srs-hard { background-color: var(--danger-light); color: var(--danger); }
         .srs-good { background-color: var(--warning-light); color: var(--warning); }
@@ -472,7 +473,6 @@
             measurementId: "G-FJFGB4BRF9"
         };
 
-        // Menginisialisasi modul Firestore Google Cloud secara langsung tanpa filter blokir
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
 
@@ -784,7 +784,6 @@
             isFlipped = false;
             
             document.getElementById('ui-fc-srs-controls').style.visibility = 'hidden';
-            document.getElementById('ui-fc-hint').style.display = 'block';
 
             const activeWord = currentDeckContext.items[fcIndex];
             
@@ -797,6 +796,7 @@
             document.getElementById('ui-fc-back-word').textContent = activeWord.en;
         }
 
+        // PERBAIKAN LOGIKA TOGGLE: Mengunci data teks bahasa Inggris agar tidak ter-reset
         window.flipActiveCard = () => {
             const cardElement = document.getElementById('ui-interactive-card');
             
