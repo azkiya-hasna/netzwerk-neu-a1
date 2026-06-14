@@ -16,10 +16,10 @@
             --primary-light: #ffedd5;
             --success: #16a34a;
             --success-light: #dcfce7;
-            --warning: #2563eb;
-            --warning-light: #dbeafe;
             --danger: #dc2626;
             --danger-light: #fee2e2;
+            --warning: #2563eb;
+            --warning-light: #dbeafe;
             --border: #e7e5e4;
             --radius-lg: 20px;
             --radius-md: 12px;
@@ -232,6 +232,26 @@
             font-weight: 600;
         }
 
+        .audio-listen-btn {
+            background-color: var(--primary-light);
+            color: var(--primary);
+            border: none;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-family: inherit;
+            font-weight: 700;
+            font-size: 0.88rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: transform 0.2s;
+        }
+
+        .audio-listen-btn:hover {
+            transform: scale(1.04);
+        }
+
         .progress-track {
             height: 6px;
             background-color: var(--border);
@@ -299,7 +319,6 @@
         .matrix-btn.correct { background-color: var(--success-light); border-color: var(--success); color: var(--success); }
         .matrix-btn.wrong { background-color: var(--danger-light); border-color: var(--danger); color: var(--danger); }
 
-        /* Input Typing UI Elements */
         .quiz-type-badge { display: inline-block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; padding: 4px 10px; border-radius: 6px; background-color: var(--primary-light); color: var(--primary); margin-bottom: 16px; }
         .quiz-prompt-lbl { font-size: 0.9rem; color: var(--text-muted); font-weight: 500; margin-bottom: 8px; display: block; }
         .text-input-field-row { display: flex; gap: 12px; margin-top: 24px; }
@@ -338,6 +357,7 @@
     </header>
 
     <main>
+        <!-- HOME DASHBOARD -->
         <div id="screen-home" class="screen active">
             <div class="welcome-hero">
                 <h1>Guten Tag! 🇩🇪</h1>
@@ -362,19 +382,29 @@
             <div class="chapters-layout" id="chapters-grid-container"></div>
         </div>
 
+        <!-- FLASHCARDS VIEW -->
         <div id="screen-flashcards" class="screen">
             <div class="screen-control-row">
-                <button class="action-back" onclick="switchScreen('home')">← Dashboard</button>
-                <div class="view-meta-counter" id="ui-fc-counter">Card 1 of 10</div>
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <button class="action-back" onclick="switchScreen('home')">← Back</button>
+                    <div>
+                        <h3 id="ui-fc-chapter-title" style="font-family: 'Space Grotesk', sans-serif; font-weight:700;">Kapitel</h3>
+                        <div class="view-meta-counter" id="ui-fc-counter">Card 1 of 10</div>
+                    </div>
+                </div>
+                <button class="audio-listen-btn" onclick="triggerVoiceSpeech(event)">🔊 Listen</button>
             </div>
             <div class="progress-track"><div class="progress-fill" id="ui-fc-progress-bar"></div></div>
             <div class="card-container" id="ui-interactive-card" onclick="flipActiveCard()">
                 <div class="card-pivot">
                     <div class="card-panel panel-front">
+                        <span class="panel-label" style="font-size: 0.8rem; letter-spacing: 0.1em; color: var(--text-muted); font-weight:700; margin-bottom:16px;">GERMAN ➔ ENGLISH</span>
                         <div class="term-display" id="ui-fc-front-word">...</div>
                         <div class="context-display" id="ui-fc-front-context">...</div>
+                        <button class="audio-listen-btn" style="margin-top: 24px; padding: 6px 14px; font-size: 0.8rem;" onclick="triggerVoiceSpeech(event)">🔊 Pronounce</button>
                     </div>
                     <div class="card-panel panel-back">
+                        <span class="panel-label" style="font-size: 0.8rem; letter-spacing: 0.1em; color: #a8a29e; font-weight:700; margin-bottom:16px;">TRANSLATION</span>
                         <div class="term-display" id="ui-fc-back-word">...</div>
                     </div>
                 </div>
@@ -389,6 +419,7 @@
             </div>
         </div>
 
+        <!-- QUIZ ENGINE -->
         <div id="screen-quiz" class="screen">
             <div class="screen-control-row">
                 <h2 style="font-family:'Space Grotesk', sans-serif; font-weight:700;" id="ui-quiz-title">Chapter Assessment</h2>
@@ -414,6 +445,7 @@
             </div>
         </div>
 
+        <!-- RESULTS SUMMARY -->
         <div id="screen-results" class="screen">
             <div class="results-modal-box">
                 <div class="score-radial" id="ui-results-percentage">0%</div>
@@ -422,6 +454,7 @@
             </div>
         </div>
 
+        <!-- PROGRESS MATRIX TAB -->
         <div id="screen-progress" class="screen">
             <div class="quiz-panel-wrapper">
                 <h3>Cloud Operations Management</h3>
@@ -434,7 +467,6 @@
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
         import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
-        // KUNCI FIREBASE ASLI MILIK HASNA SUDAH TERPASANG DI SINI
         const firebaseConfig = {
             apiKey: "AIzaSyD4U8Zg04xcpU9bc1Z__cp_cvkhM9t2-Bc",
             authDomain: "netzwerkneu.firebaseapp.com",
@@ -453,10 +485,9 @@
             }
         } catch(e) { console.error("Firebase startup failure:", e); }
 
-        // DATA KOSAKATA LENGKAP KAPITEL 1 - 12 (BERDASARKAN PDF GLOSSARY ANDA)
         const NETZWERK_DATA_MAPPING = [
             {
-                id: "kapitel-1", num: "Kapitel 1", name: "Guten Tag!",
+                id: "kapitel-1", num: "Kapitel 1", name: "Guten Tag!", emoji: "👋",
                 items: [
                     { de: "Bulgarisch", en: "Bulgarian", hint: "Länder und Sprachen" },
                     { de: "Deutsch", en: "German", hint: "Ich spreche Deutsch." },
@@ -471,7 +502,7 @@
                 ]
             },
             {
-                id: "kapitel-2", num: "Kapitel 2", name: "Freunde, Kollegen und ich",
+                id: "kapitel-2", num: "Kapitel 2", name: "Freunde, Kollegen und ich", emoji: "🤝",
                 items: [
                     { de: "gern", en: "gladly / likes to", hint: "Vorlieben ausdrücken" },
                     { de: "die Leute (Pl.)", en: "people", hint: "Personengruppen" },
@@ -486,7 +517,7 @@
                 ]
             },
             {
-                id: "kapitel-3", num: "Kapitel 3", name: "In Hamburg",
+                id: "kapitel-3", num: "Kapitel 3", name: "In Hamburg", emoji: "⚓",
                 items: [
                     { de: "der Bahnhof, \"-e", en: "train station", hint: "Verkehr und Logistik" },
                     { de: "die Kirche, -n", en: "church", hint: "Sehenswürdigkeiten" },
@@ -501,7 +532,7 @@
                 ]
             },
             {
-                id: "kapitel-4", num: "Kapitel 4", name: "Guten Appetit!",
+                id: "kapitel-4", num: "Kapitel 4", name: "Guten Appetit!", emoji: "🍽️",
                 items: [
                     { de: "der Apfelsaft, \"-e", en: "apple juice", hint: "Getränke" },
                     { de: "die Banane, -n", en: "banana", hint: "Obst und Früchte" },
@@ -516,7 +547,7 @@
                 ]
             },
             {
-                id: "kapitel-5", num: "Kapitel 5", name: "Alltag und Familie",
+                id: "kapitel-5", num: "Kapitel 5", name: "Alltag und Familie", emoji: "🏠",
                 items: [
                     { de: "der Alltag (Sg.)", en: "everyday life", hint: "Tagesablauf" },
                     { de: "die Bibliothek, -en", en: "library", hint: "An der Universität" },
@@ -531,13 +562,13 @@
                 ]
             },
             {
-                id: "kapitel-6", num: "Kapitel 6", name: "Zeit mit Freunden",
+                id: "kapitel-6", num: "Kapitel 6", name: "Zeit mit Freunden", emoji: "🎉",
                 items: [
                     { de: "feiern", en: "to celebrate", hint: "Partys und Events" },
                     { de: "das Fitness-Studio, -s", en: "gym", hint: "Sport und Freizeit" },
                     { de: "klettern", en: "to climb", hint: "Freizeitaktivitäten" },
                     { de: "wandern", en: "to hike", hint: "In der Natur" },
-                    { de: "das Geschenk, -e", en: "present", hint: "Überraschungen für Freunde" },
+                    { de: "das Geschenk, -e", en: "present", hint: "Überraschungen untuk teman" },
                     { de: "bestellen", en: "to order", hint: "Im Restaurant" },
                     { de: "die Speisekarte, -n", en: "menu", hint: "Im Restaurant" },
                     { de: "das Schnitzel, -", en: "schnitzel", hint: "Typische Gerichte" },
@@ -546,7 +577,7 @@
                 ]
             },
             {
-                id: "kapitel-7", num: "Kapitel 7", name: "Arbeitsalltag",
+                id: "kapitel-7", num: "Kapitel 7", name: "Arbeitsalltag", emoji: "💼",
                 items: [
                     { de: "der Arbeitsalltag (Sg.)", en: "workday", hint: "Berufsleben" },
                     { de: "das Paket, -e", en: "package", hint: "Post und Logistik" },
@@ -561,7 +592,7 @@
                 ]
             },
             {
-                id: "kapitel-8", num: "Kapitel 8", name: "Fit und gesund",
+                id: "kapitel-8", num: "Kapitel 8", name: "Fit und gesund", emoji: "🍎",
                 items: [
                     { de: "müde", en: "tired", hint: "Körperliches Befinden" },
                     { de: "hungrig", en: "hungry", hint: "Körperliches Befinden" },
@@ -569,14 +600,14 @@
                     { de: "das Bein, -e", en: "leg", hint: "Körperteile" },
                     { de: "der Fuß, \"-e", en: "foot", hint: "Körperteile" },
                     { de: "die Hand, \"-e", en: "hand", hint: "Körperteile" },
-                    { de: "der Kopf, \"-e", magnets: "head", hint: "Körperteile" },
+                    { de: "der Kopf, \"-e", en: "head", hint: "Körperteile" },
                     { de: "der Rücken, -", en: "back", hint: "Körperteile" },
                     { de: "der Unfall, \"-e", en: "accident", hint: "Notfälle" },
                     { de: "die Apotheke, -n", en: "pharmacy", hint: "Medikamente kaufen" }
                 ]
             },
             {
-                id: "kapitel-9", num: "Kapitel 9", name: "Meine Wohnung",
+                id: "kapitel-9", num: "Kapitel 9", name: "Meine Wohnung", emoji: "🏢",
                 items: [
                     { de: "das Bad, \"-er", en: "bath", hint: "Zimmer della Wohnung" },
                     { de: "der Balkon, -e", en: "balcony", hint: "Außenbereich" },
@@ -591,7 +622,7 @@
                 ]
             },
             {
-                id: "kapitel-10", num: "Kapitel 10", name: "Studium und Beruf",
+                id: "kapitel-10", num: "Kapitel 10", name: "Studium und Beruf", emoji: "🎓",
                 items: [
                     { de: "das Studium, Studien", en: "studies", hint: "An der Universität" },
                     { de: "die Karriere, -n", en: "career", hint: "Ziele im Berufsleben" },
@@ -606,7 +637,7 @@
                 ]
             },
             {
-                id: "kapitel-11", num: "Kapitel 11", name: "Die Jacke gefällt mir!",
+                id: "kapitel-11", num: "Kapitel 11", name: "Die Jacke gefällt mir!", emoji: "🧥",
                 items: [
                     { de: "gefallen, er gefällt", en: "to please / to like", hint: "Geschmack ausdrücken" },
                     { de: "die Jacke, -n", en: "jacket", hint: "Kleidungsstücke" },
@@ -621,7 +652,7 @@
                 ]
             },
             {
-                id: "kapitel-12", num: "Kapitel 12", name: "Ab in den Urlaub!",
+                id: "kapitel-12", num: "Kapitel 12", name: "Ab in den Urlaub!", emoji: "✈️",
                 items: [
                     { de: "das Gepäck (Sg.)", en: "luggage", hint: "Reisevorbereitung" },
                     { de: "der Reiseführer, -", en: "travel guide", hint: "Informationsmedien" },
@@ -743,7 +774,7 @@
                 node.onclick = () => initFlashcardSession(deck);
                 node.innerHTML = `
                     <div class="ch-num">${deck.num}</div>
-                    <div class="ch-name">${deck.name}</div>
+                    <div class="ch-name">${deck.emoji || ' Let\'s Learn! '} ${deck.name}</div>
                     <div class="ch-meta"><span>${deck.items.length} items</span><span>${masteredInsideDeck} clear</span></div>
                     ${badge}
                 `;
@@ -769,8 +800,12 @@
             document.getElementById('ui-fc-hint').style.display = 'block';
 
             const activeWord = currentDeckContext.items[fcIndex];
-            document.getElementById('ui-fc-counter').textContent = `Term ${fcIndex + 1} of ${currentDeckContext.items.length}`;
-            document.getElementById('ui-fc-progress-bar').style.width = `${(fcIndex / currentDeckContext.items.length) * 100}%`;
+            
+            // Pengaturan Judul Bab, Indikator dan Bar Progress sesuai gambar
+            document.getElementById('ui-fc-chapter-title').textContent = `${currentDeckContext.emoji || '📚'} ${currentDeckContext.num}: ${currentDeckContext.name}`;
+            document.getElementById('ui-fc-counter').textContent = `Card ${fcIndex + 1} of ${currentDeckContext.items.length}`;
+            document.getElementById('ui-fc-progress-bar').style.width = `${((fcIndex + 1) / currentDeckContext.items.length) * 100}%`;
+            
             document.getElementById('ui-fc-front-word').textContent = activeWord.de;
             document.getElementById('ui-fc-front-context').textContent = `Focus Area: ${activeWord.hint || 'N/A'}`;
             document.getElementById('ui-fc-back-word').textContent = activeWord.en;
@@ -782,6 +817,27 @@
             isFlipped = true;
             document.getElementById('ui-fc-hint').style.display = 'none';
             document.getElementById('ui-fc-srs-controls').style.display = 'flex';
+        };
+
+        // Fungsi Audio Pronunciation Native Web Speech API Jerman de-DE
+        window.triggerVoiceSpeech = (event) => {
+            if (event) event.stopPropagation(); // Mencegah kartu terbalik secara tidak sengaja ketika tombol diklik
+            if (!currentDeckContext) return;
+            
+            const targetWord = currentDeckContext.items[fcIndex].de;
+            
+            // Membersihkan teks tambahan metadata jamak agar pelafalan TTS bersih
+            const cleanWord = targetWord.split(',')[0].replace(/\"/g, '');
+
+            if ('speechSynthesis' in window) {
+                const utterance = new SpeechSynthesisUtterance(cleanWord);
+                utterance.lang = 'de-DE';
+                utterance.rate = 0.85; // Sedikit diperlambat agar artikulasi A1 terdengar jelas
+                window.speechSynthesis.cancel(); // Menghentikan audio antrean sebelumnya
+                window.speechSynthesis.speak(utterance);
+            } else {
+                alert("Browser ini belum mendukung fitur Text-to-Speech.");
+            }
         };
 
         window.rateVocabItem = async (val) => {
@@ -848,7 +904,7 @@
                     btn.className = 'matrix-btn';
                     btn.textContent = opt;
                     btn.onclick = () => parseSelection(btn, opt, q.englishWord);
-                    mcOptionsBox.appendChild(btn);
+                    container.appendChild(btn);
                 });
             } else {
                 typeBadge.textContent = "Active Recall Stage";
