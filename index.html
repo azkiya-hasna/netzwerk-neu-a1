@@ -307,7 +307,8 @@
         .term-display { font-family: 'Space Grotesk', sans-serif; font-size: 2.3rem; font-weight: 700; text-align: center; }
         .context-display { font-size: 0.95rem; color: var(--text-muted); font-style: italic; text-align: center; margin-top: 10px;}
 
-        .srs-row { display: none; gap: 12px; justify-content: center; }
+        /* Kontrol SRS Rating Bawah */
+        .srs-row { display: flex; gap: 12px; justify-content: center; visibility: hidden; }
         .srs-btn { padding: 16px; border-radius: var(--radius-md); border: none; font-weight: 700; cursor: pointer; flex: 1; }
         .srs-hard { background-color: var(--danger-light); color: var(--danger); }
         .srs-good { background-color: var(--warning-light); color: var(--warning); }
@@ -410,7 +411,7 @@
                 </div>
             </div>
             <div class="interactive-footer">
-                <p class="help-tip" id="ui-fc-hint">Click the card surface to reveal standard English translation</p>
+                <p class="help-tip" id="ui-fc-hint">Click the card to reveal translation / back to German</p>
                 <div class="srs-row" id="ui-fc-srs-controls">
                     <button class="srs-btn srs-hard" onclick="rateVocabItem(1)">Hard</button>
                     <button class="srs-btn srs-good" onclick="rateVocabItem(3)">Good</button>
@@ -489,181 +490,181 @@
             {
                 id: "kapitel-1", num: "Kapitel 1", name: "Guten Tag!", emoji: "👋",
                 items: [
-                    { de: "Bulgarisch", en: "Bulgarian", hint: "Länder und Sprachen" },
-                    { de: "Deutsch", en: "German", hint: "Ich spreche Deutsch." },
-                    { de: "Englisch", en: "English", hint: "Sprachoptionen" },
-                    { de: "gut", en: "good", hint: "Guten Tag!" },
-                    { de: "die Autobahn, -en", en: "highway", hint: "Verkehrsmittel" },
-                    { de: "das Butterbrot, -e", en: "sandwich", hint: "Essen" },
-                    { de: "das Handtuch, \"-er", en: "towel", hint: "Im Badezimmer" },
-                    { de: "der Kindergarten, \"-", en: "kindergarten", hint: "Kinderbetreuung" },
-                    { de: "der Koffer, -", en: "suitcase", hint: "Auf Reisen" },
-                    { de: "die Flasche, -n", en: "bottle", hint: "Getränkebehälter" }
+                    { de: "Bulgarisch", en: "Bulgarian", hint: "Länder und Sprachen" }[cite: 1],
+                    { de: "Deutsch", en: "German", hint: "Ich spreche Deutsch." }[cite: 1],
+                    { de: "Englisch", en: "English", hint: "Sprachoptionen" }[cite: 1],
+                    { de: "gut", en: "good", hint: "Guten Tag!" }[cite: 1],
+                    { de: "die Autobahn, -en", en: "highway", hint: "Verkehrsmittel" }[cite: 1],
+                    { de: "das Butterbrot, -e", en: "sandwich", hint: "Essen" }[cite: 1],
+                    { de: "das Handtuch, \"-er", en: "towel", hint: "Im Badezimmer" }[cite: 1],
+                    { de: "der Kindergarten, \"-", en: "kindergarten", hint: "Kinderbetreuung" }[cite: 1],
+                    { de: "der Koffer, -", en: "suitcase", hint: "Auf Reisen" }[cite: 1],
+                    { de: "die Flasche, -n", en: "bottle", hint: "Getränkebehälter" }[cite: 1]
                 ]
             },
             {
                 id: "kapitel-2", num: "Kapitel 2", name: "Freunde, Kollegen und ich", emoji: "🤝",
                 items: [
-                    { de: "gern", en: "gladly / likes to", hint: "Vorlieben ausdrücken" },
-                    { de: "die Leute (Pl.)", en: "people", hint: "Personengruppen" },
-                    { de: "fotografieren", en: "to photograph", hint: "Hobbys und Freizeit" },
-                    { de: "der Freund, -e", en: "friend (m)", hint: "Soziale Kontakte" },
-                    { de: "die Freundin, -nen", en: "female friend / girlfriend", hint: "Soziale Kontakte" },
-                    { de: "joggen", en: "to jog", hint: "Sportliche Aktivitäten" },
-                    { de: "der Kollege, -n", en: "colleague (m)", hint: "Am Arbeitsplatz" },
-                    { de: "die Kollegin, -nen", en: "colleague (f)", hint: "Am Arbeitsplatz" },
-                    { de: "das Kino, -s", en: "movie theater", hint: "Gehst du gern ins Kino?" },
-                    { de: "das Wochenende, -n", en: "weekend", hint: "Kochen wir am Wochenende Spaghetti?" }
+                    { de: "gern", en: "gladly / likes to", hint: "Vorlieben ausdrücken" }[cite: 1],
+                    { de: "die Leute (Pl.)", en: "people", hint: "Personengruppen" }[cite: 1],
+                    { de: "fotografieren", en: "to photograph", hint: "Hobbys und Freizeit" }[cite: 1],
+                    { de: "der Freund, -e", en: "friend (m)", hint: "Soziale Kontakte" }[cite: 1],
+                    { de: "die Freundin, -nen", en: "female friend / girlfriend", hint: "Soziale Kontakte" }[cite: 1],
+                    { de: "joggen", en: "to jog", hint: "Sportliche Aktivitäten" }[cite: 1],
+                    { de: "der Kollege, -n", en: "colleague (m)", hint: "Am Arbeitsplatz" }[cite: 1],
+                    { de: "die Kollegin, -nen", en: "colleague (f)", hint: "Am Arbeitsplatz" }[cite: 1],
+                    { de: "das Kino, -s", en: "movie theater", hint: "Gehst du gern ins Kino?" }[cite: 1],
+                    { de: "das Wochenende, -n", en: "weekend", hint: "Kochen wir am Wochenende Spaghetti?" }[cite: 1]
                 ]
             },
             {
                 id: "kapitel-3", num: "Kapitel 3", name: "In Hamburg", emoji: "⚓",
                 items: [
-                    { de: "der Bahnhof, \"-e", en: "train station", hint: "Verkehr und Logistik" },
-                    { de: "die Kirche, -n", en: "church", hint: "Sehenswürdigkeiten" },
-                    { de: "das Konzert, -e", en: "concert", hint: "Kulturelle Events" },
-                    { de: "das Rathaus, \"-er", en: "town hall", hint: "Öffentliche Gebäude" },
-                    { de: "der Turm, \"-e", en: "tower", hint: "Architektur" },
-                    { de: "der Fluss, \"-e", en: "river", hint: "Die Schiffe fahren auf dem Fluss." },
-                    { de: "der Hafen, \"-", en: "harbour", hint: "In Küstenstädten" },
-                    { de: "das Schiff, -e", en: "ship", hint: "Wassertransport" },
-                    { de: "das Flugzeug, -e", en: "airplane", hint: "Luftverkehr" },
-                    { de: "die S-Bahn, -en", en: "suburban train", hint: "Nahverkehr" }
+                    { de: "der Bahnhof, \"-e", en: "train station", hint: "Verkehr und Logistik" }[cite: 1],
+                    { de: "die Kirche, -n", en: "church", hint: "Sehenswürdigkeiten" }[cite: 1],
+                    { de: "das Konzert, -e", en: "concert", hint: "Kulturelle Events" }[cite: 1],
+                    { de: "das Rathaus, \"-er", en: "town hall", hint: "Öffentliche Gebäude" }[cite: 1],
+                    { de: "der Turm, \"-e", en: "tower", hint: "Architektur" }[cite: 1],
+                    { de: "der Fluss, \"-e", en: "river", hint: "Die Schiffe fahren auf dem Fluss." }[cite: 1],
+                    { de: "der Hafen, \"-", en: "harbour", hint: "In Küstenstädten" }[cite: 1],
+                    { de: "das Schiff, -e", en: "ship", hint: "Wassertransport" }[cite: 1],
+                    { de: "das Flugzeug, -e", en: "airplane", hint: "Luftverkehr" }[cite: 1],
+                    { de: "die S-Bahn, -en", en: "suburban train", hint: "Nahverkehr" }[cite: 1]
                 ]
             },
             {
                 id: "kapitel-4", num: "Kapitel 4", name: "Guten Appetit!", emoji: "🍽️",
                 items: [
-                    { de: "der Apfelsaft, \"-e", en: "apple juice", hint: "Getränke" },
-                    { de: "die Banane, -n", en: "banana", hint: "Obst und Früchte" },
-                    { de: "das Brötchen, -", en: "bread roll", hint: "Zum Frühstück" },
-                    { de: "die Butter (Sg.)", en: "butter", hint: "Streichfett" },
-                    { de: "das Ei, -er", en: "egg", hint: "Lebensmittel" },
-                    { de: "das Fleisch (Sg.)", en: "meat", hint: "Lebensmittel" },
-                    { de: "das Gemüse, -", en: "vegetable", hint: "Gesunde Ernährung" },
-                    { de: "die Milch (Sg.)", en: "milk", hint: "Molkereiprodukte" },
-                    { de: "der Kuchen, -", en: "cake", hint: "Süßwaren" },
-                    { de: "die Suppe, -n", en: "soup", hint: "Vorspeise" }
+                    { de: "der Apfelsaft, \"-e", en: "apple juice", hint: "Getränke" }[cite: 1],
+                    { de: "die Banane, -n", en: "banana", hint: "Obst und Früchte" }[cite: 1],
+                    { de: "das Brötchen, -", en: "bread roll", hint: "Zum Frühstück" }[cite: 1],
+                    { de: "die Butter (Sg.)", en: "butter", hint: "Streichfett" }[cite: 1],
+                    { de: "das Ei, -er", en: "egg", hint: "Lebensmittel" }[cite: 1],
+                    { de: "das Fleisch (Sg.)", en: "meat", hint: "Lebensmittel" }[cite: 1],
+                    { de: "das Gemüse, -", en: "vegetable", hint: "Gesunde Ernährung" }[cite: 1],
+                    { de: "die Milch (Sg.)", en: "milk", hint: "Molkereiprodukte" }[cite: 1],
+                    { de: "der Kuchen, -", en: "cake", hint: "Süßwaren" }[cite: 1],
+                    { de: "die Suppe, -n", en: "soup", hint: "Vorspeise" }[cite: 1]
                 ]
             },
             {
                 id: "kapitel-5", num: "Kapitel 5", name: "Alltag und Familie", emoji: "🏠",
                 items: [
-                    { de: "der Alltag (Sg.)", en: "everyday life", hint: "Tagesablauf" },
-                    { de: "die Bibliothek, -en", en: "library", hint: "An der Universität" },
-                    { de: "duschen", en: "to shower", hint: "Körperpflege" },
-                    { de: "die Familie, -n", en: "family", hint: "Verwandtschaft" },
-                    { de: "die Zeitung, -en", en: "newspaper", hint: "Medienkonsum" },
-                    { de: "der Geburtstag, -e", en: "birthday", hint: "Persönliche Feste" },
-                    { de: "die Eltern (Pl.)", en: "parents", hint: "Familie" },
-                    { de: "das Kind, -er", en: "child", hint: "Familie" },
-                    { de: "der Sohn, \"-e", en: "son", hint: "Eigene Kinder" },
-                    { de: "die Tochter, \"-", en: "daughter", hint: "Eigene Kinder" }
+                    { de: "der Alltag (Sg.)", en: "everyday life", hint: "Tagesablauf" }[cite: 1],
+                    { de: "die Bibliothek, -en", en: "library", hint: "An der Universität" }[cite: 1],
+                    { de: "duschen", en: "to shower", hint: "Körperpflege" }[cite: 1],
+                    { de: "die Familie, -n", en: "family", hint: "Verwandtschaft" }[cite: 1],
+                    { de: "die Zeitung, -en", en: "newspaper", hint: "Medienkonsum" }[cite: 1],
+                    { de: "der Geburtstag, -e", en: "birthday", hint: "Persönliche Feste" }[cite: 1],
+                    { de: "die Eltern (Pl.)", en: "parents", hint: "Familie" }[cite: 1],
+                    { de: "das Kind, -er", en: "child", hint: "Familie" }[cite: 1],
+                    { de: "der Sohn, \"-e", en: "son", hint: "Eigene Kinder" }[cite: 1],
+                    { de: "die Tochter, \"-", en: "daughter", hint: "Eigene Kinder" }[cite: 1]
                 ]
             },
             {
                 id: "kapitel-6", num: "Kapitel 6", name: "Zeit mit Freunden", emoji: "🎉",
                 items: [
-                    { de: "feiern", en: "to celebrate", hint: "Partys und Events" },
-                    { de: "das Fitness-Studio, -s", en: "gym", hint: "Sport und Freizeit" },
-                    { de: "klettern", en: "to climb", hint: "Freizeitaktivitäten" },
-                    { de: "wandern", en: "to hike", hint: "In der Natur" },
-                    { de: "das Geschenk, -e", en: "present", hint: "Überraschungen untuk teman" },
-                    { de: "bestellen", en: "to order", hint: "Im Restaurant" },
-                    { de: "die Speisekarte, -n", en: "menu", hint: "Im Restaurant" },
-                    { de: "das Schnitzel, -", en: "schnitzel", hint: "Typische Gerichte" },
-                    { de: "bezahlen", en: "to pay", hint: "Geldtransaktionen" },
-                    { de: "das Trinkgeld, -er", en: "tip", hint: "Für den Kellner" }
+                    { de: "feiern", en: "to celebrate", hint: "Partys und Events" }[cite: 1],
+                    { de: "das Fitness-Studio, -s", en: "gym", hint: "Sport und Freizeit" }[cite: 1],
+                    { de: "klettern", en: "to climb", hint: "Freizeitaktivitäten" }[cite: 1],
+                    { de: "wandern", en: "to hike", hint: "In der Natur" }[cite: 1],
+                    { de: "das Geschenk, -e", en: "present", hint: "Überraschungen untuk teman" }[cite: 1],
+                    { de: "bestellen", en: "to order", hint: "Im Restaurant" }[cite: 1],
+                    { de: "die Speisekarte, -n", en: "menu", hint: "Im Restaurant" }[cite: 1],
+                    { de: "das Schnitzel, -", en: "schnitzel", hint: "Typische Gerichte" }[cite: 1],
+                    { de: "bezahlen", en: "to pay", hint: "Geldtransaktionen" }[cite: 1],
+                    { de: "das Trinkgeld, -er", en: "tip", hint: "Für den Kellner" }[cite: 1]
                 ]
             },
             {
                 id: "kapitel-7", num: "Kapitel 7", name: "Arbeitsalltag", emoji: "💼",
                 items: [
-                    { de: "der Arbeitsalltag (Sg.)", en: "workday", hint: "Berufsleben" },
-                    { de: "das Paket, -e", en: "package", hint: "Post und Logistik" },
-                    { de: "der Nachbar, -n", en: "neighbour (m)", hint: "Umfeld und Wohnen" },
-                    { de: "das Praktikum, Praktika", en: "internship", hint: "Berufserfahrung sammeln" },
-                    { de: "der Fehler, -", en: "mistake", hint: "Arbeitsorganisation" },
-                    { de: "erklären", en: "to explain", hint: "Kommunikation" },
-                    { de: "die Bank, -en", en: "bank", hint: "Finanzinstitution" },
-                    { de: "das Passwort, \"-er", en: "password", hint: "Datenschutz am PC" },
-                    { de: "das WLAN (Sg.)", en: "Wi-Fi", hint: "Internetverbindung" },
-                    { de: "speichern", en: "to save", hint: "Computerarbeit" }
+                    { de: "der Arbeitsalltag (Sg.)", en: "workday", hint: "Berufsleben" }[cite: 1],
+                    { de: "das Paket, -e", en: "package", hint: "Post und Logistik" }[cite: 1],
+                    { de: "der Nachbar, -n", en: "neighbour (m)", hint: "Umfeld und Wohnen" }[cite: 1],
+                    { de: "das Praktikum, Praktika", en: "internship", hint: "Berufserfahrung sammeln" }[cite: 1],
+                    { de: "der Fehler, -", en: "mistake", hint: "Arbeitsorganisation" }[cite: 1],
+                    { de: "erklären", en: "to explain", hint: "Kommunikation" }[cite: 1],
+                    { de: "die Bank, -en", en: "bank", hint: "Finanzinstitution" }[cite: 1],
+                    { de: "das Passwort, \"-er", en: "password", hint: "Datenschutz am PC" }[cite: 1],
+                    { de: "das WLAN (Sg.)", en: "Wi-Fi", hint: "Internetverbindung" }[cite: 1],
+                    { de: "speichern", en: "to save", hint: "Computerarbeit" }[cite: 1]
                 ]
             },
             {
                 id: "kapitel-8", num: "Kapitel 8", name: "Fit und gesund", emoji: "🍎",
                 items: [
-                    { de: "müde", en: "tired", hint: "Körperliches Befinden" },
-                    { de: "hungrig", en: "hungry", hint: "Körperliches Befinden" },
-                    { de: "der Bauch, \"-e", en: "stomach", hint: "Körperteile" },
-                    { de: "das Bein, -e", en: "leg", hint: "Körperteile" },
-                    { de: "der Fuß, \"-e", en: "foot", hint: "Körperteile" },
-                    { de: "die Hand, \"-e", en: "hand", hint: "Körperteile" },
-                    { de: "der Kopf, \"-e", en: "head", hint: "Körperteile" },
-                    { de: "der Rücken, -", en: "back", hint: "Körperteile" },
-                    { de: "der Unfall, \"-e", en: "accident", hint: "Notfälle" },
-                    { de: "die Apotheke, -n", en: "pharmacy", hint: "Medikamente kaufen" }
+                    { de: "müde", en: "tired", hint: "Körperliches Befinden" }[cite: 1],
+                    { de: "hungrig", en: "hungry", hint: "Körperliches Befinden" }[cite: 1],
+                    { de: "der Bauch, \"-e", en: "stomach", hint: "Körperteile" }[cite: 1],
+                    { de: "das Bein, -e", en: "leg", hint: "Körperteile" }[cite: 1],
+                    { de: "der Fuß, \"-e", en: "foot", hint: "Körperteile" }[cite: 1],
+                    { de: "die Hand, \"-e", en: "hand", hint: "Körperteile" }[cite: 1],
+                    { de: "der Kopf, \"-e", en: "head", hint: "Körperteile" }[cite: 1],
+                    { de: "der Rücken, -", en: "back", hint: "Körperteile" }[cite: 1],
+                    { de: "der Unfall, \"-e", en: "accident", hint: "Notfälle" }[cite: 1],
+                    { de: "die Apotheke, -n", en: "pharmacy", hint: "Medikamente kaufen" }[cite: 1]
                 ]
             },
             {
                 id: "kapitel-9", num: "Kapitel 9", name: "Meine Wohnung", emoji: "🏢",
                 items: [
-                    { de: "das Bad, \"-er", en: "bath", hint: "Zimmer della Wohnung" },
-                    { de: "der Balkon, -e", en: "balcony", hint: "Außenbereich" },
-                    { de: "die Küche, -n", en: "kitchen", hint: "Zimmer della Wohnung" },
-                    { de: "der Kühlschrank, \"-e", en: "refrigerator", hint: "Küchengeräte" },
-                    { de: "die Lampe, -n", en: "lamp", hint: "Möbel und Einrichtung" },
-                    { de: "der Schrank, \"-e", en: "wardrobe, cupboard", hint: "Möbel" },
-                    { de: "das Sofa, -s", en: "sofa, couch", hint: "Wohnzimmer" },
-                    { de: "der Stuhl, \"-e", en: "chair", hint: "Möbel" },
-                    { de: "die Wohnung, -en", en: "flat / apartment", hint: "Immobilien" },
-                    { de: "die Miete, -n", en: "rent", hint: "Monatliche Kosten" }
+                    { de: "das Bad, \"-er", en: "bath", hint: "Zimmer della Wohnung" }[cite: 1],
+                    { de: "der Balkon, -e", en: "balcony", hint: "Außenbereich" }[cite: 1],
+                    { de: "die Küche, -n", en: "kitchen", hint: "Zimmer della Wohnung" }[cite: 1],
+                    { de: "der Kühlschrank, \"-e", en: "refrigerator", hint: "Küchengeräte" }[cite: 1],
+                    { de: "die Lampe, -n", en: "lamp", hint: "Möbel und Einrichtung" }[cite: 1],
+                    { de: "der Schrank, \"-e", en: "wardrobe, cupboard", hint: "Möbel" }[cite: 1],
+                    { de: "das Sofa, -s", en: "sofa, couch", hint: "Wohnzimmer" }[cite: 1],
+                    { de: "der Stuhl, \"-e", en: "chair", hint: "Möbel" }[cite: 1],
+                    { de: "die Wohnung, -en", en: "flat / apartment", hint: "Immobilien" }[cite: 1],
+                    { de: "die Miete, -n", en: "rent", hint: "Monatliche Kosten" }[cite: 1]
                 ]
             },
             {
                 id: "kapitel-10", num: "Kapitel 10", name: "Studium und Beruf", emoji: "🎓",
                 items: [
-                    { de: "das Studium, Studien", en: "studies", hint: "An der Universität" },
-                    { de: "die Karriere, -n", en: "career", hint: "Ziele im Berufsleben" },
-                    { de: "verdienen", en: "to earn", hint: "Geld und Arbeit" },
-                    { de: "der Feierabend", en: "closing time, home time", hint: "Nach der Arbeit" },
-                    { de: "fleißig", en: "hardworking", hint: "Eigenschaften" },
-                    { de: "die Prüfung, -en", en: "test, exam", hint: "Akademische Hürden" },
-                    { de: "früher", en: "formerly, in the past", hint: "Zeitangaben" },
-                    { de: "die Bewerbung, -en", en: "application", hint: "Einen Job suchen" },
-                    { de: "der Job, -s", en: "job", hint: "Erwerbstätigkeit" },
-                    { de: "der Weihnachtsmarkt, \"-e", en: "Christmas market", hint: "Saisonale Arbeit" }
+                    { de: "das Studium, Studien", en: "studies", hint: "An der Universität" }[cite: 1],
+                    { de: "die Karriere, -n", en: "career", hint: "Ziele im Berufsleben" }[cite: 1],
+                    { de: "verdienen", en: "to earn", hint: "Geld und Arbeit" }[cite: 1],
+                    { de: "der Feierabend", en: "closing time, home time", hint: "Nach der Arbeit" }[cite: 1],
+                    { de: "fleißig", en: "hardworking", hint: "Eigenschaften" }[cite: 1],
+                    { de: "die Prüfung, -en", en: "test, exam", hint: "Akademische Hürden" }[cite: 1],
+                    { de: "früher", en: "formerly, in the past", hint: "Zeitangaben" }[cite: 1],
+                    { de: "die Bewerbung, -en", en: "application", hint: "Einen Job suchen" }[cite: 1],
+                    { de: "der Job, -s", en: "job", hint: "Erwerbstätigkeit" }[cite: 1],
+                    { de: "der Weihnachtsmarkt, \"-e", en: "Christmas market", hint: "Saisonale Arbeit" }[cite: 1]
                 ]
             },
             {
                 id: "kapitel-11", num: "Kapitel 11", name: "Die Jacke gefällt mir!", emoji: "🧥",
                 items: [
-                    { de: "gefallen, er gefällt", en: "to please / to like", hint: "Geschmack ausdrücken" },
-                    { de: "die Jacke, -n", en: "jacket", hint: "Kleidungsstücke" },
-                    { de: "eng", en: "tight", hint: "Passform von Kleidern" },
-                    { de: "das Hemd, -en", en: "shirt", hint: "Herrenmode" },
-                    { de: "die Hose, -n", en: "trousers", hint: "Kleidung" },
-                    { de: "der Rock, \"-e", en: "skirt", hint: "Damenmode" },
-                    { de: "der Anzug, \"-e", en: "suit", hint: "Formelle Kleidung" },
-                    { de: "das Kleid, -er", en: "dress", hint: "Kleidung" },
-                    { de: "der Pullover, -", en: "jumper", hint: "Wintermode" },
-                    { de: "tragen, er trägt", en: "to wear", hint: "Kleidung am Körper" }
+                    { de: "gefallen, er gefällt", en: "to please / to like", hint: "Geschmack ausdrücken" }[cite: 1],
+                    { de: "die Jacke, -n", en: "jacket", hint: "Kleidungsstücke" }[cite: 1],
+                    { de: "eng", en: "tight", hint: "Passform von Kleidern" }[cite: 1],
+                    { de: "das Hemd, -en", en: "shirt", hint: "Herrenmode" }[cite: 1],
+                    { de: "die Hose, -n", en: "trousers", hint: "Kleidung" }[cite: 1],
+                    { de: "der Rock, \"-e", en: "skirt", hint: "Damenmode" }[cite: 1],
+                    { de: "der Anzug, \"-e", en: "suit", hint: "Formelle Kleidung" }[cite: 1],
+                    { de: "das Kleid, -er", en: "dress", hint: "Kleidung" }[cite: 1],
+                    { de: "der Pullover, -", en: "jumper", hint: "Wintermode" }[cite: 1],
+                    { de: "tragen, er trägt", en: "to wear", hint: "Kleidung am Körper" }[cite: 1]
                 ]
             },
             {
                 id: "kapitel-12", num: "Kapitel 12", name: "Ab in den Urlaub!", emoji: "✈️",
                 items: [
-                    { de: "das Gepäck (Sg.)", en: "luggage", hint: "Reisevorbereitung" },
-                    { de: "der Reiseführer, -", en: "travel guide", hint: "Informationsmedien" },
-                    { de: "das Doppelzimmer, -", en: "twin room", hint: "Im Hotel" },
-                    { de: "das Einzelzimmer, -", en: "single room", hint: "Im Hotel" },
-                    { de: "der Pass, \"-e", en: "passport", hint: "Reisedokumente" },
-                    { de: "reservieren", en: "to book", hint: "Unterkunft sichern" },
-                    { de: "die Sehenswürdigkeit, -en", en: "tourist attraction", hint: "Städtetrip Highlights" },
-                    { de: "der Berg, -e", en: "mountain", hint: "Landschaften" },
-                    { de: "schneien", en: "to snow", hint: "Wetterbedingungen" },
-                    { de: "sonnig", en: "sunny", hint: "Wetterberichte" }
+                    { de: "das Gepäck (Sg.)", en: "luggage", hint: "Reisevorbereitung" }[cite: 1],
+                    { de: "der Reiseführer, -", en: "travel guide", hint: "Informationsmedien" }[cite: 1],
+                    { de: "das Doppelzimmer, -", en: "twin room", hint: "Im Hotel" }[cite: 1],
+                    { de: "das Einzelzimmer, -", en: "single room", hint: "Im Hotel" }[cite: 1],
+                    { de: "der Pass, \"-e", en: "passport", hint: "Reisedokumente" }[cite: 1],
+                    { de: "reservieren", en: "to book", hint: "Unterkunft sichern" }[cite: 1],
+                    { de: "die Sehenswürdigkeit, -en", en: "tourist attraction", hint: "Städtetrip Highlights" }[cite: 1],
+                    { de: "der Berg, -e", en: "mountain", hint: "Landschaften" }[cite: 1],
+                    { de: "schneien", en: "to snow", hint: "Wetterbedingungen" }[cite: 1],
+                    { de: "sonnig", en: "sunny", hint: "Wetterberichte" }[cite: 1]
                 ]
             }
         ];
@@ -796,12 +797,13 @@
         function updateFlashcardUi() {
             document.getElementById('ui-interactive-card').classList.remove('flipped');
             isFlipped = false;
-            document.getElementById('ui-fc-srs-controls').style.display = 'none';
+            
+            // Penguncian visibilitas rating dikembalikan ke mode sembunyi di awal kartu baru
+            document.getElementById('ui-fc-srs-controls').style.visibility = 'hidden';
             document.getElementById('ui-fc-hint').style.display = 'block';
 
             const activeWord = currentDeckContext.items[fcIndex];
             
-            // Pengaturan Judul Bab, Indikator dan Bar Progress sesuai gambar
             document.getElementById('ui-fc-chapter-title').textContent = `${currentDeckContext.emoji || '📚'} ${currentDeckContext.num}: ${currentDeckContext.name}`;
             document.getElementById('ui-fc-counter').textContent = `Card ${fcIndex + 1} of ${currentDeckContext.items.length}`;
             document.getElementById('ui-fc-progress-bar').style.width = `${((fcIndex + 1) / currentDeckContext.items.length) * 100}%`;
@@ -811,29 +813,32 @@
             document.getElementById('ui-fc-back-word').textContent = activeWord.en;
         }
 
+        // UPGRADE TOGGLE FLIP: Sekarang kartu bisa dibolak-balik tanpa batasan klik
         window.flipActiveCard = () => {
-            if(isFlipped) return;
-            document.getElementById('ui-interactive-card').classList.add('flipped');
-            isFlipped = true;
-            document.getElementById('ui-fc-hint').style.display = 'none';
-            document.getElementById('ui-fc-srs-controls').style.display = 'flex';
+            const cardElement = document.getElementById('ui-interactive-card');
+            
+            if (!isFlipped) {
+                cardElement.classList.add('flipped');
+                isFlipped = true;
+                document.getElementById('ui-fc-srs-controls').style.visibility = 'visible'; // Memunculkan tombol srs rating
+            } else {
+                cardElement.classList.remove('flipped');
+                isFlipped = false;
+            }
         };
 
-        // Fungsi Audio Pronunciation Native Web Speech API Jerman de-DE
         window.triggerVoiceSpeech = (event) => {
-            if (event) event.stopPropagation(); // Mencegah kartu terbalik secara tidak sengaja ketika tombol diklik
+            if (event) event.stopPropagation(); 
             if (!currentDeckContext) return;
             
             const targetWord = currentDeckContext.items[fcIndex].de;
-            
-            // Membersihkan teks tambahan metadata jamak agar pelafalan TTS bersih
             const cleanWord = targetWord.split(',')[0].replace(/\"/g, '');
 
             if ('speechSynthesis' in window) {
                 const utterance = new SpeechSynthesisUtterance(cleanWord);
                 utterance.lang = 'de-DE';
-                utterance.rate = 0.85; // Sedikit diperlambat agar artikulasi A1 terdengar jelas
-                window.speechSynthesis.cancel(); // Menghentikan audio antrean sebelumnya
+                utterance.rate = 0.85; 
+                window.speechSynthesis.cancel(); 
                 window.speechSynthesis.speak(utterance);
             } else {
                 alert("Browser ini belum mendukung fitur Text-to-Speech.");
@@ -904,7 +909,7 @@
                     btn.className = 'matrix-btn';
                     btn.textContent = opt;
                     btn.onclick = () => parseSelection(btn, opt, q.englishWord);
-                    container.appendChild(btn);
+                    mcOptionsBox.appendChild(btn);
                 });
             } else {
                 typeBadge.textContent = "Active Recall Stage";
