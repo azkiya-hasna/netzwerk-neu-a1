@@ -1064,4 +1064,3 @@ export const NETZWERK_DATA_MAPPING = [
         ]
     }
 ];
-];
