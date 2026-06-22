@@ -1408,5 +1408,5 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "das Verbot, -e", en: "prohibition", hint: "Kurz und klar" },
             { de: "wieder|geben", en: "to recite / repeat / render", hint: "er gibt wieder, hat wiedergegeben (Kurz und klar)" }
         ]
-    }
+    },
 ];
