@@ -1121,7 +1121,7 @@ export const NETZWERK_DATA_MAPPING = [
         id: "kapitel-7-5a-5f", num: "Kapitel 7 (5a-5f)", name: "Wohin gehst du? & Bank", emoji: "🏦",
         items: [
             { de: "nach Hause", en: "(toward) home", hint: "5a" },
-            { de: "wohin", en: whereto / where to?", hint: "5a" },
+            { de: "wohin", en: "whereto / where to?", hint: "5a" },
             { de: "der Automat, -en", en: "vending machine / ATM", hint: "5a ÜB" },
             { de: "bar", en: "in cash", hint: "Zahlen Sie bar oder mit Karte? (5a ÜB)" },
             { de: "genug", en: "enough", hint: "5a ÜB" },
