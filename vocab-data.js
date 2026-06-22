@@ -1769,7 +1769,7 @@ export const NETZWERK_DATA_MAPPING = [
         ]
     },
     {
-        id: "kapitel-11-8b-kurz", num: "Kapitel 11 (8b-KK)", name: "Kaufhaus & Berlin", emoji: "🏢",
+        id: "kapitel-11-8b-10a-p1", num: "Kapitel 11 (8b-10a P1)", name: "Kaufhaus & Mode-Abteilungen", emoji: "🏢",
         items: [
             { de: "an|probieren", en: "to try on", hint: "8b" },
             { de: "aus|ziehen", en: "to take off", hint: "er zieht aus, hat ausgezogen (8b)" },
@@ -1803,7 +1803,12 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "das Untergeschoss, -e", en: "basement", hint: "10a" },
             { de: "der USB-Stick, -s", en: "USB stick", hint: "10a" },
             { de: "die Zeitschrift, -en", en: "magazine", hint: "10a" },
-            { de: "das Produkt, -e", en: "product", hint: "10b" },
+            { de: "das Produkt, -e", en: "product", hint: "10b" }
+        ]
+    },
+    {
+        id: "kapitel-11-10c-11b", num: "Kapitel 11 (10c-11b)", name: "Kaufhaus & Öffnungszeiten", emoji: "📢",
+        items: [
             { de: "der Bleistift, -e", en: "pencil", hint: "10c" },
             { de: "kaputt", en: "broken", hint: "10c" },
             { de: "das Papier, -e", en: "paper", hint: "10c" },
@@ -1818,7 +1823,12 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "das Schild, -er", en: "sign", hint: "11b ÜB" },
             { de: "schließen", en: "to close", hint: "er schließt, hat geschlossen (11b ÜB)" },
             { de: "zu sein", en: "to be closed", hint: "11b ÜB" },
-            { de: "zu haben", en: "to be closed", hint: "er hat zu, hat zugehabt (11b ÜB)" },
+            { de: "zu haben", en: "to be closed", hint: "er hat zu, hat zugehabt (11b ÜB)" }
+        ]
+    },
+    {
+        id: "kapitel-11-12a-kurz", num: "Kapitel 11 (12a-KK)", name: "Berlin, Design & Grammatik", emoji: "🎨",
+        items: [
             { de: "das Atelier, -s", en: "studio", hint: "12a" },
             { de: "attraktiv", en: "attractive", hint: "12a" },
             { de: "auf jeden Fall", en: "in any case", hint: "12a" },
