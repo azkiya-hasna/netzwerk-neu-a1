@@ -1408,7 +1408,7 @@ export const NETZWERK_DATA_MAPPING = [
         ]
     },
     {
-        id: "kapitel-8-12a-kurz", num: "Kapitel 8 (12a-KK)", name: "Hausmittel & Spitalberufe", emoji: "🥣",
+        id: "kapitel-8-12a-12c", num: "Kapitel 8 (12a-12c)", name: "Hausmittel & Forumstipps", emoji: "🥣",
         items: [
             { de: "der Honig (Sg.)", en: "honey", hint: "12a" },
             { de: "die Hühnersuppe, -n", en: "chicken soup", hint: "12a" },
@@ -1428,7 +1428,12 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "der Tipp, -s", en: "tip", hint: "12b" },
             { de: "versuchen", en: "to try", hint: "12b" },
             { de: "aufhangen", en: "to hang up", hint: "12c" },
-            { de: "der Zettel, -", en: "note", hint: "12c" },
+            { de: "der Zettel, -", en: "note", hint: "12c" }
+        ]
+    },
+    {
+        id: "kapitel-8-13a-kurz", num: "Kapitel 8 (13a-KK)", name: "Spitalberufe & Kurz und klar", emoji: "🩺",
+        items: [
             { de: "anstrengend", en: "exhausting", hint: "13a" },
             { de: "das Blut (Sg.)", en: "blood", hint: "13a" },
             { de: "das Ergebnis, -se", en: "result", hint: "13a" },
