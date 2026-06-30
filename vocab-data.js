@@ -1034,7 +1034,7 @@ export const NETZWERK_DATA_MAPPING = [
         ]
     },
     {
-        id: "kapitel-6-6aub-12b", num: "Kapitel 6 (6aÜB-12b)", name: "Im Restaurant", emoji: "🍽️",
+        id: "kapitel-6-6aub-10b", num: "Kapitel 6 (6aÜB-10b)", name: "Restaurant & Akkusativ Pronomen", emoji: "🍽️",
         items: [
             { de: "mit|machen", en: "to join in / participate", hint: "6a ÜB" },
             { de: "der Regen, -", en: "rain", hint: "6a ÜB" },
@@ -1058,7 +1058,12 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "ihn", en: "him (accusative pronoun)", hint: "10b" },
             { de: "mich", en: "me (accusative pronoun)", hint: "10b" },
             { de: "sie", en: "her / them", hint: "Das Schnitzel ist für sie. (10b)" },
-            { de: "der Teil, -e", en: "part", hint: "10b" },
+            { de: "der Teil, -e", en: "part", hint: "10b" }
+        ]
+    },
+    {
+        id: "kapitel-6-10c-12b", num: "Kapitel 6 (10c-12b)", name: "Speisekarte & Bezahlen", emoji: "💶",
+        items: [
             { de: "passieren", en: "to happen", hint: "ist passiert (10c)" },
             { de: "verboten", en: "forbidden / prohibited", hint: "10c" },
             { de: "das Eis (Sg.)", en: "ice cream / ice", hint: "11" },
@@ -1082,7 +1087,7 @@ export const NETZWERK_DATA_MAPPING = [
         ]
     },
     {
-        id: "kapitel-6-13a-kurz", num: "Kapitel 6 (13a-KK)", name: "Lokale & Kurz und klar", emoji: "🍻",
+        id: "kapitel-6-12bub-14a", num: "Kapitel 6 (12bÜB-14a)", name: "Kneipen & Biergarten", emoji: "🍻",
         items: [
             { de: "danke schön", en: "thank you very much", hint: "12b ÜB" },
             { de: "der Durst (Sg.)", en: "thirst", hint: "13a" },
@@ -1111,14 +1116,19 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "typisch", en: "typical", hint: "14a" },
             { de: "überall", en: "everywhere", hint: "14a" },
             { de: "voll", en: "full", hint: "Die Kneipe ist am Abend voll. (14a)" },
-            { de: "das Wetter, -", en: "weather", hint: "14a" },
+            { de: "das Wetter, -", en: "weather", hint: "14a" }
+        ]
+    },
+    {
+        id: "kapitel-6-15a-kurz", num: "Kapitel 6 (15a-KK)", name: "Veranstaltungen & Event-Lust", emoji: "🏃",
+        items: [
             { de: "die Anmeldung, -en", en: "application / registration", hint: "die Anmeldung zum Marathon (15a)" },
             { de: "die Anzeige, -n", en: "advertisement / ad", hint: "15a" },
             { de: "die Atmosphäre (Sg.)", en: "atmosphere", hint: "15a" },
             { de: "auf|passen", en: "to pay attention / watch out", hint: "15a" },
             { de: "der Beginn (Sg.)", en: "beginning", hint: "15a" },
             { de: "beginnen", en: "to begin", hint: "hat begonnen (15a)" },
-            { de: "besondere, besonderer", en: "special", hint: "15a" },
+            { de: "bare, besonderer", en: "special", hint: "15a" },
             { de: "das Double Feature, -s", en: "double feature (cinema)", hint: "15a" },
             { de: "der Eintritt, -e", en: "entrance / admission fee", hint: "15a" },
             { de: "enden", en: "to end", hint: "15a" },
