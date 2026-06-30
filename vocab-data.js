@@ -747,42 +747,47 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "der Vormittag, -e", en: "morning (before noon)", hint: "9c" }
         ]
     },
-    {
-        id: "kapitel-4-10a-kurz", num: "Kapitel 4 (10a-KK)", name: "Küchenberufe & Mindmap", emoji: "👨‍🍳",
+   {
+        id: "kapitel-4-10a-10c", num: "Kapitel 4 (10a-10c)", name: "Mindmap & Assoziation", emoji: "🧠",
         items: [
             { de: "die Mindmap, -s", en: "mind map", hint: "10a" },
             { de: "das Paar, -e", en: "pair / couple", hint: "10b" },
             { de: "das Thema, Themen", en: "topic / theme", hint: "10b" },
             { de: "die Assoziation, -en", en: "association", hint: "10c" },
-            { de: "ein|fallen", en: "to come to mind", hint: "es fällt ein, ist eingefallen (10c)" },
+            { de: "ein|fallsen", en: "to think of / come to mind", hint: "es fällt ein, ist eingefallen (10c)" },
             { de: "frei", en: "free", hint: "Sammeln Sie freie Assoziationen. (10c)" },
             { de: "die Methode, -n", en: "method", hint: "10c" },
             { de: "thematisch", en: "topical / thematic", hint: "10c" },
-            { de: "die Wortgruppe, -n", en: "word group", hint: "10c" },
-            { de: "rund um", en: "all around / all about", hint: "Berufe rund ums Essen (11)" },
-            { de: "als", en: "as", hint: "Max arbeitet als Koch. (11)" },
+            { de: "die Wortgruppe, -n", en: "word group", hint: "10c" }
+        ]
+    },
+    {
+        id: "kapitel-4-11-kurz", num: "Kapitel 4 (11-KK)", name: "Berufe rund ums Essen", emoji: "👨‍🍳",
+        items: [
+            { de: "rund um", en: "all about / all around", hint: "Berufe rund ums Essen (11)" },
+            { de: "als", en: "as", hint: "Max Schmidt arbeitet seit zwei Jahren als Koch. (11)" },
             { de: "die Altstadt, \"-e", en: "historic city / old town", hint: "11" },
-            { de: "am", en: "at the / on the", hint: "Max ist Koch am Bodensee. (11)" },
+            { de: "am", en: "at / on", hint: "Max Schmidt ist Koch am Bodensee. (11)" },
             { de: "die Arbeitszeit, -en", en: "working hours", hint: "11" },
             { de: "beantworten", en: "to answer", hint: "11" },
             { de: "der Champignon, -s", en: "mushroom", hint: "11" },
-            { de: "Chef", en: "boss / chef (male)", hint: "11" },
-            { de: "die Chefin, -nen", en: "boss (female)", hint: "11" },
+            { de: "der Chef, -s", en: "boss (m)", hint: "11" },
+            { de: "die Chefin, -nen", en: "boss (f)", hint: "11" },
             { de: "das Dessert, -s", en: "dessert", hint: "11" },
-            { de: "echt", en: "really / real", hint: "Das ist dann echt stressig! (11)" },
+            { de: "echt", en: "really / genuinely", hint: "Das ist dann echt stressig! (11)" },
             { de: "das Fischgericht, -e", en: "fish dish", hint: "11" },
             { de: "frisch", en: "fresh", hint: "11" },
-            { de: "das Gericht, -e", en: "dish / meal", hint: "11" },
+            { de: "das Gericht, -e", en: "meal / dish", hint: "11" },
             { de: "helfen", en: "to help", hint: "er hilft, hat geholfen (11)" },
             { de: "klein", en: "small", hint: "11" },
             { de: "kreativ", en: "creative", hint: "11" },
             { de: "länger", en: "longer", hint: "11" },
-            { de: "natürlich", en: "of course / naturally", hint: "11" },
-            { de: "nett", en: "nice / kind", hint: "11" },
+            { de: "natürlich", en: "of course / naturally", hint: "Das ist natürlich nicht so schön. (11)" },
+            { de: "nett", en: "nice", hint: "11" },
             { de: "normalerweise", en: "normally", hint: "11" },
             { de: "probieren", en: "to try / taste", hint: "11" },
             { de: "schälen", en: "to peel", hint: "11" },
-            { de: "schneiden", en: "to cut / chop", hint: "er schneidet, hat geschnitten (11)" },
+            { de: "schneiden", en: "to cut / chop", hint: "Er schneidet das Gemüse. (11)" },
             { de: "seit", en: "since / for", hint: "seit zwei Jahren (11)" },
             { de: "der Spaß (Sg.)", en: "fun", hint: "Kochen macht Spaß. (11)" },
             { de: "stressig", en: "stressful", hint: "11" },
@@ -792,9 +797,10 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "wichtig", en: "important", hint: "11" },
             { de: "zu|bereiten", en: "to prepare / cook", hint: "11" },
             { de: "zurück", en: "back", hint: "11" },
+            { de: "die Zwiebel, -n", en: "onion", hint: "11" },
             { de: "führen", en: "to lead / have", hint: "ein Gespräch führen (Kurz und klar)" },
             { de: "unregelmäßig", en: "irregular", hint: "unregelmäßige Verben (Kurz und klar)" },
-            { de: "die Vorliebe, -n", en: "preference / liking", hint: "Kurz und klar" }
+            { de: "die Vorliebe, -n", en: "preference", hint: "Kurz und klar" }
         ]
     },
     // ==========================================
