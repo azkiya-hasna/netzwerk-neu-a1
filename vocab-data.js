@@ -1510,12 +1510,12 @@ export const NETZWERK_DATA_MAPPING = [
         ]
     },
     {
-        id: "kapitel-9-3a-6b", num: "Kapitel 9 (3a-6b)", name: "Wohnungssuche & Umzug", emoji: "📦",
+        id: "kapitel-9-3a-3d", num: "Kapitel 9 (3a-3d)", name: "Wohnungssuche & Anzeigen", emoji: "🔍",
         items: [
             { de: "hell", en: "light / bright", hint: "3a" },
             { de: "maximal", en: "maximally / maximum", hint: "3a" },
             { de: "qm", en: "square metre / sq m", hint: "Quadratmeter (3a)" },
-            { de: "die Terrasse, -n", en: "patio / terrace", hint: "3a" },
+            { de: "die Terrasse, -n", en: "add / patio / terrace", hint: "3a" },
             { de: "ungefähr", en: "approximately / roughly", hint: "3a" },
             { de: "die Wohnungssuche (Sg.)", en: "flat search", hint: "3a" },
             { de: "das Zentrum, Zentren", en: "centre", hint: "3a" },
@@ -1537,7 +1537,12 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "die Wohnungsanzeige, -n", en: "advertisement for a flat", hint: "3c" },
             { de: "zentral", en: "central", hint: "3c" },
             { de: "dunkel", en: "dark", hint: "3d" },
-            { de: "günstig", en: "low-priced / favorable", hint: "3d" },
+            { de: "günstig", en: "low-priced / favorable", hint: "3d" }
+        ]
+    },
+    {
+        id: "kapitel-9-4a-6b", num: "Kapitel 9 (4a-6b)", name: "Umzug & Einweihungsfeier", emoji: "📦",
+        items: [
             { de: "stellen", en: "to put / place vertically", hint: "Carla will den Computer in die Küche stellen. (4a)" },
             { de: "aus|füllen", en: "to fill in (a form)", hint: "4a ÜB" },
             { de: "besichtigen", en: "to view / inspect (a flat)", hint: "4f" },
@@ -1567,7 +1572,7 @@ export const NETZWERK_DATA_MAPPING = [
         ]
     },
     {
-        id: "kapitel-9-7a-kurz", num: "Kapitel 9 (7a-KK)", name: "Farben & Wohnformen", emoji: "🎨",
+        id: "kapitel-9-6b-10a", num: "Kapitel 9 (6b-10a)", name: "Wechselpräpositionen & Hausformen", emoji: "🎨",
         items: [
             { de: "über", en: "over / above", hint: "Das Bild ist über dem Fernseher. (6b)" },
             { de: "unter", en: "under / beneath", hint: "6b" },
@@ -1595,7 +1600,12 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "der Garten, \"-", en: "garden", hint: "10a" },
             { de: "das Hochhaus, \"-er", en: "skyscraper / high-rise building", hint: "10a" },
             { de: "das Holz, \"-er", en: "wood", hint: "10a" },
-            { de: "das Loft, -s", en: "loft", hint: "10a" },
+            { de: "das Loft, -s", en: "loft", hint: "10a" }
+        ]
+    },
+    {
+        id: "kapitel-9-10a-kurz", num: "Kapitel 9 (10a-KK)", name: "Wohnformen & Kurz und klar", emoji: "🏡",
+        items: [
             { de: "der Raum, \"-e", en: "room / space", hint: "10a" },
             { de: "das Reihenhaus, \"-er", en: "townhouse / terraced house", hint: "10a" },
             { de: "die Treppe, -n", en: "stairs / staircase", hint: "10a" },
@@ -1612,7 +1622,7 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "das Erdgeschoss, -e", en: "ground level / ground floor", hint: "11a" },
             { de: "die Lage, -n", en: "location / position", hint: "11a" },
             { de: "nie", en: "never", hint: "11a" },
-            { de: "weit", en: "far", hint: "Von hier ist es nicht weit zur Uni. (11a)" },
+            { de: "weit", en: "far", hint: "Von hier ist es tidak weit zur Uni. (11a)" },
             { de: "die WG, -s", en: "flat share / shared apartment", hint: "Wohngemeinschaft (11b)" },
             { de: "die Wohn-Situation, -en", en: "living situation", hint: "11b" },
             { de: "zufrieden", en: "satisfied", hint: "11b" },
