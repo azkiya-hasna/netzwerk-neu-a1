@@ -1897,7 +1897,7 @@ export const NETZWERK_DATA_MAPPING = [
         ]
     },
     {
-        id: "kapitel-11-12a-kurz", num: "Kapitel 11 (12a-KK)", name: "Berlin, Design & Grammatik", emoji: "🎨",
+        id: "kapitel-11-12a-12b-p1", num: "Kapitel 11 (12a-12b P1)", name: "Berlin & Designszene", emoji: "🎨",
         items: [
             { de: "das Atelier, -s", en: "studio", hint: "12a" },
             { de: "attraktiv", en: "attractive", hint: "12a" },
@@ -1924,7 +1924,12 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "bequem", en: "comfortable", hint: "12b" },
             { de: "der Deckel, -", en: "lid", hint: "12b" },
             { de: "der Flagship-Store, -s", en: "flagship store", hint: "12b" },
-            { de: "der Haushalt, -e", en: "household", hint: "12b" },
+            { de: "der Haushalt, -e", en: "household", hint: "12b" }
+        ]
+    },
+    {
+        id: "kapitel-11-12b-p2-kurz", num: "Kapitel 11 (12b P2-KK)", name: "Shopping-Trends & Grammatik", emoji: "🛍️",
+        items: [
             { de: "der Individualist, -en", en: "individualist (m)", hint: "12b" },
             { de: "die Individualistin, -nen", en: "individualist (f)", hint: "12b" },
             { de: "das Modell, -e", en: "model", hint: "12b" },
