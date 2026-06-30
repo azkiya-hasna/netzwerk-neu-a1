@@ -1995,7 +1995,7 @@ export const NETZWERK_DATA_MAPPING = [
         ]
     },
     {
-        id: "kapitel-12-3a-6a", num: "Kapitel 12 (3a-6a)", name: "Hotel & Wegbeschreibung", emoji: "🏨",
+        id: "kapitel-12-3a-4a", num: "Kapitel 12 (3a-4a)", name: "Hotelreservierung & Routen", emoji: "🏨",
         items: [
             { de: "die Städtereise, -n", en: "city trip", hint: "3a" },
             { de: "die Stadtführung, -en", en: "tour of the city", hint: "3a" },
@@ -2005,7 +2005,7 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "die Daten (Pl.)", en: "files", hint: "3a ÜB" },
             { de: "das Doppelzimmer, -", en: "twin room", hint: "3a ÜB" },
             { de: "das Einzelzimmer, -", en: "single room", hint: "3a ÜB" },
-            { de: "die Karte, -n", en: "card", hint: "Sie können mit Karte atau bar zahlen. (3a ÜB)" },
+            { de: "die Karte, -n", en: "card", hint: "Sie können mit Karte oder bar zahlen. (3a ÜB)" },
             { de: "die Papiere (Pl.)", en: "documents", hint: "Ich brauche Ihre Papiere. (3a ÜB)" },
             { de: "der Pass, \"-e", en: "passport", hint: "3a ÜB" },
             { de: "reservieren", en: "to book", hint: "3a ÜB" },
@@ -2022,7 +2022,12 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "ein|steigen", en: "to board", hint: "er steigt ein, ist eingestiegen (4a)" },
             { de: "die Haltestelle, -n", en: "station", hint: "4a" },
             { de: "die Route, -n", en: "route", hint: "4a" },
-            { de: "um|steigen", en: "to transfer", hint: "er steigt um, ist umgestiegen (4a)" },
+            { de: "um|steigen", en: "to transfer", hint: "er steigt um, ist umgestiegen (4a)" }
+        ]
+    },
+    {
+        id: "kapitel-12-4b-6a", num: "Kapitel 12 (4b-6a)", name: "U-Bahn, Postkarten & Sehenswürdigkeiten", emoji: "🚇",
+        items: [
             { de: "benutzen", en: "to use", hint: "4b" },
             { de: "die Nummer, -n", en: "number", hint: "4b" },
             { de: "der Platz, \"-e", en: "square", hint: "Das Kino ist am Potsdamer Platz. (4b ÜB)" },
@@ -2037,8 +2042,8 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "der Flughafen, \"-", en: "airport", hint: "4b ÜB" },
             { de: "gegenüber", en: "across from", hint: "4b ÜB" },
             { de: "das Gleis, -e", en: "track", hint: "4b ÜB" },
-            { de: "nehmen", en: "to take", hint: "Nehmen Sie den Bus Nummer 18. (4b ÜB)" },
-            { de: "denn", en: "because", hint: "In Basel ist es schön, denn man kann viel machen. (5a)" },
+            { de: "nehmen", en: "to take", hint: "Nehmen Sie den Bus. (4b ÜB)" },
+            { de: "denn", en: "because", hint: "Ich reise gern, denn ich lerne neue Orte kennen. (5a)" },
             { de: "die Postkarte, -n", en: "postcard", hint: "5a" },
             { de: "shoppen gehen", en: "to go shopping", hint: "er geht shoppen, ist shoppen gegangen (5b)" },
             { de: "die Tante, -n", en: "aunt", hint: "5b" },
@@ -2048,7 +2053,7 @@ export const NETZWERK_DATA_MAPPING = [
         ]
     },
     {
-        id: "kapitel-12-7a-kurz", num: "Kapitel 12 (7a-KK)", name: "Reisebericht & Wetter", emoji: "🌦️",
+        id: "kapitel-12-7a-7d", num: "Kapitel 12 (7a-7d)", name: "Reisebericht & Erlebnisse", emoji: "🎒",
         items: [
             { de: "die Auskunft, \"-e", en: "information", hint: "Auskunft geben (7a)" },
             { de: "außerhalb", en: "outside of", hint: "7a" },
@@ -2060,7 +2065,7 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "die Jugendherberge, -n", en: "youth hostel", hint: "7a" },
             { de: "k.o.", en: "tired", hint: "7a" },
             { de: "los|fahren", en: "to leave", hint: "er fährt los, ist losgefahren (7a)" },
-            { de: "der Mann, \"-er", en: "boy", hint: "Mann, bin ich froh! (7a)" },
+            { de: "der Mann, \"-er", en: "man / boy", hint: "Mann, bin ich froh! (7a)" },
             { de: "die Pension, -en", en: "guesthouse", hint: "7a" },
             { de: "der Reisebericht, -e", en: "travelogue", hint: "7a" },
             { de: "sauber", en: "clean", hint: "7a" },
@@ -2083,7 +2088,12 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "das Skifahren (Sg.)", en: "to ski", hint: "7c" },
             { de: "das Video, -s", en: "video", hint: "7c" },
             { de: "das Deutschbuch, \"-er", en: "German book", hint: "7d" },
-            { de: "wunderbar", en: "wonderful", hint: "7d" },
+            { de: "wunderbar", en: "wonderful", hint: "7d" }
+        ]
+    },
+    {
+        id: "kapitel-12-8b-11d", num: "Kapitel 12 (8b-11d)", name: "Himmelsrichtungen & Wetterbericht", emoji: "🌦️",
+        items: [
             { de: "der Flug, \"-e", en: "flight", hint: "8b" },
             { de: "die Wortliste, -n", en: "word list", hint: "10c" },
             { de: "die Himmelsrichtung, -en", en: "cardinal direction", hint: "11a" },
@@ -2112,7 +2122,12 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "die Hitze (Sg.)", en: "heat", hint: "11d" },
             { de: "das Mistwetter (Sg.)", en: "bad weather", hint: "11d" },
             { de: "schütten", en: "to pour", hint: "Es schüttet, so ein Regen! (11d)" },
-            { de: "selten", en: "rarely", hint: "11d" },
+            { de: "selten", en: "rarely", hint: "11d" }
+        ]
+    },
+    {
+        id: "kapitel-12-12a-kurz", num: "Kapitel 12 (12a-KK)", name: "Reiseziele & Kurz und klar", emoji: "🌴",
+        items: [
             { de: "einmal", en: "once", hint: "12a" },
             { de: "das Reiseziel, -e", en: "(travel) destination", hint: "12a" },
             { de: "der Abschnitt, -e", en: "section / paragraph", hint: "12b" },
