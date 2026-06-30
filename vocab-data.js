@@ -841,7 +841,7 @@ export const NETZWERK_DATA_MAPPING = [
         ]
     },
     {
-        id: "kapitel-5-7a-9", num: "Kapitel 5 (7a-9)", name: "Familie & Verwandte", emoji: "👪",
+        id: "kapitel-5-7a-7b", num: "Kapitel 5 (7a-7b)", name: "Termine & Kernfamilie", emoji: "📅",
         items: [
             { de: "der Englisch-Test, -s", en: "English test", hint: "7a" },
             { de: "der Geburtstag, -e", en: "birthday", hint: "7a" },
@@ -865,10 +865,15 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "telefonieren", en: "to telephone / talk on phone", hint: "7b" },
             { de: "die Tochter, \"-", en: "daughter", hint: "7b" },
             { de: "der Trompetenunterricht (Sg.)", en: "trumpet lessons", hint: "7b" },
-            { de: "der Vater, \"-", en: "father", hint: "7b" },
+            { de: "der Vater, \"-", en: "father", hint: "7b" }
+        ]
+    },
+    {
+        id: "kapitel-5-8a-9", num: "Kapitel 5 (8a-9)", name: "Verwandtschaft & Grammatik", emoji: "👪",
+        items: [
             { de: "beschreiben", en: "to describe", hint: "er beschreibt, hat beschrieben (8a)" },
             { de: "der Bruder, \"-", en: "brother", hint: "8a" },
-            { de: "gehen", en: "to go (to a school)", hint: "Meine Kinder gehen in die Schule. (8a)" },
+            { de: "gehen", en: "to go (to a school)", hint: "Meine Residential-Kinder gehen in die Schule. (8a)" },
             { de: "ledig", en: "single / unmarried", hint: "8a" },
             { de: "der Possessivartikel, -", en: "possessive article", hint: "8a" },
             { de: "die Schwester, -n", en: "sister", hint: "8a" },
@@ -890,7 +895,7 @@ export const NETZWERK_DATA_MAPPING = [
         ]
     },
     {
-        id: "kapitel-5-10a-12", num: "Kapitel 5 (10a-12)", name: "Gästebuch & Verabredung", emoji: "📆",
+        id: "kapitel-5-10a-11a", num: "Kapitel 5 (10a-11a)", name: "Homepage & Haustiere", emoji: "🐹",
         items: [
             { de: "der Ball, \"-e", en: "ball", hint: "10a" },
             { de: "das Gästebuch, \"-er", en: "guestbook", hint: "10a" },
@@ -914,7 +919,12 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "plus", en: "plus", hint: "11a" },
             { de: "das Pronomen, -", en: "pronoun", hint: "11a" },
             { de: "der Stapel, -", en: "deck of cards / stack", hint: "11a" },
-            { de: "ziehen", en: "to draw / pull", hint: "er zieht, hat gezogen (11a)" },
+            { de: "ziehen", en: "to draw / pull", hint: "er zieht, hat gezogen (11a)" }
+        ]
+    },
+    {
+        id: "kapitel-5-11c-12", num: "Kapitel 5 (11c-12)", name: "Pläne & Modalverben", emoji: "🗓️",
+        items: [
             { de: "der Gruß, \"-e", en: "greeting", hint: "Liebe Grüße (11c)" },
             { de: "die Hausaufgabe, -n", en: "homework", hint: "11c" },
             { de: "können", en: "to be able to / can", hint: "er kann, hat gekonnt (11c)" },
