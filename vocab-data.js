@@ -449,7 +449,7 @@ export const NETZWERK_DATA_MAPPING = [
         ]
     },
     {
-        id: "kapitel-3-3-6c", num: "Kapitel 3 (3-6c)", name: "Verkehrsmittel & Glück", emoji: "🎫",
+        id: "kapitel-3-3-4c", num: "Kapitel 3 (3-4c)", name: "Artikel & Kursraumaktionen", emoji: "🎫",
         items: [
             { de: "okay", en: "okay", hint: "3" },
             { de: "der Plan, \"-e", en: "plan / map", hint: "3" },
@@ -464,7 +464,7 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "die Gruppe, -n", en: "group", hint: "4a" },
             { de: "passand", en: "matching / fitting", hint: "4a" },
             { de: "unbestimmt", en: "indefinite", hint: "der unbestimmte Artikel (4a)" },
-            { de: "das Haus, \"-er", en: "house", hint: "4a" },
+            { de: "das House, \"-er", en: "house", hint: "4a" },
             { de: "der Satz, \"-e", en: "sentence", hint: "4a" },
             { de: "doppelt", en: "double", hint: "4b" },
             { de: "der Konsonant, -en", en: "consonant", hint: "4b" },
@@ -473,7 +473,12 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "der Arm, -e", en: "arm", hint: "4c" },
             { de: "klopfen", en: "to knock / tap", hint: "4c" },
             { de: "kreisen", en: "to circle / rotate", hint: "4c" },
-            { de: "der Tisch, -e", en: "table", hint: "4c" },
+            { de: "der Tisch, -e", en: "table", hint: "4c" }
+        ]
+    },
+    {
+        id: "kapitel-3-5a-6c", num: "Kapitel 3 (5a-6c)", name: "Verkehrsmittel & Fahrkarten", emoji: "🚇",
+        items: [
             { de: "die Bildgeschichte, -n", en: "comic strip / picture story", hint: "5a" },
             { de: "der Bus, -se", en: "bus", hint: "5a" },
             { de: "das Fahrrad, \"-er", en: "bicycle / bike", hint: "5a" },
@@ -497,7 +502,7 @@ export const NETZWERK_DATA_MAPPING = [
         ]
     },
     {
-        id: "kapitel-3-7a-9d", num: "Kapitel 3 (7a-9d)", name: "Orientierung & Kulturevents", emoji: "🎭",
+        id: "kapitel-3-7a-8", num: "Kapitel 3 (7a-8)", name: "Orientierung & Wegbeschreibung", emoji: "📍",
         items: [
             { de: "links", en: "left / to the left", hint: "7a" },
             { de: "die Wegbeschreibung, -en", en: "directions", hint: "7a" },
@@ -511,7 +516,12 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "der Park, -s", en: "park", hint: "8" },
             { de: "der Start, -s", en: "starting line / start", hint: "8" },
             { de: "würfeln", en: "to roll the dice", hint: "8" },
-            { de: "das Ziel, -e", en: "goal / destination / finish line", hint: "8" },
+            { de: "das Ziel, -e", en: "goal / destination / finish line", hint: "8" }
+        ]
+    },
+    {
+        id: "kapitel-3-9a-9d", num: "Kapitel 3 (9a-9d)", name: "Kulturevents & Film", emoji: "🎭",
+        items: [
             { de: "an", en: "over / during", hint: "An 10 Tagen über 100 Filme. (9a)" },
             { de: "der Chor, \"-e", en: "choir", hint: "9a" },
             { de: "deutschsprachig", en: "German-speaking", hint: "9a" },
@@ -524,7 +534,7 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "der Gast, \"-e", en: "guest", hint: "9b" },
             { de: "ihr, ihre", en: "its / her", hint: "Die Stadthalle zeigt ihre Produktionen. (9b)" },
             { de: "das Orchester, -", en: "orchestra", hint: "9b" },
-            { de: "die Produktion, -en", en: "production", hint: "9b" },
+            { de: "die Production, -en", en: "production", hint: "9b" },
             { de: "das Publikum (Sg.)", en: "audience", hint: "9b" },
             { de: "der Regisseur, -e", en: "director (m)", hint: "9b" },
             { de: "die Regisseurin, -nen", en: "director (f)", hint: "9b" },
