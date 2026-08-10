@@ -690,5 +690,216 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "die Videokonferenz, -en", en: "video conference", hint: "13a" },
             { de: "virtuell", en: "virtual", hint: "13a" }
         ]
+    },
+    // ==========================================
+    // KAPITEL 7: GANZ SCHÖN MOBIL
+    // ==========================================
+    {
+        id: "a2-kapitel-7-1a-3c", num: "Kapitel 7 (1a-3c)", name: "Verkehr, Panne & Auto", emoji: "🚗",
+        items: [
+            { de: "der Konzertsaal, -säle", en: "concert hall", hint: "1a" },
+            { de: "versprechen", en: "to promise", hint: "1 ÜB" },
+            { de: "vor|haben", en: "to plan", hint: "1 ÜB" },
+            { de: "die Ampel, -n", en: "traffic light", hint: "1 ÜB" },
+            { de: "halten", en: "to stop", hint: "1 ÜB" },
+            { de: "der Motor, -en", en: "motor", hint: "1 ÜB" },
+            { de: "die Panne, -n", en: "car trouble", hint: "1 ÜB" },
+            { de: "der Parkplatz, \"-e", en: "parking lot", hint: "1 ÜB" },
+            { de: "der Reifen, -", en: "tire", hint: "1 ÜB" },
+            { de: "der Stau, -s", en: "traffic jam", hint: "1 ÜB" },
+            { de: "das Navi, -s", en: "satnav", hint: "2" },
+            { de: "das Parkhaus, \"-er", en: "parking garage", hint: "2" },
+            { de: "tanken", en: "to refuel", hint: "3" },
+            { de: "ab|fliegen", en: "to depart", hint: "3c ÜB" },
+            { de: "der Abflug, \"-e", en: "departing flight", hint: "3c ÜB" },
+            { de: "das Benzin (Sg.)", en: "petrol", hint: "3c ÜB" },
+            { de: "bremsen", en: "to brake", hint: "3c ÜB" },
+            { de: "buchen", en: "to book", hint: "3c ÜB" },
+            { de: "das Kennzeichen, -", en: "license plate", hint: "3c ÜB" },
+            { de: "die Monatskarte, -n", en: "monthly ticket", hint: "3c ÜB" },
+            { de: "parken", en: "to park", hint: "3c ÜB" },
+            { de: "die Tankstelle, -n", en: "petrol station", hint: "3c ÜB" },
+            { de: "die Versicherung, -en", en: "insurance", hint: "3c ÜB" }
+        ]
+    },
+    {
+        id: "a2-kapitel-7-4a-6c", num: "Kapitel 7 (4a-6c)", name: "Unterwegs & Carsharing", emoji: "🛴",
+        items: [
+            { de: "ewig", en: "forever", hint: "4a" },
+            { de: "das Kinderabteil, -e", en: "children's compartment", hint: "4a" },
+            { de: "nervig", en: "annoying", hint: "4a" },
+            { de: "ungeduldig", en: "impatient", hint: "4a" },
+            { de: "weiter|fahren", en: "to carry on / drive on", hint: "4a" },
+            { de: "der Kinderwagen, -", en: "pram", hint: "5a" },
+            { de: "der Bordcomputer, -", en: "on-board computer", hint: "6a" },
+            { de: "der E-Scooter, -", en: "electric scooter", hint: "6a" },
+            { de: "das Fahrzeug, -e", en: "vehicle", hint: "6a" },
+            { de: "registrieren (sich)", en: "to register", hint: "6a" },
+            { de: "der Tarif, -e", en: "rate", hint: "6a" },
+            { de: "die Werbung, -en", en: "advertisement", hint: "6a" },
+            { de: "ab|stellen", en: "to park", hint: "6c" },
+            { de: "erreichen", en: "to reach", hint: "6c" },
+            { de: "die Fahrt, -en", en: "journey", hint: "6c" },
+            { de: "die Kaution, -en", en: "deposit", hint: "6c" },
+            { de: "der Kundenservice, -s", en: "customer service", hint: "6c" },
+            { de: "nötig", en: "necessary", hint: "6c" },
+            { de: "versichert", en: "insured", hint: "6c" }
+        ]
+    },
+    {
+        id: "a2-kapitel-7-8a-10c", num: "Kapitel 7 (8a-10c)", name: "Wegbeschreibung & Umwelt", emoji: "🚲",
+        items: [
+            { de: "die Kreuzung, -en", en: "crossroads", hint: "8c" },
+            { de: "vorbei|gehen", en: "to walk past", hint: "8c" },
+            { de: "die Beschreibung, -en", en: "description", hint: "8f" },
+            { de: "die Platzreservierung, -en", en: "seat reservation", hint: "9a" },
+            { de: "die Stadtbesichtigung, -en", en: "sightseeing tour", hint: "9a" },
+            { de: "das E-Bike, -s", en: "electronic bike", hint: "10a" },
+            { de: "elektrisch", en: "electric", hint: "10a" },
+            { de: "der Experte, -n", en: "expert (m)", hint: "10a" },
+            { de: "die Expertin, -nen", en: "expert (f)", hint: "10a" },
+            { de: "die Großstadt, \"-e", en: "large city", hint: "10a" },
+            { de: "die Innenstadt, \"-e", en: "city centre", hint: "10a" },
+            { de: "die Konsequenz, -en", en: "consequence", hint: "10a" },
+            { de: "lösen", en: "to solve", hint: "10a" },
+            { de: "der Lösungsvorschlag, \"-e", en: "proposed solution", hint: "10a" },
+            { de: "der Radfahrer, -", en: "cyclist (m)", hint: "10a" },
+            { de: "die Radfahrerin, -nen", en: "cyclist (f)", hint: "10a" },
+            { de: "der Radweg, -e", en: "cycle path", hint: "10a" },
+            { de: "reduzieren", en: "to reduce", hint: "10a" },
+            { de: "die Seilbahn, -en", en: "cable car", hint: "10a" },
+            { de: "umweltfreundlich", en: "environmentally friendly", hint: "10a" },
+            { de: "das Verkehrsproblem, -e", en: "traffic problem", hint: "10a" },
+            { de: "sinnvoll", en: "sensible", hint: "10c" },
+            { de: "unpraktisch", en: "impractical", hint: "10c" }
+        ]
+    },
+    {
+        id: "a2-kapitel-7-11a-11c", num: "Kapitel 7 (11a-11c)", name: "Pendeln & Wetterfaktoren", emoji: "🌦️",
+        items: [
+            { de: "brauchen", en: "to need", hint: "11a" },
+            { de: "das Gewitter, -", en: "thunderstorm", hint: "11a" },
+            { de: "das Glatteis (Sg.)", en: "black ice", hint: "11a" },
+            { de: "pendeln", en: "to commute", hint: "11a" },
+            { de: "die Richtung, -en", en: "direction", hint: "11a" },
+            { de: "sogar", en: "even", hint: "11a" },
+            { de: "die Zugfahrt, -en", en: "train ride", hint: "11a" },
+            { de: "hinten", en: "behind", hint: "11c" },
+            { de: "die Schlange, -n", en: "queue", hint: "11c" },
+            { de: "vorne", en: "at the front", hint: "11c" },
+            { de: "klatschen", en: "to clap", hint: "13c" },
+            { de: "überlegen (sich)", en: "to invent / consider", hint: "13d" }
+        ]
+    },
+
+    // ==========================================
+    // KAPITEL 8: GELERNT IST GELERNT!
+    // ==========================================
+    {
+        id: "a2-kapitel-8-1a-1b", num: "Kapitel 8 (1a-1b)", name: "Lernen & Hobbys", emoji: "🎸",
+        items: [
+            { de: "chinesisch", en: "Chinese", hint: "1a" },
+            { de: "die Schrift, -en", en: "script", hint: "1a" },
+            { de: "abonnieren", en: "to subscribe to sth", hint: "1b" },
+            { de: "bearbeiten", en: "to edit", hint: "1b" },
+            { de: "beschweren (sich)", en: "to complain about", hint: "1b" },
+            { de: "die Disziplin (Sg.)", en: "discipline", hint: "1b" },
+            { de: "die Einführung, -en", en: "introduction", hint: "1b" },
+            { de: "gebraucht", en: "used", hint: "1b" },
+            { de: "die Gitarre, -n", en: "guitar", hint: "1b" },
+            { de: "das Instrument, -e", en: "instrument", hint: "1b" },
+            { de: "der Kanal, \"-e", en: "channel", hint: "1b" },
+            { de: "das Klavier, -e", en: "piano", hint: "1b" },
+            { de: "kompliziert", en: "complicated", hint: "1b" },
+            { de: "der Kursleiter, -", en: "course director (m)", hint: "1b" },
+            { de: "die Kursleiterin, -nen", en: "course director (f)", hint: "1b" },
+            { de: "notwendig", en: "necessary", hint: "1b" },
+            { de: "pensioniert", en: "retired", hint: "1b" },
+            { de: "prima", en: "great", hint: "1b" },
+            { de: "die Qualität, -en", en: "quality", hint: "1b" },
+            { de: "die Rente, -n", en: "retirement", hint: "1b" }
+        ]
+    },
+    {
+        id: "a2-kapitel-8-3a-4a", num: "Kapitel 8 (3a-4a)", name: "Prüfungssorgen & Lerntipps", emoji: "🧠",
+        items: [
+            { de: "die Abschlussprüfung, -en", en: "final exam", hint: "3a" },
+            { de: "die Fahrstunde, -n", en: "driving lesson", hint: "3a" },
+            { de: "das Forum, Foren", en: "panel / forum", hint: "3a" },
+            { de: "hart", en: "difficult", hint: "3a" },
+            { de: "intelligent", en: "intelligent", hint: "3a" },
+            { de: "kapieren", en: "to understand", hint: "3a" },
+            { de: "klug", en: "clever", hint: "3a" },
+            { de: "die Magenschmerzen (Pl.)", en: "stomach ache", hint: "3a" },
+            { de: "rasen", en: "to race", hint: "3a" },
+            { de: "realistisch", en: "realistic", hint: "3a" },
+            { de: "das Stipendium, Stipendien", en: "scholarship", hint: "3a" },
+            { de: "der Stoff, -e", en: "material", hint: "3a" },
+            { de: "der Zeitplan, \"-e", en: "schedule", hint: "3a" },
+            { de: "verschieben", en: "to postpone", hint: "3c" },
+            { de: "durch|atmen", en: "to breathe deeply", hint: "4a" },
+            { de: "die Energie, -n", en: "energy", hint: "4a" },
+            { de: "die Nervosität (Sg.)", en: "nervousness", hint: "4a" },
+            { de: "der Prüfer, -", en: "examiner (m)", hint: "4a" },
+            { de: "die Prüferin, -nen", en: "examiner (f)", hint: "4a" },
+            { de: "der Trick, -s", en: "trick", hint: "4a" }
+        ]
+    },
+    {
+        id: "a2-kapitel-8-4bub-6b", num: "Kapitel 8 (4bÜB-6b)", name: "Beratung & Berufe mit Sprache", emoji: "🗣️",
+        items: [
+            { de: "die Beratung, -en", en: "consultation", hint: "4b ÜB" },
+            { de: "erfahren", en: "experienced", hint: "4b ÜB" },
+            { de: "erforderlich", en: "required", hint: "4b ÜB" },
+            { de: "die Förderung, -en", en: "funding", hint: "4b ÜB" },
+            { de: "mündlich", en: "oral", hint: "4b ÜB" },
+            { de: "schriftlich", en: "written", hint: "4b ÜB" },
+            { de: "der Workshop, -s", en: "workshop", hint: "4b ÜB" },
+            { de: "der Ratschlag, \"-e", en: "advice", hint: "4d" },
+            { de: "an|stellen", en: "to hire", hint: "6b" },
+            { de: "der Arbeitgeber, -", en: "employer", hint: "6b" },
+            { de: "der Auftrag, \"-e", en: "contract / order", hint: "6b" },
+            { de: "ausländisch", en: "foreign", hint: "6b" },
+            { de: "der Autor, -en", en: "author (m)", hint: "6b" },
+            { de: "die Autorin, -nen", en: "author (f)", hint: "6b" },
+            { de: "begleiten", en: "to accompany", hint: "6b" },
+            { de: "dolmetschen", en: "to translate (orally)", hint: "6b" },
+            { de: "faszinieren", en: "to fascinate", hint: "6b" },
+            { de: "freiberuflich", en: "freelance", hint: "6b" },
+            { de: "der Gebärdendolmetscher, -", en: "sign language interpreter (m)", hint: "6b" },
+            { de: "die Gebärdendolmetscherin, -nen", en: "sign language interpreter (f)", hint: "6b" },
+            { de: "gehörlos", en: "deaf", hint: "6b" },
+            { de: "die Kommunikation (Sg.)", en: "communication", hint: "6b" },
+            { de: "kommunizieren", en: "to communicate", hint: "6b" },
+            { de: "die Konferenz, -en", en: "conference", hint: "6b" },
+            { de: "die Sprachwissenschaft, -en", en: "linguistic science", hint: "6b" }
+        ]
+    },
+    {
+        id: "a2-kapitel-8-9a-11b", num: "Kapitel 8 (9a-11b)", name: "Ehrenamt & Präsentationen", emoji: "🎤",
+        items: [
+            { de: "die Bücherei, -en", en: "library", hint: "9a" },
+            { de: "existieren", en: "to exist", hint: "9a" },
+            { de: "der/die Freiwillige, -n", en: "volunteer", hint: "9a" },
+            { de: "putzen", en: "to clean", hint: "9a" },
+            { de: "die Reparatur, -en", en: "repair", hint: "9a" },
+            { de: "reparieren", en: "to repair", hint: "9a" },
+            { de: "der Senior, -en", en: "senior (m)", hint: "9a" },
+            { de: "die Seniorin, -nen", en: "senior (f)", hint: "9a" },
+            { de: "spülen", en: "to rinse", hint: "9a" },
+            { de: "voneinander", en: "from each other", hint: "9a" },
+            { de: "weg|werfen", en: "to throw away", hint: "9a" },
+            { de: "das Werkzeug, -e", en: "tool", hint: "9a" },
+            { de: "die Einleitung, -en", en: "introduction", hint: "10b" },
+            { de: "die Gliederung, -en", en: "outline", hint: "10b" },
+            { de: "der Hauptteil, -e", en: "main part", hint: "10b" },
+            { de: "ab|lesen", en: "to read", hint: "11a" },
+            { de: "beachten", en: "to consider", hint: "11b" },
+            { de: "flüssig", en: "fluent", hint: "11b" },
+            { de: "der Inhalt, -e", en: "content", hint: "11b" },
+            { de: "vor|tragen", en: "to present", hint: "11b" },
+            { de: "der Zuhörer, -", en: "member of audience (m)", hint: "11b" },
+            { de: "die Zuhörerin, -nen", en: "member of audience (f)", hint: "11b" }
+        ]
     }
 ];
