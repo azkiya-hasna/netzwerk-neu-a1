@@ -1117,4 +1117,178 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "weg|laufen", en: "to run away", hint: "12c" }
         ]
     },
+    // ==========================================
+    // KAPITEL 11: WIE DIE ZEIT VERGEHT!
+    // ==========================================
+    {
+        id: "a2-kapitel-11-1a-2c", num: "Kapitel 11 (1a-2c)", name: "Zeit, Alltag & Unfälle", emoji: "⏳",
+        items: [
+            { de: "verbringen", en: "to spend (time)", hint: "1a" },
+            { de: "vergehen", en: "to pass by", hint: "1a" },
+            { de: "verreisen", en: "to go away (on a journey)", hint: "1a" },
+            { de: "Acht geben", en: "to take care", hint: "1b ÜB" },
+            { de: "der Alkohol (Sg.)", en: "alcohol", hint: "1b ÜB" },
+            { de: "backen", en: "to bake", hint: "1b ÜB" },
+            { de: "bauen", en: "to build", hint: "1b ÜB" },
+            { de: "betrunken", en: "drunk", hint: "1b ÜB" },
+            { de: "bluten", en: "to bleed", hint: "1b ÜB" },
+            { de: "brechen", en: "to break", hint: "1b ÜB" },
+            { de: "ein|richten", en: "to furnish", hint: "1b ÜB" },
+            { de: "die Hausfrau, -en", en: "homemaker (f)", hint: "1b ÜB" },
+            { de: "der Hausmann, \"-er", en: "homemaker (m)", hint: "1b ÜB" },
+            { de: "sparen", en: "to save", hint: "1b ÜB" },
+            { de: "verletzen", en: "to hurt / injure", hint: "1b ÜB" },
+            { de: "vor allem", en: "especially", hint: "2a" },
+            { de: "der Werktag, -e", en: "working day", hint: "2c" }
+        ]
+    },
+    {
+        id: "a2-kapitel-11-5a-9d", num: "Kapitel 11 (5a-9d)", name: "Stress, Arbeit & Ausflug", emoji: "💼",
+        items: [
+            { de: "behalten", en: "to keep", hint: "5a" },
+            { de: "die Ehe, -n", en: "marriage", hint: "5a" },
+            { de: "entlassen", en: "to fire / dismiss", hint: "5a" },
+            { de: "der Export, -e", en: "export", hint: "5a" },
+            { de: "die Frist, -en", en: "deadline", hint: "5a" },
+            { de: "der Import, -e", en: "import", hint: "5a" },
+            { de: "klingeln", en: "to ring", hint: "5a" },
+            { de: "schimpfen", en: "to scold", hint: "5a" },
+            { de: "ständig", en: "constant", hint: "5a" },
+            { de: "aus|schalten", en: "to switch off", hint: "5b" },
+            { de: "die Kategorie, -n", en: "category", hint: "8a" },
+            { de: "die Kajaktour, -en", en: "kayak tour", hint: "9a" },
+            { de: "das Mitleid (Sg.)", en: "pity / compassion", hint: "9a" },
+            { de: "interessieren (sich)", en: "to be interested in", hint: "9d" }
+        ]
+    },
+    {
+        id: "a2-kapitel-11-11a-12b", num: "Kapitel 11 (11a-12b)", name: "Früher & Sprichwörter", emoji: "📜",
+        items: [
+            { de: "altmodisch", en: "old-fashioned", hint: "11a" },
+            { de: "besitzen", en: "to own", hint: "11a" },
+            { de: "damals", en: "back then", hint: "11a" },
+            { de: "das Einkaufszentrum, -zentren", en: "shopping centre", hint: "11a" },
+            { de: "das Feuer, -", en: "fire", hint: "11a" },
+            { de: "heizen", en: "to heat", hint: "11a" },
+            { de: "die Heizung, -en", en: "heating", hint: "11a" },
+            { de: "die Hektik (Sg.)", en: "rush / haste", hint: "11a" },
+            { de: "kühl", en: "cool", hint: "11a" },
+            { de: "die Kutsche, -n", en: "carriage", hint: "11a" },
+            { de: "der Notfall, \"-e", en: "emergency", hint: "11b" },
+            { de: "produzieren", en: "to produce", hint: "11b" },
+            { de: "reich", en: "rich", hint: "11b" },
+            { de: "der Strom (Sg.)", en: "electricity", hint: "11b" },
+            { de: "träumen", en: "to dream", hint: "11b" },
+            { de: "die Unterkunft, \"-e", en: "accommodation", hint: "11b" },
+            { de: "verzichten", en: "to give up sth", hint: "11d" },
+            { de: "besorgen", en: "to get / obtain", hint: "12a" },
+            { de: "das Gold (Sg.)", en: "gold", hint: "12a" },
+            { de: "heilen", en: "to heal", hint: "12a" },
+            { de: "der Rat (Sg.)", en: "advice", hint: "12a" },
+            { de: "das Sprichwort, \"-er", en: "proverb", hint: "12a" },
+            { de: "effektiv", en: "effective", hint: "12b" }
+        ]
+    },
+
+    // ==========================================
+    // KAPITEL 12: GUTE UNTERHALTUNG!
+    // ==========================================
+    {
+        id: "a2-kapitel-12-1a-1d", num: "Kapitel 12 (1a-1d)", name: "Literatur & Medienwelt", emoji: "👑",
+        items: [
+            { de: "der König, -e", en: "king", hint: "1a" },
+            { de: "die Königin, -nen", en: "queen", hint: "1a" },
+            { de: "die Unterhaltung, -en", en: "entertainment", hint: "1a" },
+            { de: "die Gesellschaft, -en", en: "society", hint: "1b" },
+            { de: "die Gewalt (Sg.)", en: "violence", hint: "1b" },
+            { de: "insbesondere", en: "especially", hint: "1b" },
+            { de: "jährlich", en: "yearly", hint: "1b" },
+            { de: "das Kinderbuch, \"-er", en: "children's book", hint: "1b" },
+            { de: "die Kriminalität (Sg.)", en: "criminality", hint: "1b" },
+            { de: "die Kulisse, -n", en: "scenery / backdrop", hint: "1b" },
+            { de: "das Märchenschloss, \"-er", en: "fairytale castle", hint: "1b" },
+            { de: "die Realität, -en", en: "reality", hint: "1b" },
+            { de: "der Roman, -e", en: "novel", hint: "1b" },
+            { de: "das Schloss, \"-er", en: "castle", hint: "1b" },
+            { de: "der Synchronsprecher, -", en: "voice actor (m)", hint: "1b" },
+            { de: "die Synchronsprecherin, -nen", en: "voice actress (f)", hint: "1b" },
+            { de: "die Verfilmung, -en", en: "film adaptation", hint: "1d" },
+            { de: "das Werk, -e", en: "piece / work of art", hint: "1d" },
+            { de: "wild", en: "wild", hint: "1d" },
+            { de: "die Führung, -en", en: "guided tour", hint: "1d" }
+        ]
+    },
+    {
+        id: "a2-kapitel-12-3a-4c", num: "Kapitel 12 (3a-4c)", name: "Festival, Ticket & Booking", emoji: "🎟️",
+        items: [
+            { de: "das Musikfestival, -s", en: "music festival", hint: "3a" },
+            { de: "die AGB, -s", en: "terms and conditions", hint: "3a ÜB" },
+            { de: "erhalten", en: "to receive", hint: "3a ÜB" },
+            { de: "die Gebühr, -en", en: "fee", hint: "3a ÜB" },
+            { de: "der Kauf, \"-e", en: "purchase", hint: "3a ÜB" },
+            { de: "die Mehrwertsteuer (Mwst.)", en: "value-added tax (VAT)", hint: "3a ÜB" },
+            { de: "der Sitzplatz, \"-e", en: "seat", hint: "3a ÜB" },
+            { de: "der Stehplatz, \"-e", en: "standing room", hint: "3a ÜB" },
+            { de: "die Überweisung, -en", en: "bank transfer", hint: "3a ÜB" },
+            { de: "der Versand (Sg.)", en: "shipping", hint: "3a ÜB" },
+            { de: "der Warenkorb, \"-e", en: "shopping cart", hint: "3a ÜB" },
+            { de: "die Zahlungsart, -en", en: "payment method", hint: "3a ÜB" },
+            { de: "der Campingplatz, \"-e", en: "campsite", hint: "4a" },
+            { de: "die Verpflegung, -en", en: "provisions / catering", hint: "4a" },
+            { de: "der Rucksack, \"-e", en: "backpack", hint: "4b" },
+            { de: "die Übernachtung, -en", en: "overnight stay", hint: "4b" }
+        ]
+    },
+    {
+        id: "a2-kapitel-12-6b-8a", num: "Kapitel 12 (6b-8a)", name: "Musikstile & Radio-Meldungen", emoji: "📻",
+        items: [
+            { de: "der Hardrock (Sg.)", en: "hard rock", hint: "6b" },
+            { de: "der Hit, -s", en: "hit", hint: "6b" },
+            { de: "melodisch", en: "melodious", hint: "6b" },
+            { de: "der Musikstil, -e", en: "music genre", hint: "6b" },
+            { de: "befreundet", en: "friendly", hint: "7a" },
+            { de: "bestätigen", en: "to confirm", hint: "7a" },
+            { de: "der Einsatz, \"-e", en: "assignment", hint: "7a" },
+            { de: "der Hörer, -", en: "listener (m)", hint: "7a" },
+            { de: "die Hörerin, -nen", en: "listener (f)", hint: "7a" },
+            { de: "der Nachrichtensprecher, -", en: "newsreader (m)", hint: "7a" },
+            { de: "die Nachrichtensprecherin, -nen", en: "newsreader (f)", hint: "7a" },
+            { de: "der Sammler, -", en: "collector (m)", hint: "7a" },
+            { de: "die Sammlerin, -nen", en: "collector (f)", hint: "7a" },
+            { de: "das Schnäppchen, -", en: "bargain", hint: "7a" },
+            { de: "die Stille (Sg.)", en: "silence", hint: "7a" },
+            { de: "die Stimme, -n", en: "voice", hint: "7a" },
+            { de: "die Stimmung, -en", en: "mood", hint: "7a" },
+            { de: "verschlafen", en: "to oversleep", hint: "7a" },
+            { de: "der Wert, -e", en: "value", hint: "7a" },
+            { de: "wertvoll", en: "valuable", hint: "7a" },
+            { de: "die Meldung, -en", en: "announcement / report", hint: "8a" }
+        ]
+    },
+    {
+        id: "a2-kapitel-12-9a-11b", num: "Kapitel 12 (9a-11b)", name: "Kunst, Malerei & Bilder", emoji: "🎨",
+        items: [
+            { de: "die Hauptrolle, -n", en: "lead / main role", hint: "9a" },
+            { de: "der/die Prominente, -n", en: "celebrity", hint: "9a" },
+            { de: "die Malerei, -en", en: "painting", hint: "10a" },
+            { de: "der Audioguide, -s", en: "audio guide", hint: "10b" },
+            { de: "die Bedeutung, -en", en: "meaning", hint: "10c" },
+            { de: "die Kunstgeschichte (Sg.)", en: "art history", hint: "10c" },
+            { de: "ab|malen", en: "to depict / paint", hint: "10d" },
+            { de: "das Wildschwein, -e", en: "wild boar", hint: "10d" },
+            { de: "abstrakt", en: "abstract", hint: "11a" },
+            { de: "hübsch", en: "pretty", hint: "11a" },
+            { de: "uninteressant", en: "uninteresting", hint: "11a" },
+            { de: "verrückt", en: "crazy", hint: "11a" },
+            { de: "die Bildbeschreibung, -en", en: "description of a picture", hint: "11b" },
+            { de: "dahinter", en: "behind it", hint: "11b" },
+            { de: "deuten", en: "to indicate", hint: "11b" },
+            { de: "der Titel, -", en: "title", hint: "11b" },
+            { de: "der Vordergrund, \"-e", en: "foreground", hint: "11b" },
+            { de: "auf|fallen", en: "to stand out / notice", hint: "12c" },
+            { de: "der Ausblick, -e", en: "view", hint: "12c" },
+            { de: "der Hintergrund, \"-e", en: "background", hint: "12c" }
+        ]
+    }
+];
 ];
