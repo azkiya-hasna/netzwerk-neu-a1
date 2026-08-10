@@ -266,5 +266,217 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "verspätet", en: "late", hint: "12a ÜB" },
             { de: "aus|tauschen", en: "to exchange", hint: "12b" }
         ]
+    },
+    // ==========================================
+    // KAPITEL 5: LEBEN IN DER STADT
+    // ==========================================
+    {
+        id: "a2-kapitel-5-1a-1b", num: "Kapitel 5 (1a-1b)", name: "Ämter, Müll & Stadtpflege", emoji: "🏛️",
+        items: [
+            { de: "das Amt, \"-er", en: "department", hint: "1a" },
+            { de: "die Behörde, -n", en: "authority / agency", hint: "1a" },
+            { de: "die Müllabfuhr (Sg.)", en: "garbage disposal", hint: "1a" },
+            { de: "öffentlich", en: "public", hint: "1a" },
+            { de: "die Polizei (Sg.)", en: "police", hint: "1a" },
+            { de: "die Straßenreinigung (Sg.)", en: "street cleaning", hint: "1a" },
+            { de: "das Verkehrsmittel, -", en: "(means of) transportation", hint: "1a" },
+            { de: "der Antrag, \"-e", en: "application", hint: "1b" },
+            { de: "auf|räumen", en: "to clean up", hint: "1b" },
+            { de: "aus|füllen", en: "to fill (in)", hint: "1b" },
+            { de: "der Beamte, -n", en: "official (m)", hint: "1b" },
+            { de: "die Beamtin, -nen", en: "official (f)", hint: "1b" },
+            { de: "bedienen", en: "to serve", hint: "1b" },
+            { de: "beschützen", en: "to protect", hint: "1b" },
+            { de: "das Dokument, -e", en: "document", hint: "1b" },
+            { de: "der Fahrer, -", en: "driver (m)", hint: "1b" },
+            { de: "die Fahrerin, -nen", en: "driver (f)", hint: "1b" },
+            { de: "genehmigen", en: "to approve", hint: "1b" },
+            { de: "kümmern (sich)", en: "to take care of", hint: "1b" },
+            { de: "leeren", en: "to empty", hint: "1b" },
+            { de: "der Müll (Sg.)", en: "rubbish", hint: "1b" },
+            { de: "die Mülltonne, -n", en: "rubbish bin", hint: "1b" },
+            { de: "die Operation, -en", en: "operation", hint: "1b" },
+            { de: "pflegen", en: "to take care of", hint: "1b" }
+        ]
+    },
+    {
+        id: "a2-kapitel-5-2a-3c", num: "Kapitel 5 (2a-3c)", name: "Jobsuche & Vorstellungsgespräch", emoji: "💼",
+        items: [
+            { de: "aus|geben", en: "to spend", hint: "2a" },
+            { de: "die Aushilfe, -n", en: "temporary help", hint: "2a" },
+            { de: "der Dom, -e", en: "cathedral", hint: "2a" },
+            { de: "dringend", en: "urgent", hint: "2a" },
+            { de: "erledigen", en: "to take care of", hint: "2a" },
+            { de: "eröffnen", en: "to open", hint: "2a" },
+            { de: "der Lohn, \"-e", en: "wage", hint: "2a" },
+            { de: "vor|stellen (sich)", en: "to imagine", hint: "2a" },
+            { de: "das Vorstellungsgespräch, -e", en: "job interview", hint: "2a ÜB" },
+            { de: "bewerben", en: "to apply", hint: "3a" },
+            { de: "die Kenntnis, -se", en: "knowledge", hint: "3a" },
+            { de: "die Stellenanzeige, -n", en: "job advertisement", hint: "3a" },
+            { de: "die Teilzeit (Sg.)", en: "part-time", hint: "3a" },
+            { de: "die Unterlagen (Pl.)", en: "documents", hint: "3a" },
+            { de: "die Bezahlung, -en", en: "payment", hint: "3c" },
+            { de: "erwarten", en: "to expect", hint: "3c" },
+            { de: "bunt", en: "colourful", hint: "3c" },
+            { de: "spontan", en: "spontaneous", hint: "3c" }
+        ]
+    },
+    {
+        id: "a2-kapitel-5-4a-6d", num: "Kapitel 5 (4a-6d)", name: "Behördengänge & Dokumente", emoji: "📄",
+        items: [
+            { de: "ab|geben", en: "to submit", hint: "5a" },
+            { de: "beantragen", en: "to apply for", hint: "5a" },
+            { de: "der Betrag, \"-e", en: "amount", hint: "5a" },
+            { de: "der Diebstahl, \"-e", en: "theft", hint: "5a" },
+            { de: "die Einbürgerung, -en", en: "naturalisation", hint: "5a" },
+            { de: "die Geldbörse, -n", en: "purse", hint: "5a" },
+            { de: "der Kredit, -e", en: "loan", hint: "5a" },
+            { de: "melden", en: "to report", hint: "5a" },
+            { de: "der Personalausweis, -e", en: "ID card", hint: "5a" },
+            { de: "verlängern", en: "to extend", hint: "5a" },
+            { de: "die Bankkarte, -n", en: "bank card", hint: "5c" },
+            { de: "ab|heben", en: "to withdraw", hint: "5d" },
+            { de: "die Grenze, -n", en: "border", hint: "5d" },
+            { de: "gültig", en: "valid", hint: "5e" },
+            { de: "das Visum, Visa", en: "visa", hint: "5e" },
+            { de: "sperren", en: "to block", hint: "6a" },
+            { de: "aus|drucken", en: "to print", hint: "6c" },
+            { de: "bitten", en: "to ask for sth", hint: "6c" },
+            { de: "funktionieren", en: "to work", hint: "6c" },
+            { de: "der Gefallen, -", en: "favour", hint: "6c" },
+            { de: "leihen", en: "to borrow", hint: "6c" }
+        ]
+    },
+    {
+        id: "a2-kapitel-5-8a-8b", num: "Kapitel 5 (8a-8b)", name: "Rund um den Wiener Ring", emoji: "🗺️",
+        items: [
+            { de: "der Stadtplan, \"-e", en: "city map", hint: "8a" },
+            { de: "der/die Angestellte, -n", en: "employee", hint: "8b" },
+            { de: "die Disco, -s", en: "disco", hint: "8b" },
+            { de: "das Drama, Dramen", en: "drama", hint: "8b" },
+            { de: "die Entspannung (Sg.)", en: "relaxation", hint: "8b" },
+            { de: "das Gebäude, -", en: "building", hint: "8b" },
+            { de: "das Gesetz, -e", en: "law", hint: "8b" },
+            { de: "der Kaiser, -", en: "emperor", hint: "8b" },
+            { de: "die Kaiserin, -nen", en: "empress", hint: "8b" },
+            { de: "der Maler, -", en: "painter (m)", hint: "8b" },
+            { de: "die Malerin, -nen", en: "painter (f)", hint: "8b" },
+            { de: "das Parlament, -e", en: "parliament", hint: "8b" },
+            { de: "der Politiker, -", en: "politician (m)", hint: "8b" },
+            { de: "die Politikerin, -nen", en: "politician (f)", hint: "8b" },
+            { de: "die Ruhe (Sg.)", en: "quiet", hint: "8b" },
+            { de: "der Tourist, -en", en: "tourist (m)", hint: "8b" },
+            { de: "die Touristin, -nen", en: "tourist (f)", hint: "8b" },
+            { de: "die Verwaltung (Sg.)", en: "administration", hint: "8b" }
+        ]
+    },
+
+    // ==========================================
+    // KAPITEL 6: ARBEITSWELTEN
+    // ==========================================
+    {
+        id: "a2-kapitel-6-1b-3a", num: "Kapitel 6 (1b-3a)", name: "Alltag & Geschäftsreise", emoji: "🚆",
+        items: [
+            { de: "der Ärger (Sg.)", en: "anger", hint: "1b" },
+            { de: "beeilen (sich)", en: "to hurry (up)", hint: "1b" },
+            { de: "klappen", en: "to work / succeed", hint: "2a" },
+            { de: "die Rückfahrt (Sg.)", en: "return journey", hint: "2a" },
+            { de: "beraten", en: "to advise", hint: "2c" },
+            { de: "ein|halten", en: "to adhere (to an appointment)", hint: "2c" },
+            { de: "die Tätigkeit, -en", en: "occupation", hint: "2c" },
+            { de: "die Vokabel, -n", en: "word", hint: "2c" },
+            { de: "die Geschäftsreise, -n", en: "business trip", hint: "3a" },
+            { de: "zurück|kommen", en: "to return", hint: "3a" },
+            { de: "die Hinfahrt (Sg.)", en: "journey there", hint: "3a" },
+            { de: "die Bahn, -en", en: "train", hint: "3a ÜB" },
+            { de: "die Bahnhofshalle, -n", en: "station hall", hint: "3a ÜB" },
+            { de: "die Durchsage, -n", en: "announcement", hint: "3a ÜB" },
+            { de: "der Fahrgast, \"-e", en: "passenger", hint: "3a ÜB" },
+            { de: "der Fahrplan, \"-e", en: "timetable", hint: "3a ÜB" },
+            { de: "der Schalter, -", en: "counter", hint: "3a ÜB" },
+            { de: "der Wagen, -", en: "car / carriage", hint: "3a ÜB" },
+            { de: "die Zugverbindung, -en", en: "train connection", hint: "4a" },
+            { de: "der Fahrkartenschalter, -", en: "booking office", hint: "4b" },
+            { de: "der Gang, \"-e", en: "aisle", hint: "4b" }
+        ]
+    },
+    {
+        id: "a2-kapitel-6-5a-6", num: "Kapitel 6 (5a-6)", name: "Kultur & Abendprogramm", emoji: "🎟️",
+        items: [
+            { de: "das Abend-Programm, -e", en: "evening programme", hint: "5a" },
+            { de: "das Album, Alben", en: "album", hint: "5a" },
+            { de: "die Band, -s", en: "band", hint: "5a" },
+            { de: "erleben", en: "to experience", hint: "5a" },
+            { de: "die Ermäßigung, -en", en: "discount", hint: "5a" },
+            { de: "der Feiertag, -e", en: "holiday", hint: "5a" },
+            { de: "der Musiker, -", en: "musician (m)", hint: "5a" },
+            { de: "die Musikerin, -nen", en: "musician (f)", hint: "5a" },
+            { de: "der Sänger, -", en: "singer (m)", hint: "5a" },
+            { de: "die Sängerin, -nen", en: "singer (f)", hint: "5a" },
+            { de: "der Tagesgast, \"-e", en: "one-day visitor", hint: "5a" },
+            { de: "der Trainer, -", en: "trainer (m)", hint: "5a" },
+            { de: "die Trainerin, -nen", en: "trainer (f)", hint: "5a" },
+            { de: "professionell", en: "professional", hint: "5c" },
+            { de: "fantastisch", en: "fantastic", hint: "6" },
+            { de: "das Kunstmuseum, Kunstmuseen", en: "art museum", hint: "6" },
+            { de: "preiswert", en: "cheap / good value", hint: "6" }
+        ]
+    },
+    {
+        id: "a2-kapitel-6-7a-9b", num: "Kapitel 6 (7a-9b)", name: "Karriere & Berufswechsel", emoji: "👨‍⚕️",
+        items: [
+            { de: "auf keinen Fall", en: "under no circumstances", hint: "7a" },
+            { de: "bereuen", en: "to regret", hint: "7a" },
+            { de: "beruflich", en: "professional", hint: "7a" },
+            { de: "der Berufswechsel, -", en: "career change", hint: "7a" },
+            { de: "die Chance, -n", en: "opportunity", hint: "7a" },
+            { de: "erfolgreich", en: "successful", hint: "7a" },
+            { de: "finanziell", en: "financial", hint: "7a" },
+            { de: "die Freiheit (Sg.)", en: "freedom", hint: "7a" },
+            { de: "das Gehalt, \"-er", en: "salary", hint: "7a" },
+            { de: "der Jobwechsel, -", en: "job change", hint: "7a" },
+            { de: "der Lastwagen, -", en: "truck", hint: "7a" },
+            { de: "der Leiter, -", en: "director (m)", hint: "7a" },
+            { de: "die Leiterin, -nen", en: "director (f)", hint: "7a" },
+            { de: "der Lkw, -s", en: "truck", hint: "7a" },
+            { de: "der Neuanfang, \"-e", en: "new beginning", hint: "7a" },
+            { de: "das Risiko, Risiken", en: "risk", hint: "7a" },
+            { de: "selbstständig", en: "independent / freelance", hint: "7a" },
+            { de: "der Übersetzer, -", en: "translator (m)", hint: "7a" },
+            { de: "die Übersetzerin, -nen", en: "translator (f)", hint: "7a" },
+            { de: "die Umwelt (Sg.)", en: "environment", hint: "7c" },
+            { de: "schwanger", en: "pregnant", hint: "8b" },
+            { de: "der Berufswunsch, \"-e", en: "career goal", hint: "8c" }
+        ]
+    },
+    {
+        id: "a2-kapitel-6-11b-13a", num: "Kapitel 6 (11b-13a)", name: "Telefonat & Digitale Arbeitswelt", emoji: "📞",
+        items: [
+            { de: "der Anrufbeantworter, -", en: "answering machine", hint: "11b" },
+            { de: "deutlich", en: "distinct / clear", hint: "11b" },
+            { de: "hektisch", en: "hectic", hint: "11b" },
+            { de: "konzentrieren (sich)", en: "to concentrate", hint: "11b" },
+            { de: "lächeln", en: "to smile", hint: "11b" },
+            { de: "stören", en: "to disturb", hint: "11b" },
+            { de: "das Telefonat, -e", en: "telephone call", hint: "11b" },
+            { de: "der Anrufer, -", en: "caller (m)", hint: "12b" },
+            { de: "die Anruferin, -nen", en: "caller (f)", hint: "12b" },
+            { de: "aus|richten", en: "to pass on sth to sb", hint: "12b" },
+            { de: "hinterlassen", en: "to leave (behind)", hint: "12b" },
+            { de: "die Rückmeldung, -en", en: "response", hint: "12b" },
+            { de: "zurück|rufen", en: "to call sb back", hint: "12b" },
+            { de: "verändern", en: "to change", hint: "13a" },
+            { de: "befristet", en: "temporary", hint: "13a" },
+            { de: "die Digitalisierung (Sg.)", en: "digitisation", hint: "13a" },
+            { de: "erreichbar", en: "reachable", hint: "13a" },
+            { de: "die Fabrik, -en", en: "factory", hint: "13a" },
+            { de: "das Grundeinkommen, -", en: "basic income", hint: "13a" },
+            { de: "die Kompetenz, -en", en: "expertise", hint: "13a" },
+            { de: "die Maschine, -n", en: "machine", hint: "13a" },
+            { de: "der Roboter, -", en: "robot", hint: "13a" },
+            { de: "die Videokonferenz, -en", en: "video conference", hint: "13a" },
+            { de: "virtuell", en: "virtual", hint: "13a" }
+        ]
     }
 ];
