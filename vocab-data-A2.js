@@ -901,5 +901,220 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "der Zuhörer, -", en: "member of audience (m)", hint: "11b" },
             { de: "die Zuhörerin, -nen", en: "member of audience (f)", hint: "11b" }
         ]
-    }
+    },
+    // ==========================================
+    // KAPITEL 9: SPORTLICH, SPORTLICH
+    // ==========================================
+    {
+        id: "a2-kapitel-9-1a-2b", num: "Kapitel 9 (1a-2b)", name: "Sportarten & Ausrüstung", emoji: "⚽",
+        items: [
+            { de: "der Fußballschuh, -e", en: "football boot", hint: "1a" },
+            { de: "das Kajak, -s", en: "kayak", hint: "1a" },
+            { de: "langlaufen", en: "to cross-country ski", hint: "1a" },
+            { de: "die Matte, -n", en: "mat", hint: "1a" },
+            { de: "das Mountainbike, -s", en: "mountain bike", hint: "1a" },
+            { de: "das Paddel, -", en: "paddle", hint: "1a" },
+            { de: "der Schläger, -", en: "bat / racket", hint: "1a" },
+            { de: "der Skistock, \"-e", en: "ski pole", hint: "1a" },
+            { de: "die Sportart, -en", en: "sport", hint: "1a" },
+            { de: "das Surfbrett, -er", en: "surf board", hint: "1a" },
+            { de: "surfen", en: "to surf", hint: "1a" },
+            { de: "tauchen", en: "to dive", hint: "1a" },
+            { de: "die Taucherbrille, -n", en: "diving mask", hint: "1a" },
+            { de: "Volleyball (Sg.)", en: "volleyball", hint: "1a" },
+            { de: "die Mannschaft, -en", en: "team", hint: "1b ÜB" },
+            { de: "schießen", en: "to shoot", hint: "1b" },
+            { de: "das Tor, -e", en: "goal", hint: "1b" },
+            { de: "der Wettbewerb, -e", en: "competition", hint: "1b" },
+            { de: "entspannen", en: "to relax", hint: "2b" },
+            { de: "der Erfolg, -e", en: "success", hint: "2b" },
+            { de: "die Gesundheit (Sg.)", en: "health", hint: "2b" },
+            { de: "basteln", en: "to make sth / craft", hint: "2b" },
+            { de: "die Kette, -n", en: "necklace", hint: "2b" }
+        ]
+    },
+    {
+        id: "a2-kapitel-9-3a-5c", num: "Kapitel 9 (3a-5c)", name: "Fan-Kultur & Emotionen", emoji: "🏆",
+        items: [
+            { de: "der Fanartikel, -", en: "team merchandise", hint: "3a" },
+            { de: "der Sportverein, -e", en: "sports club", hint: "3b" },
+            { de: "der Fußballfan, -s", en: "football fan", hint: "3c" },
+            { de: "verstärken", en: "to reinforce", hint: "3c" },
+            { de: "wahnsinnig", en: "crazy", hint: "3c" },
+            { de: "die Enttäuschung, -en", en: "disappointment", hint: "3d" },
+            { de: "genial", en: "impressive / brilliant", hint: "3d" },
+            { de: "großartig", en: "terrific", hint: "3d" },
+            { de: "die Hoffnung, -en", en: "hope", hint: "3d" },
+            { de: "die Katastrophe, -n", en: "catastrophe", hint: "3d" },
+            { de: "unglaublich", en: "unbelievable", hint: "3d" },
+            { de: "aus|fallen", en: "to be cancelled", hint: "4" },
+            { de: "die Radtour, -en", en: "bike ride", hint: "4" },
+            { de: "benehmen (sich)", en: "to behave", hint: "5a" },
+            { de: "deshalb", en: "therefore", hint: "5a" },
+            { de: "die Fanseite, -n", en: "fan page", hint: "5a" },
+            { de: "treu", en: "loyal", hint: "5a" },
+            { de: "trotzdem", en: "still / nevertheless", hint: "5a" },
+            { de: "das Vorbild, -er", en: "role model", hint: "5a" },
+            { de: "die Folge, -n", en: "consequence", hint: "5b" },
+            { de: "sympathisch", en: "likeable", hint: "5c" },
+            { de: "der Widerspruch, \"-e", en: "contradiction", hint: "5c" }
+        ]
+    },
+    {
+        id: "a2-kapitel-9-8a-11b", num: "Kapitel 9 (8a-11b)", name: "Klettergarten & Verabredung", emoji: "🧗",
+        items: [
+            { de: "der Cousin, -s", en: "cousin (m)", hint: "8a" },
+            { de: "die Cousine, -n", en: "cousin (f)", hint: "8a" },
+            { de: "die Kondition (Sg.)", en: "stamina", hint: "8a" },
+            { de: "einverstanden", en: "agreed", hint: "9a" },
+            { de: "neulich", en: "recent", hint: "9b" },
+            { de: "der Hochseilgarten, \"-", en: "high ropes course", hint: "10a" },
+            { de: "der Kletterer, -", en: "climber (m)", hint: "10a" },
+            { de: "der Klettergurt, -e", en: "harness", hint: "10a" },
+            { de: "die Kletterin, -nen", en: "climber (f)", hint: "10a" },
+            { de: "übermorgen", en: "day after tomorrow", hint: "10a" },
+            { de: "zurück|geben", en: "to return", hint: "10a" },
+            { de: "werfen", en: "to throw", hint: "11b" },
+            { de: "bewachen", en: "to guard", hint: "12a" },
+            { de: "eineinhalb", en: "one and a half", hint: "12a" },
+            { de: "entfernt", en: "away", hint: "12a" },
+            { de: "faszinierend", en: "fascinating", hint: "12a" },
+            { de: "der Führer, -", en: "guide (m)", hint: "12a" },
+            { de: "die Führerin, -nen", en: "guide (f)", hint: "12a" },
+            { de: "das Gasthaus, \"-er", en: "inn", hint: "12a" },
+            { de: "das Gebiet, -e", en: "area", hint: "12a" }
+        ]
+    },
+    {
+        id: "a2-kapitel-9-12a-13a", num: "Kapitel 9 (12a-13a)", name: "Natur, Wandern & Kitesurfen", emoji: "🏞️",
+        items: [
+            { de: "das Grenzgebiet, -e", en: "frontier / border area", hint: "12a" },
+            { de: "hinunter", en: "down", hint: "12a" },
+            { de: "der Hinweis, -e", en: "evidence / hint", hint: "12a" },
+            { de: "die Höhle, -n", en: "cave", hint: "12a" },
+            { de: "kulturell", en: "cultural", hint: "12a" },
+            { de: "der Nationalpark, -s", en: "national park", hint: "12a" },
+            { de: "der Nebel, -", en: "fog", hint: "12a" },
+            { de: "quer", en: "across", hint: "12a" },
+            { de: "der Staat, -en", en: "state", hint: "12a" },
+            { de: "die Strecke, -n", en: "route", hint: "12a" },
+            { de: "der Streifen, -", en: "strip", hint: "12a" },
+            { de: "das Tal, \"-er", en: "valley", hint: "12a" },
+            { de: "die Temperatur, -en", en: "temperature", hint: "12a" },
+            { de: "trocken", en: "dry", hint: "12a" },
+            { de: "die Umgebung, -en", en: "vicinity / surroundings", hint: "12a" },
+            { de: "die Wanderung, -en", en: "hike", hint: "12a" },
+            { de: "der Wanderweg, -e", en: "hiking trail", hint: "12a" },
+            { de: "der Einwohner, -", en: "inhabitant (m)", hint: "13a" },
+            { de: "die Einwohnerin, -nen", en: "inhabitant (f)", hint: "13a" },
+            { de: "das Kitesurfen (Sg.)", en: "kitesurfing", hint: "13a" },
+            { de: "die Surfschule, -n", en: "surf school", hint: "13a" }
+        ]
+    },
+
+    // ==========================================
+    // KAPITEL 10: ZUSAMMEN LEBEN
+    // ==========================================
+    {
+        id: "a2-kapitel-10-1a-2a", num: "Kapitel 10 (1a-2a)", name: "Wohnformen & Hausbereiche", emoji: "🏡",
+        items: [
+            { de: "der Bauernhof, \"-e", en: "farm", hint: "1a" },
+            { de: "die Breite, -n", en: "width", hint: "1b" },
+            { de: "die Ferienwohnung, -en", en: "holiday home", hint: "1b" },
+            { de: "die Fläche, -n", en: "area", hint: "1b" },
+            { de: "das Hausboot, -e", en: "houseboat", hint: "1b" },
+            { de: "die Höhe, -n", en: "altitude / height", hint: "1b" },
+            { de: "intensiv", en: "intense", hint: "1b" },
+            { de: "die Kuh, \"-e", en: "cow", hint: "1b" },
+            { de: "die Länge, -n", en: "length", hint: "1b" },
+            { de: "der Luxus (Sg.)", en: "luxury", hint: "1b" },
+            { de: "nass", en: "wet", hint: "1b" },
+            { de: "der Quadratmeter, -", en: "square meter", hint: "1b" },
+            { de: "schaukeln", en: "to rock", hint: "1b" },
+            { de: "spiegeln (sich)", en: "to reflect", hint: "1b" },
+            { de: "der Stadtrand, \"-er", en: "city limit", hint: "1b" },
+            { de: "das Ufer, -", en: "shore", hint: "1b" },
+            { de: "die Wagenburg, -en", en: "wagon fort", hint: "1b" },
+            { de: "das Dach, \"-er", en: "roof", hint: "1a ÜB" },
+            { de: "der Keller, -", en: "basement", hint: "1a ÜB" },
+            { de: "einsam", en: "lonely", hint: "2a" }
+        ]
+    },
+    {
+        id: "a2-kapitel-10-3c-5e", num: "Kapitel 10 (3c-5e)", name: "Nachbarn & Sommerfest", emoji: "🎈",
+        items: [
+            { de: "gießen", en: "to water", hint: "3c" },
+            { de: "der Lärm (Sg.)", en: "noise", hint: "3c" },
+            { de: "bellen", en: "to bark", hint: "4b" },
+            { de: "das Päckchen, -", en: "package", hint: "4b" },
+            { de: "stinken", en: "to stink", hint: "4b" },
+            { de: "der Aushang, \"-e", en: "announcement", hint: "5a" },
+            { de: "schmutzig", en: "dirty", hint: "5a" },
+            { de: "die Torte, -n", en: "gateau / cake", hint: "5a" },
+            { de: "der Blumentopf, \"-e", en: "flower pot", hint: "5b" },
+            { de: "der Boden, \"-", en: "floor / ground", hint: "5b" },
+            { de: "das Gartenhaus, \"-er", en: "summer house", hint: "5b" },
+            { de: "hängen", en: "to hang / be attached", hint: "5b" },
+            { de: "die Kerze, -n", en: "candle", hint: "5b" },
+            { de: "das Kissen, -", en: "pillow", hint: "5b" },
+            { de: "der Lampion, -s", en: "paper lantern", hint: "5b" },
+            { de: "das Poster, -", en: "poster", hint: "5b" },
+            { de: "der Roller, -", en: "scooter", hint: "5b" },
+            { de: "das Spielzeug, -e", en: "toy", hint: "5b" },
+            { de: "legen", en: "to lie / put horizontally", hint: "5c" },
+            { de: "die Dekoration, -en", en: "decoration", hint: "5e" }
+        ]
+    },
+    {
+        id: "a2-kapitel-10-6b-7c", num: "Kapitel 10 (6b-7c)", name: "WG, Mieter & Auszug", emoji: "🔑",
+        items: [
+            { de: "ein|ziehen", en: "to move in", hint: "6b" },
+            { de: "der Mieter, -", en: "tenant (m)", hint: "6b" },
+            { de: "die Mieterin, -nen", en: "tenant (f)", hint: "6b" },
+            { de: "möbliert", en: "furnished", hint: "6b" },
+            { de: "die Nebenkosten (Pl.)", en: "utilities", hint: "6b" },
+            { de: "aus|kennen (sich)", en: "to know one's way around", hint: "6c" },
+            { de: "aus|packen", en: "to unpack", hint: "6c" },
+            { de: "der Briefkasten, \"-", en: "mailbox", hint: "6c" },
+            { de: "gespannt", en: "curious", hint: "6c" },
+            { de: "kündigen", en: "to resign / terminate lease", hint: "6c" },
+            { de: "der Mitbewohner, -", en: "flatmate (m)", hint: "6d" },
+            { de: "die Mitbewohnerin, -nen", en: "flatmate (f)", hint: "6d" },
+            { de: "verirren (sich)", en: "to get lost", hint: "6d" },
+            { de: "die Zulassung, -en", en: "admission", hint: "6d" },
+            { de: "einmalig", en: "unique", hint: "7c" },
+            { de: "gelten", en: "to apply / be valid", hint: "7c" },
+            { de: "der Zeitraum, \"-e", en: "period", hint: "7c" }
+        ]
+    },
+    {
+        id: "a2-kapitel-10-10c-12e", num: "Kapitel 10 (10c-12e)", name: "Haustiere & Tiergeschichten", emoji: "🐶",
+        items: [
+            { de: "der Bär, -en", en: "bear", hint: "10c" },
+            { de: "der Hase, -n", en: "rabbit", hint: "10c" },
+            { de: "die Katze, -n", en: "cat", hint: "10c" },
+            { de: "der Kosename, -n", en: "pet name", hint: "10c" },
+            { de: "das Haustier, -e", en: "pet", hint: "10d" },
+            { de: "die Ratte, -n", en: "rat", hint: "11a" },
+            { de: "das Futter (Sg.)", en: "feed", hint: "11b" },
+            { de: "modisch", en: "fashionable", hint: "11b" },
+            { de: "das Schwein, -e", en: "pig", hint: "11b" },
+            { de: "der Tierarzt, \"-e", en: "vet (m)", hint: "11b" },
+            { de: "die Tierärztin, -nen", en: "vet (f)", hint: "11b" },
+            { de: "die Vermutung, -en", en: "assumption", hint: "11b" },
+            { de: "der Vogel, \"-", en: "bird", hint: "11b" },
+            { de: "der Bauer, -n", en: "farmer (m)", hint: "12a" },
+            { de: "die Bäuerin, -nen", en: "farmer (f)", hint: "12a" },
+            { de: "der Besitzer, -", en: "owner (m)", hint: "12a" },
+            { de: "die Besitzerin, -nen", en: "owner (f)", hint: "12a" },
+            { de: "besorgt", en: "worried", hint: "12a" },
+            { de: "dünn", en: "thin", hint: "12a" },
+            { de: "das Schaf, -e", en: "sheep", hint: "12a" },
+            { de: "das Zuhause, -", en: "home", hint: "12a" },
+            { de: "füttern", en: "to feed", hint: "12c" },
+            { de: "nebenan", en: "next door", hint: "12c" },
+            { de: "das Stockwerk, -e", en: "floor", hint: "12c" },
+            { de: "weg|laufen", en: "to run away", hint: "12c" }
+        ]
+    },
 ];
