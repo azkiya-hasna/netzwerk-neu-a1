@@ -5,7 +5,833 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>German Flashcard — Cloud Sync Trainer</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <style><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>German Flashcard — Cloud Sync Trainer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg-base: #fbfbf9;
+            --bg-surface: #ffffff;
+            --text-main: #1c1917;
+            --text-muted: #78716c;
+            --primary: #dd5e28;
+            --primary-dark: #b84318;
+            --primary-light: #ffedd5;
+            --success: #16a34a;
+            --success-light: #dcfce7;
+            --danger: #dc2626;
+            --danger-light: #fee2e2;
+            --warning: #2563eb;
+            --warning-light: #dbeafe;
+            --border: #e7e5e4;
+            --radius-lg: 20px;
+            --radius-md: 12px;
+            --shadow: 0 4px 20px -2px rgba(28, 25, 23, 0.06);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 80px;
+        }
+
+        .sync-banner {
+            background-color: #292524;
+            color: #f5f5f4;
+            padding: 10px 24px;
+            font-size: 0.85rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .sync-controls {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sync-input {
+            background-color: #44403c;
+            border: 1px solid #57534e;
+            color: #ffffff;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-family: inherit;
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+
+        .sync-btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 4px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+
+        .sync-btn:hover { background-color: var(--primary-dark); }
+
+        header {
+            background-color: #1c1917;
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .nav-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+            height: 68px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .brand span { color: var(--primary); }
+
+        .nav-tabs { display: flex; gap: 6px; }
+
+        .tab-trigger {
+            background: none;
+            border: none;
+            padding: 8px 16px;
+            font-family: inherit;
+            font-weight: 600;
+            font-size: 0.88rem;
+            color: #a8a29e;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: all 0.2s;
+        }
+
+        .tab-trigger:hover, .tab-trigger.active {
+            color: #ffffff;
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        .tab-trigger.active { background-color: var(--primary); }
+
+        main {
+            max-width: 860px;
+            margin: 40px auto;
+            padding: 0 24px;
+        }
+
+        .screen { display: none; }
+        .screen.active { display: block; }
+
+        .welcome-hero { margin-bottom: 36px; }
+        .welcome-hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        /* METRICS BAR DIUBAH MENJADI 2 KOLOM RAPI */
+        .metrics-bar {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .metric-tile {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .metric-tile .value {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: block;
+        }
+
+        .metric-tile .lbl {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .chapters-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 18px;
+        }
+
+        .chapter-node {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.25s, border-color 0.25s;
+        }
+
+        .chapter-node:hover {
+            transform: translateY(-3px);
+            border-color: var(--primary);
+        }
+
+        .ch-num { font-size: 0.78rem; font-weight: 700; color: var(--text-muted); }
+        .ch-name { font-size: 1.05rem; font-weight: 700; margin-bottom: 12px; }
+
+        .ch-badge {
+            display: inline-block;
+            margin-top: 12px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+            background-color: var(--bg-base);
+            color: var(--text-muted);
+            border: 1px solid var(--border);
+        }
+
+        .ch-badge.completed {
+            background-color: var(--success-light);
+            color: var(--success);
+            border-color: transparent;
+        }
+
+        .screen-control-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 28px;
+        }
+
+        .action-back {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            padding: 10px 20px;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .audio-listen-btn {
+            background-color: var(--primary-light);
+            color: var(--primary);
+            border: none;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-family: inherit;
+            font-weight: 700;
+            font-size: 0.88rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: transform 0.2s;
+        }
+
+        .audio-listen-btn:hover {
+            transform: scale(1.04);
+        }
+
+        .progress-track {
+            height: 6px;
+            background-color: var(--border);
+            border-radius: 3px;
+            margin-bottom: 36px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: var(--primary);
+            width: 0%;
+            transition: width 0.3s;
+        }
+
+        .card-container {
+            perspective: 1200px;
+            width: 100%;
+            max-width: 520px;
+            height: 320px;
+            margin: 0 auto 36px;
+            cursor: pointer;
+        }
+
+        .card-pivot {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.5s ease;
+        }
+
+        .card-container.flipped .card-pivot { transform: rotateY(180deg); }
+
+        .card-panel {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 28px;
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            box-shadow: var(--shadow);
+        }
+
+        .panel-front { background-color: var(--bg-surface); }
+        .panel-back { background-color: #1c1917; color: #ffffff; transform: rotateY(180deg); }
+
+        .term-display { font-family: 'Space Grotesk', sans-serif; font-size: 2.3rem; font-weight: 700; text-align: center; }
+        .context-display { font-size: 0.95rem; color: var(--text-muted); font-style: italic; text-align: center; margin-top: 10px;}
+
+        .srs-row { display: flex; gap: 12px; justify-content: center; visibility: hidden; }
+        .srs-btn { padding: 16px; border-radius: var(--radius-md); border: none; font-weight: 700; cursor: pointer; flex: 1; }
+        .srs-hard { background-color: var(--danger-light); color: var(--danger); }
+        .srs-good { background-color: var(--warning-light); color: var(--warning); }
+        .srs-easy { background-color: var(--success-light); color: var(--success); }
+
+        .quiz-panel-wrapper { background: var(--bg-surface); padding: 40px; border-radius: var(--radius-lg); border: 1px solid var(--border); }
+        .matrix-options { display: grid; gap: 12px; margin-top: 24px; }
+        .matrix-btn { padding: 18px; text-align: left; border: 2px solid var(--border); border-radius: var(--radius-md); font-weight: 600; cursor: pointer; }
+        .matrix-btn.correct { background-color: var(--success-light); border-color: var(--success); color: var(--success); }
+        .matrix-btn.wrong { background-color: var(--danger-light); border-color: var(--danger); color: var(--danger); }
+
+        .quiz-type-badge { display: inline-block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; padding: 4px 10px; border-radius: 6px; background-color: var(--primary-light); color: var(--primary); margin-bottom: 16px; }
+        .quiz-prompt-lbl { font-size: 0.9rem; color: var(--text-muted); font-weight: 500; margin-bottom: 8px; display: block; }
+        .text-input-field-row { display: flex; gap: 12px; margin-top: 24px; }
+        .input-box-control { flex: 1; padding: 16px; border: 2px solid var(--border); border-radius: var(--radius-md); font-family: inherit; font-size: 1.05rem; font-weight: 600; outline: none; }
+        .input-box-control.correct { border-color: var(--success); background-color: var(--success-light); color: var(--success); }
+        .input-box-control.wrong { border-color: var(--danger); background-color: var(--danger-light); color: var(--danger); }
+        .btn-verify { background-color: var(--text-main); color: #ffffff; border: none; padding: 0 24px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; font-family: inherit; }
+        .btn-verify:hover { background-color: var(--primary); }
+        .typing-feedback-banner { margin-top: 16px; padding: 16px; border-radius: var(--radius-md); font-size: 0.95rem; font-weight: 600; display: none; }
+        .typing-feedback-banner.correct { display: block; background-color: var(--success-light); color: var(--success); }
+        .typing-feedback-banner.wrong { display: block; background-color: var(--danger-light); color: var(--danger); }
+
+        .results-modal-box { background-color: var(--bg-surface); padding: 48px; border-radius: var(--radius-lg); text-align: center; max-width: 500px; margin: 40px auto; }
+        .score-radial { width: 130px; height: 130px; border-radius: 50%; background-color: var(--primary-light); color: var(--primary); font-size: 2.6rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 28px;}
+    </style>
+</head>
+<body>
+
+    <div class="sync-banner">
+        <div>Cloud Sync Status: <span id="sync-status" style="font-weight: 700; color: #f59e0b;">Offline (Local Mode)</span></div>
+        <div class="sync-controls">
+            <label for="sync-key-input">Your Sync Key:</label>
+            <input type="text" id="sync-key-input" class="sync-input" placeholder="Enter key to load progress...">
+            <button class="sync-btn" onclick="loadCloudProgressFromKey()">Connect & Sync</button>
+        </div>
+    </div>
+
+    <header>
+        <div class="nav-inner">
+            <div class="brand">German<span> Flashcard</span></div>
+            <!-- SEKSI NAVIGASI DENGAN PILIHAN LEVEL SECTION (LINGKARAN MERAH #1) -->
+            <div class="nav-tabs">
+                <button class="tab-trigger active" id="tab-A1" onclick="switchLevelSection('A1')">A1</button>
+                <button class="tab-trigger" id="tab-A2" onclick="switchLevelSection('A2')">A2</button>
+                <button class="tab-trigger" id="tab-B1" onclick="switchLevelSection('B1')">B1</button>
+                <button class="tab-trigger" id="tab-B2" onclick="switchLevelSection('B2')">B2</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HOME DASHBOARD -->
+        <div id="screen-home" class="screen active">
+            <div class="welcome-hero">
+                <h1 id="ui-hero-title">Guten Tag! 🇩🇪</h1>
+                <!-- DESKRIPSI WORTSATZ TIEAP LEVEL (LINGKARAN BIRU #2) -->
+                <p id="ui-level-description">Landung der Grundwortschatz A1 Module: Alltagsgespräche, Familie, Berufe und Grundgrammatik.</p>
+            </div>
+
+            <!-- METRICS BAR TANPA TOTAL REVIEWS (LINGKARAN HIJAU #3) -->
+            <div class="metrics-bar">
+                <div class="metric-tile">
+                    <span class="value" id="ui-metric-mastered">0</span>
+                    <span class="lbl">Words Mastered</span>
+                </div>
+                <div class="metric-tile">
+                    <span class="value" id="ui-metric-completion">0%</span>
+                    <span class="lbl">Quiz Completion</span>
+                </div>
+            </div>
+
+            <div class="chapters-layout" id="chapters-grid-container"></div>
+        </div>
+
+        <!-- FLASHCARDS VIEW -->
+        <div id="screen-flashcards" class="screen">
+            <div class="screen-control-row">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <button class="action-back" onclick="switchScreen('home')">← Back</button>
+                    <div>
+                        <h3 id="ui-fc-chapter-title" style="font-family: 'Space Grotesk', sans-serif; font-weight:700;">Kapitel</h3>
+                        <div class="view-meta-counter" id="ui-fc-counter">Card 1 of 10</div>
+                    </div>
+                </div>
+                <button class="audio-listen-btn" onclick="triggerVoiceSpeech(event)">🔊 Listen</button>
+            </div>
+            <div class="progress-track"><div class="progress-fill" id="ui-fc-progress-bar"></div></div>
+            <div class="card-container" id="ui-interactive-card" onclick="flipActiveCard()">
+                <div class="card-pivot">
+                    <div class="card-panel panel-front">
+                        <span class="panel-label" style="font-size: 0.8rem; letter-spacing: 0.1em; color: var(--text-muted); font-weight:700; margin-bottom:16px;">GERMAN ➔ ENGLISH</span>
+                        <div class="term-display" id="ui-fc-front-word">...</div>
+                        <div class="context-display" id="ui-fc-front-context">...</div>
+                        <button class="audio-listen-btn" style="margin-top: 24px; padding: 6px 14px; font-size: 0.8rem;" onclick="triggerVoiceSpeech(event)">🔊 Pronounce</button>
+                    </div>
+                    <div class="card-panel panel-back">
+                        <span class="panel-label" style="font-size: 0.8rem; letter-spacing: 0.1em; color: #a8a29e; font-weight:700; margin-bottom:16px;">TRANSLATION</span>
+                        <div class="term-display" id="ui-fc-back-word">...</div>
+                    </div>
+                </div>
+            </div>
+            <div class="interactive-footer">
+                <div class="srs-row" id="ui-fc-srs-controls">
+                    <button class="srs-btn srs-hard" onclick="rateVocabItem(1)">Hard</button>
+                    <button class="srs-btn srs-good" onclick="rateVocabItem(3)">Good</button>
+                    <button class="srs-btn srs-easy" onclick="rateVocabItem(5)">Easy</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- QUIZ ENGINE -->
+        <div id="screen-quiz" class="screen">
+            <div class="screen-control-row">
+                <h2 style="font-family:'Space Grotesk', sans-serif; font-weight:700;" id="ui-quiz-title">Chapter Assessment</h2>
+                <div class="view-meta-counter" id="ui-quiz-counter">Question 1 of 10</div>
+            </div>
+            <div class="quiz-panel-wrapper">
+                <div class="quiz-type-badge" id="ui-quiz-type-badge">Multiple Choice</div>
+                <span class="quiz-prompt-lbl" id="ui-quiz-instruction-label">Identify the correct translation:</span>
+                <div class="term-display" style="font-size:2rem; text-align:left; margin-top:4px;" id="ui-quiz-prompt-word">...</div>
+                
+                <div class="matrix-options" id="ui-quiz-options-box"></div>
+
+                <div id="ui-quiz-typing-box" style="display: none;">
+                    <div class="text-input-field-row">
+                        <input type="text" class="input-box-control" id="ui-quiz-text-input" placeholder="Type the German entry..." autocomplete="off">
+                        <button class="btn-verify" id="ui-quiz-verify-btn" onclick="checkTypingAnswer()">Verify</button>
+                    </div>
+                    <div class="typing-feedback-banner" id="ui-quiz-typing-feedback"></div>
+                </div>
+            </div>
+            <div class="footer-action-align" style="margin-top:20px;">
+                <button class="sync-btn" id="ui-quiz-next-btn" onclick="stepQuizSequence()" style="display:none; padding:12px 24px;">Next Question →</button>
+            </div>
+        </div>
+
+        <!-- RESULTS SUMMARY -->
+        <div id="screen-results" class="screen">
+            <div class="results-modal-box">
+                <div class="score-radial" id="ui-results-percentage">0%</div>
+                <h2>Evaluation Complete</h2>
+                <button class="sync-btn" style="margin-top:20px;" onclick="switchScreen('home')">Return to Dashboard</button>
+            </div>
+        </div>
+    </main>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+        // MAPPING DESKRIPSI WORTSCHATZ MASING-MASING LEVEL (LINGKARAN BIRU #2)
+        const LEVEL_DESCRIPTIONS = {
+            'A1': 'Landung der Grundwortschatz A1 Module: Alltagsgespräche, Familie, Berufe, Einkaufen und Grundgrammatik.',
+            'A2': 'Erweiterter Wortschatz A2: Reise, Arbeit, Gesundheit, Orientierung und Vergangene Ereignisse.',
+            'B1': 'Mittelstufe Wortschatz B1: Meinungen ausdrücken, Berufswelt, Kultur, Umwelt und komplexe Strukturen.',
+            'B2': 'Fortgeschrittene Sprachverwendung B2: Fachbegriffe, Diskussionen, Abstrakte Themen und Nuancen.'
+        };
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyD4U8Zg04xcpU9bc1Z__cp_cvkhM9t2-Bc",
+            authDomain: "netzwerkneu.firebaseapp.com",
+            projectId: "netzwerkneu",
+            storageBucket: "netzwerkneu.firebasestorage.app",
+            messagingSenderId: "680912448325",
+            appId: "1:680912448325:web:d7e745d8ee932e309dac2c",
+            measurementId: "G-FJFGB4BRF9"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        let memoryLedger = { masteredKeys: {}, reviewTotals: 0, quizScores: {} };
+        let activeSyncKeyStr = "";
+        let currentLevel = "A1";
+        let activeDataMapping = [];
+
+        // SISTEM IMPOR DINAMIS DARI FILE BERBEDA (vocab-data-A1.js, vocab-data-A2.js, DSK)
+        window.loadLevelDataset = async (level) => {
+            currentLevel = level;
+            document.getElementById('ui-level-description').textContent = LEVEL_DESCRIPTIONS[level] || "";
+            
+            try {
+                // Mencoba memanggil file kosakata spesifik sesuai level
+                const module = await import(`./vocab-data-${level}.js`);
+                activeDataMapping = module.NETZWERK_DATA_MAPPING || [];
+            } catch (err) {
+                console.warn(`File vocab-data-${level}.js belum tersedia, mencoba file fallback vocab-data.js...`);
+                try {
+                    const fallback = await import(`./vocab-data.js`);
+                    activeDataMapping = fallback.NETZWERK_DATA_MAPPING || [];
+                } catch(e) {
+                    console.error("Gagal memuat dataset kosakata:", e);
+                    activeDataMapping = [];
+                }
+            }
+            renderDashboardUi();
+        };
+
+        window.switchLevelSection = (level) => {
+            document.querySelectorAll('.tab-trigger').forEach(btn => btn.classList.remove('active'));
+            const activeTab = document.getElementById(`tab-${level}`);
+            if(activeTab) activeTab.classList.add('active');
+            
+            loadLevelDataset(level);
+        };
+
+        window.initGlobalState = () => {
+            const locallyStoredKey = localStorage.getItem('lf_cloud_sync_key');
+            if(locallyStoredKey) {
+                activeSyncKeyStr = locallyStoredKey;
+                document.getElementById('sync-key-input').value = activeSyncKeyStr;
+                loadCloudProgressFromKey();
+            } else {
+                activeSyncKeyStr = "user-" + Math.random().toString(36).substring(2, 7).toUpperCase();
+                localStorage.setItem('lf_cloud_sync_key', activeSyncKeyStr);
+                document.getElementById('sync-key-input').value = activeSyncKeyStr;
+                readLocalStorageBackupData();
+                loadLevelDataset("A1");
+            }
+        };
+
+        function readLocalStorageBackupData() {
+            const localKeys = localStorage.getItem('nw_mastered_map');
+            const localTotals = localStorage.getItem('nw_review_count');
+            const localQuizzes = localStorage.getItem('nw_quiz_scores');
+            if (localKeys) memoryLedger.masteredKeys = JSON.parse(localKeys);
+            if (localTotals) memoryLedger.reviewTotals = parseInt(localTotals, 10);
+            if (localQuizzes) memoryLedger.quizScores = JSON.parse(localQuizzes);
+        }
+
+        window.loadCloudProgressFromKey = async () => {
+            const inputVal = document.getElementById('sync-key-input').value.trim();
+            if(!inputVal) return;
+            activeSyncKeyStr = inputVal;
+            localStorage.setItem('lf_cloud_sync_key', activeSyncKeyStr);
+
+            document.getElementById('sync-status').textContent = "Connecting...";
+            try {
+                const recordRef = doc(db, "user_progress", activeSyncKeyStr);
+                const querySnapshot = await getDoc(recordRef);
+                
+                if(querySnapshot.exists()) {
+                    memoryLedger = querySnapshot.data();
+                    document.getElementById('sync-status').textContent = "Connected & Synced ✅";
+                    document.getElementById('sync-status').style.color = "#10b981";
+                } else {
+                    document.getElementById('sync-status').textContent = "New Key Activated (Cloud Set) 🌱";
+                    document.getElementById('sync-status').style.color = "#3b82f6";
+                    await setDoc(recordRef, memoryLedger);
+                }
+                loadLevelDataset(currentLevel);
+            } catch(error) {
+                console.error(error);
+                document.getElementById('sync-status').textContent = "Sync Connection Error ❌";
+                document.getElementById('sync-status').style.color = "#dc2626";
+            }
+        };
+
+        async function pushProgressUpdateToCloud() {
+            localStorage.setItem('nw_mastered_map', JSON.stringify(memoryLedger.masteredKeys));
+            localStorage.setItem('nw_review_count', memoryLedger.reviewTotals.toString());
+            localStorage.setItem('nw_quiz_scores', JSON.stringify(memoryLedger.quizScores));
+
+            try {
+                const targetDocRef = doc(db, "user_progress", activeSyncKeyStr);
+                await setDoc(targetDocRef, memoryLedger);
+            } catch(e) { console.error("Cloud push anomaly:", e); }
+        }
+
+        window.switchScreen = (id) => {
+            document.querySelectorAll('.screen').forEach(el => el.classList.remove('active'));
+            document.getElementById(`screen-${id}`).classList.add('active');
+            if(id === 'home') renderDashboardUi();
+        };
+
+        function renderDashboardUi() {
+            let totalMasteredCount = 0;
+            Object.values(memoryLedger.masteredKeys).forEach(val => { if (val === 'mastered') totalMasteredCount++; });
+            
+            const totalDecks = activeDataMapping.length || 1;
+            const completedCount = Object.keys(memoryLedger.quizScores).filter(k => activeDataMapping.some(d => d.id === k)).length;
+            const completionPercent = Math.round((completedCount / totalDecks) * 100);
+
+            document.getElementById('ui-metric-mastered').textContent = totalMasteredCount;
+            document.getElementById('ui-metric-completion').textContent = `${completionPercent}%`;
+
+            const container = document.getElementById('chapters-grid-container');
+            container.innerHTML = '';
+
+            if (activeDataMapping.length === 0) {
+                container.innerHTML = `<div style="grid-column: 1/-1; text-align:center; padding: 40px; color: var(--text-muted);">
+                    Data vocabulary untuk section <b>${currentLevel}</b> (vocab-data-${currentLevel}.js) belum ditemukan di repository.
+                </div>`;
+                return;
+            }
+
+            activeDataMapping.forEach(deck => {
+                let masteredInsideDeck = 0;
+                deck.items.forEach(item => {
+                    if (memoryLedger.masteredKeys[`${deck.id}-${item.de}`] === 'mastered') masteredInsideDeck++;
+                });
+                const scores = memoryLedger.quizScores[deck.id];
+                let badge = `<span class="ch-badge">Quiz Locked</span>`;
+                if(scores !== undefined) badge = `<span class="ch-badge completed">Score: ${scores}%</span>`;
+
+                const node = document.createElement('div');
+                node.className = 'chapter-node';
+                node.onclick = () => initFlashcardSession(deck);
+                node.innerHTML = `
+                    <div class="ch-num">${deck.num}</div>
+                    <div class="ch-name">${deck.emoji || ' 📖 '} ${deck.name}</div>
+                    <div class="ch-meta"><span>${deck.items.length} items • </span><span>${masteredInsideDeck} clear</span></div>
+                    ${badge}
+                `;
+                container.appendChild(node);
+            });
+        }
+
+        let currentDeckContext = null;
+        let fcIndex = 0;
+        let isFlipped = false;
+
+        function initFlashcardSession(deckObj) {
+            currentDeckContext = deckObj;
+            fcIndex = 0;
+            switchScreen('flashcards');
+            updateFlashcardUi();
+        }
+
+        function updateFlashcardUi() {
+            document.getElementById('ui-interactive-card').classList.remove('flipped');
+            isFlipped = false;
+            
+            document.getElementById('ui-fc-srs-controls').style.visibility = 'hidden';
+
+            const activeWord = currentDeckContext.items[fcIndex];
+            
+            document.getElementById('ui-fc-chapter-title').textContent = `${currentDeckContext.emoji || '📚'} ${currentDeckContext.name}`;
+            document.getElementById('ui-fc-counter').textContent = `Card ${fcIndex + 1} of ${currentDeckContext.items.length}`;
+            document.getElementById('ui-fc-progress-bar').style.width = `${((fcIndex + 1) / currentDeckContext.items.length) * 100}%`;
+            
+            document.getElementById('ui-fc-front-word').textContent = activeWord.de;
+            document.getElementById('ui-fc-front-context').textContent = `Modul area: ${activeWord.hint || 'N/A'}`;
+            document.getElementById('ui-fc-back-word').textContent = activeWord.en;
+        }
+
+        window.flipActiveCard = () => {
+            const cardElement = document.getElementById('ui-interactive-card');
+            
+            if (!isFlipped) {
+                cardElement.classList.add('flipped');
+                isFlipped = true;
+                document.getElementById('ui-fc-srs-controls').style.visibility = 'visible';
+            } else {
+                cardElement.classList.remove('flipped');
+                isFlipped = false;
+            }
+        };
+
+        window.triggerVoiceSpeech = (event) => {
+            if (event) event.stopPropagation(); 
+            if (!currentDeckContext) return;
+            
+            const targetWord = currentDeckContext.items[fcIndex].de;
+            const cleanWord = targetWord.split(',')[0].replace(/\"/g, '').replace(/\|\s*/g, '');
+
+            if ('speechSynthesis' in window) {
+                const utterance = new SpeechSynthesisUtterance(cleanWord);
+                utterance.lang = 'de-DE';
+                utterance.rate = 0.85; 
+                window.speechSynthesis.cancel(); 
+                window.speechSynthesis.speak(utterance);
+            } else {
+                alert("Browser ini belum mendukung fitur Text-to-Speech.");
+            }
+        };
+
+        window.rateVocabItem = async (val) => {
+            const activeItemWord = currentDeckContext.items[fcIndex];
+            const compKey = `${currentDeckContext.id}-${activeItemWord.de}`;
+            memoryLedger.reviewTotals++;
+            if(val === 5) memoryLedger.masteredKeys[compKey] = 'mastered';
+            
+            await pushProgressUpdateToCloud();
+            fcIndex++;
+            if(fcIndex >= currentDeckContext.items.length) { startQuizSequence(); } else { updateFlashcardUi(); }
+        };
+
+        let quizQuestions = [];
+        let quizIdx = 0;
+        let runningQuizScore = 0;
+
+        function startQuizSequence() {
+            quizIdx = 0; runningQuizScore = 0; quizQuestions = [];
+            currentDeckContext.items.forEach((item, index) => {
+                const incorrectOptions = currentDeckContext.items.filter(x => x.en !== item.en).map(x => x.en);
+                let combinedChoices = [item.en, ...incorrectOptions].slice(0,4).sort(() => Math.random() - 0.5);
+                const exerciseType = (index % 2 === 0) ? 'mc' : 'type';
+
+                quizQuestions.push({ 
+                    type: exerciseType,
+                    germanWord: item.de, 
+                    englishWord: item.en, 
+                    choices: combinedChoices 
+                });
+            });
+            switchScreen('quiz');
+            renderQuizQuestion();
+        }
+
+        function renderQuizQuestion() {
+            document.getElementById('ui-quiz-next-btn').style.display = 'none';
+            const q = quizQuestions[quizIdx];
+            document.getElementById('ui-quiz-counter').textContent = `Question ${quizIdx + 1} of ${quizQuestions.length}`;
+            
+            const typeBadge = document.getElementById('ui-quiz-type-badge');
+            const instructionLabel = document.getElementById('ui-quiz-instruction-label');
+            const promptHeader = document.getElementById('ui-quiz-prompt-word');
+            const mcOptionsBox = document.getElementById('ui-quiz-options-box');
+            const typingInputBox = document.getElementById('ui-quiz-typing-box');
+
+            mcOptionsBox.innerHTML = '';
+            typingInputBox.style.display = 'none';
+            document.getElementById('ui-quiz-text-input').value = '';
+            document.getElementById('ui-quiz-text-input').className = 'input-box-control';
+            document.getElementById('ui-quiz-verify-btn').disabled = false;
+            document.getElementById('ui-quiz-typing-feedback').style.display = 'none';
+
+            if (q.type === 'mc') {
+                typeBadge.textContent = "Recognition Stage";
+                typeBadge.style.backgroundColor = "var(--primary-light)";
+                typeBadge.style.color = "var(--primary)";
+                instructionLabel.textContent = "Identify the correct English meaning:";
+                promptHeader.textContent = q.germanWord;
+                mcOptionsBox.style.display = 'grid';
+
+                q.choices.forEach(opt => {
+                    const btn = document.createElement('button');
+                    btn.className = 'matrix-btn';
+                    btn.textContent = opt;
+                    btn.onclick = () => parseSelection(btn, opt, q.englishWord);
+                    mcOptionsBox.appendChild(btn);
+                });
+            } else {
+                typeBadge.textContent = "Active Recall Stage";
+                typeBadge.style.backgroundColor = "var(--success-light)";
+                typeBadge.style.color = "var(--success)";
+                instructionLabel.textContent = "Translate this term into German:";
+                promptHeader.textContent = q.englishWord;
+                mcOptionsBox.style.display = 'none';
+                typingInputBox.style.display = 'block';
+                setTimeout(() => document.getElementById('ui-quiz-text-input').focus(), 50);
+            }
+        }
+
+        function parseSelection(btn, selected, correct) {
+            document.querySelectorAll('.matrix-btn').forEach(b => b.disabled = true);
+            if(selected === correct) { btn.classList.add('correct'); runningQuizScore++; }
+            else { btn.classList.add('wrong'); document.querySelectorAll('.matrix-btn').forEach(b => { if(b.textContent === correct) b.classList.add('correct'); }); }
+            document.getElementById('ui-quiz-next-btn').style.display = 'block';
+        }
+
+        function cleanStringForLooseMatching(str) {
+            return str.toLowerCase()
+                      .replace(/^(der|die|das)\s+/, '')
+                      .replace(/,\s*["-].*$/, '')
+                      .replace(/\|/g, '')
+                      .trim();
+        }
+
+        window.checkTypingAnswer = () => {
+            const inputField = document.getElementById('ui-quiz-text-input');
+            const userString = inputField.value.trim();
+            if (!userString) return;
+
+            const q = quizQuestions[quizIdx];
+            document.getElementById('ui-quiz-verify-btn').disabled = true;
+            inputField.disabled = true;
+
+            const baseCorrectAnswer = q.germanWord;
+            const isMatchExact = userString.toLowerCase() === baseCorrectAnswer.toLowerCase();
+            const isMatchLoose = cleanStringForLooseMatching(userString) === cleanStringForLooseMatching(baseCorrectAnswer);
+
+            const feedbackBanner = document.getElementById('ui-quiz-typing-feedback');
+            feedbackBanner.style.display = 'block';
+
+            if (isMatchExact || isMatchLoose) {
+                inputField.className = 'input-box-control correct';
+                feedbackBanner.className = 'typing-feedback-banner correct';
+                feedbackBanner.textContent = `Richtig! Perfect active recall match.`;
+                runningQuizScore++;
+            } else {
+                inputField.className = 'input-box-control wrong';
+                feedbackBanner.className = 'typing-feedback-banner wrong';
+                feedbackBanner.textContent = `Correct form: ${baseCorrectAnswer}`;
+            }
+            document.getElementById('ui-quiz-next-btn').style.display = 'block';
+        };
+
+        window.stepQuizSequence = async () => {
+            document.getElementById('ui-quiz-text-input').disabled = false;
+            quizIdx++;
+            if(quizIdx >= quizQuestions.length) {
+                const finalScore = Math.round((runningQuizScore / quizQuestions.length) * 100);
+                memoryLedger.quizScores[currentDeckContext.id] = finalScore;
+                await pushProgressUpdateToCloud();
+                document.getElementById('ui-results-percentage').textContent = `${finalScore}%`;
+                switchScreen('results');
+            } else { renderQuizQuestion(); }
+        };
+
+        window.initGlobalState();
+    </script>
+</body>
+</html>
         :root {
             --bg-base: #fbfbf9;
             --bg-surface: #ffffff;
