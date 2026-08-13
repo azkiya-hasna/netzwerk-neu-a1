@@ -337,5 +337,117 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "der/die Vorgesetzte, -n", en: "superior", hint: "10b" },
             { de: "die Wange, -n", en: "cheek", hint: "10b" }
         ]
+    },
+    // ==========================================
+    // KAPITEL 4: ARBEITSWELT
+    // ==========================================
+    {
+        id: "b1-kapitel-4-1b-1cub", num: "Kapitel 4 (1b-1cÜB)", name: "Berufe, Industrie & Recht", emoji: "⚖️",
+        items: [
+            { de: "die Analyse, -n", en: "analysis", hint: "1b" },
+            { de: "aus|tragen", en: "to deliver", hint: "1b" },
+            { de: "der Briefträger, -", en: "postal carrier (m)", hint: "1b" },
+            { de: "die Briefträgerin, -nen", en: "postal carrier (f)", hint: "1b" },
+            { de: "der Chemiker, -", en: "chemist (m)", hint: "1b" },
+            { de: "die Chemikerin, -nen", en: "chemist (f)", hint: "1b" },
+            { de: "die Elektronik (Sg.)", en: "electronics", hint: "1b" },
+            { de: "exakt", en: "exact", hint: "1b" },
+            { de: "der Mechatroniker, -", en: "mechatronics engineer (m)", hint: "1b" },
+            { de: "die Mechatronikerin, -nen", en: "mechatronics engineer (f)", hint: "1b" },
+            { de: "das Metall, -e", en: "metal", hint: "1b" },
+            { de: "zu|stellen", en: "to deliver", hint: "1b" },
+            { de: "die Akte, -n", en: "file / document", hint: "1a ÜB" },
+            { de: "der/die Angeklagte, -n", en: "defendant", hint: "1a ÜB" },
+            { de: "das Einkommen, -", en: "income", hint: "1a ÜB" },
+            { de: "der Elektroingenieur, -e", en: "electrical engineer (m)", hint: "1a ÜB" },
+            { de: "die Elektroingenieurin, -nen", en: "electrical engineer (f)", hint: "1a ÜB" },
+            { de: "gerecht", en: "fair / just", hint: "1a ÜB" },
+            { de: "das Gericht, -e", en: "court (of law)", hint: "1a ÜB" },
+            { de: "die Gerichtsverhandlung, -en", en: "trial", hint: "1a ÜB" },
+            { de: "her|stellen", en: "to produce / create", hint: "1a ÜB" },
+            { de: "die Industrie, -n", en: "industry", hint: "1a ÜB" },
+            { de: "die Landwirtschaft (Sg.)", en: "agriculture", hint: "1a ÜB" }
+        ]
+    },
+    {
+        id: "b1-kapitel-4-1cub-6e", num: "Kapitel 4 (1cÜB-6e)", name: "Justiz, Werkzeuge & Missgeschicke", emoji: "🛠️",
+        items: [
+            { de: "der Rechtsanwalt, \"-e", en: "lawyer (m)", hint: "1a ÜB" },
+            { de: "die Rechtsanwältin, -nen", en: "lawyer (f)", hint: "1a ÜB" },
+            { de: "der Richter, -", en: "judge (m)", hint: "1a ÜB" },
+            { de: "die Richterin, -nen", en: "judge (f)", hint: "1a ÜB" },
+            { de: "der Schreiner, -", en: "carpenter (m)", hint: "1a ÜB" },
+            { de: "die Schreinerin, -nen", en: "carpenter (f)", hint: "1a ÜB" },
+            { de: "das Urteil, -e", en: "verdict", hint: "1a ÜB" },
+            { de: "das Verbrechen, -", en: "crime", hint: "1a ÜB" },
+            { de: "der Augenblick, -e", en: "moment", hint: "1c" },
+            { de: "ernst nehmen", en: "to take sth seriously", hint: "1c" },
+            { de: "aus|halten", en: "to cope (with)", hint: "3" },
+            { de: "frei|nehmen", en: "to take time off", hint: "5a" },
+            { de: "das Besteck, -e", en: "cutlery", hint: "6a ÜB" },
+            { de: "der Hammer, -", en: "hammer", hint: "6a ÜB" },
+            { de: "der Kamm, \"-e", en: "comb", hint: "6a ÜB" },
+            { de: "die Schere, -n", en: "scissors", hint: "6a ÜB" },
+            { de: "schütten", en: "to spill", hint: "6c" },
+            { de: "das Versehen, -", en: "accident", hint: "6c" },
+            { de: "verwechseln", en: "to confuse", hint: "6c" },
+            { de: "die Absicht, -en", en: "intention", hint: "6d" },
+            { de: "verzeihen", en: "to forgive", hint: "6d" }
+        ]
+    },
+    {
+        id: "b1-kapitel-4-8b-9c", num: "Kapitel 4 (8b-9c)", name: "Bewerbung & Unterlagen", emoji: "📄",
+        items: [
+            { de: "ab|schreiben", en: "to copy", hint: "8b" },
+            { de: "der Anhang, \"-e", en: "appendix / attachment", hint: "8b" },
+            { de: "aussagekräftig", en: "meaningful", hint: "8b" },
+            { de: "die Bescheinigung, -en", en: "certificate", hint: "8b" },
+            { de: "das Bewerbungsfoto, -s", en: "application photo", hint: "8b" },
+            { de: "das Bewerbungsschreiben, -", en: "cover letter", hint: "8b" },
+            { de: "das Bewerbungstraining, -s", en: "job application training", hint: "8b" },
+            { de: "eignen (sich)", en: "to be suitable for", hint: "8b" },
+            { de: "erkundigen (sich)", en: "to inquire", hint: "8b" },
+            { de: "die Fortbildung, -en", en: "further training", hint: "8b" },
+            { de: "die Geduld (Sg.)", en: "patience", hint: "8b" },
+            { de: "die Jobsuche, -n", en: "job search", hint: "8b" },
+            { de: "der Lebenslauf, \"-e", en: "resume / CV", hint: "8b" },
+            { de: "mit|schicken", en: "to send along", hint: "8b" },
+            { de: "die Personalabteilung, -en", en: "human resources (HR)", hint: "8b" },
+            { de: "der Profi, -s", en: "professional", hint: "8b" },
+            { de: "relevant", en: "relevant", hint: "8b" },
+            { de: "seriös", en: "respectable", hint: "8b" },
+            { de: "die Voraussetzung, -en", en: "prerequisite / condition", hint: "8b" },
+            { de: "die Vorlage, -n", en: "template / guideline", hint: "8b" },
+            { de: "zukünftig", en: "future", hint: "8b" },
+            { de: "der Zweck, -e", en: "purpose", hint: "8b" }
+        ]
+    },
+    {
+        id: "b1-kapitel-4-10a-13d", num: "Kapitel 4 (10a-13d)", name: "Vorstellungsgespräch & Auftritt", emoji: "🗣️",
+        items: [
+            { de: "der Eindruck, \"-e", en: "impression", hint: "10a" },
+            { de: "überzeugen", en: "to convince", hint: "10a" },
+            { de: "qualifiziert", en: "qualified", hint: "10c" },
+            { de: "die Absprache, -n", en: "agreement", hint: "12a" },
+            { de: "der Stundenlohn, \"-e", en: "hourly wage", hint: "12a" },
+            { de: "die Bewerbungsunterlagen (Pl.)", en: "application documents", hint: "12b" },
+            { de: "absolut", en: "absolutely", hint: "13b" },
+            { de: "die Anfahrt, -en", en: "journey", hint: "13b" },
+            { de: "die Aufregung (Sg.)", en: "excitement / nervousness", hint: "13b" },
+            { de: "der Auftritt, -e", en: "appearance", hint: "13b" },
+            { de: "der Bewerber, -", en: "applicant (m)", hint: "13b" },
+            { de: "die Bewerberin, -nen", en: "applicant (f)", hint: "13b" },
+            { de: "die Branche, -n", en: "field of business", hint: "13b" },
+            { de: "entspannt", en: "relaxed", hint: "13b" },
+            { de: "die Fähigkeit, -en", en: "ability / skill", hint: "13b" },
+            { de: "die Körperhaltung, -en", en: "posture", hint: "13b" },
+            { de: "die Körpersprache (Sg.)", en: "body language", hint: "13b" },
+            { de: "menschlich", en: "human", hint: "13b" },
+            { de: "optimistisch", en: "optimistic", hint: "13b" },
+            { de: "die Persönlichkeit, -en", en: "personality", hint: "13b" },
+            { de: "vor|ziehen", en: "to prefer", hint: "13b" },
+            { de: "zählen", en: "to count / matter", hint: "13b" },
+            { de: "der Zweifel, -", en: "doubt", hint: "13b" }
+        ]
     }
 ];
