@@ -1031,5 +1031,173 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "unterzeichnen", en: "to sign", hint: "11a" },
             { de: "die Würde (Sg.)", en: "dignity", hint: "11a" }
         ]
+    },
+    // ==========================================
+    // KAPITEL 11: STADT, LAND, FLUSS
+    // ==========================================
+    {
+        id: "b1-kapitel-11-1b-4d", num: "Kapitel 11 (1b-4d)", name: "Stadtleben, Dialekt & Freizeit", emoji: "🏙️",
+        items: [
+            { de: "das Bürogebäude, -", en: "office building", hint: "1b" },
+            { de: "der Dreck (Sg.)", en: "dirt", hint: "1b" },
+            { de: "der Fußgänger, -", en: "pedestrian (m)", hint: "1b" },
+            { de: "die Fußgängerin, -nen", en: "pedestrian (f)", hint: "1b" },
+            { de: "das Schaufenster, -", en: "shop window", hint: "1b" },
+            { de: "der Schmutz (Sg.)", en: "dirt", hint: "1b" },
+            { de: "das Tempo, Tempi", en: "speed", hint: "1b" },
+            { de: "das Freizeitangebot, -e", en: "recreational activity", hint: "2a" },
+            { de: "der Stadtmensch, -en", en: "townie / city person", hint: "4a" },
+            { de: "anscheinend", en: "apparent", hint: "4b" },
+            { de: "der Dialekt, -e", en: "dialect", hint: "4b" },
+            { de: "eindeutig", en: "clear / explicit", hint: "4b" },
+            { de: "das Kulturfest, -e", en: "cultural festival", hint: "4b" },
+            { de: "der Landmensch, -en", en: "country person", hint: "4b" },
+            { de: "entsprechend", en: "equivalent / corresponding", hint: "4c" },
+            { de: "die Sportsachen (Pl.)", en: "sports gear", hint: "4d" }
+        ]
+    },
+    {
+        id: "b1-kapitel-11-6a-8b", num: "Kapitel 11 (6a-8b)", name: "Frühschicht, Stadt & Lebensqualität", emoji: "🌇",
+        items: [
+            { de: "erwachen", en: "to awaken", hint: "6a" },
+            { de: "die Backstube, -n", en: "bakery", hint: "6b" },
+            { de: "der Dienst, -e", en: "duty / service", hint: "6b" },
+            { de: "ein|liefern", en: "to admit (to hospital)", hint: "6b" },
+            { de: "die Frühschicht, -en", en: "morning shift", hint: "6b" },
+            { de: "konzentriert", en: "concentrated", hint: "6b" },
+            { de: "der/die Obdachlose, -n", en: "homeless person", hint: "6b" },
+            { de: "die Schicht, -en", en: "shift", hint: "6b" },
+            { de: "städtisch", en: "urban / municipal", hint: "6b" },
+            { de: "die Übergabe, -n", en: "handover", hint: "6b" },
+            { de: "unruhig", en: "restless / turbulent", hint: "6b" },
+            { de: "der Der Sozialarbeiter, -", en: "social worker (m)", hint: "6d" },
+            { de: "die Sozialarbeiterin, -nen", en: "social worker (f)", hint: "6d" },
+            { de: "ab|hängen", en: "to depend on", hint: "8b" },
+            { de: "die Arbeitslosigkeit (Sg.)", en: "unemployment", hint: "8b" },
+            { de: "berücksichtigen", en: "to consider", hint: "8b" },
+            { de: "die Diversität (Sg.)", en: "diversity", hint: "8b" },
+            { de: "die Elternzeit (Sg.)", en: "parental leave", hint: "8b" },
+            { de: "fest|legen", en: "to determine", hint: "8b" },
+            { de: "die Gender-Gerechtigkeit (Sg.)", en: "gender equity", hint: "8b" },
+            { de: "gesellschaftlich", en: "social", hint: "8b" },
+            { de: "die Kinderbetreuung (Sg.)", en: "childcare", hint: "8b" },
+            { de: "die Work-Life-Balance (Sg.)", en: "work-life balance", hint: "8b" }
+        ]
+    },
+    {
+        id: "b1-kapitel-11-12a-13b", num: "Kapitel 11 (12a-13b)", name: "Zürich, Erkundung & Wahrzeichen", emoji: "🇨🇭",
+        items: [
+            { de: "die Diskussion, -en", en: "discussion", hint: "12a" },
+            { de: "die Kita, -s", en: "kindergarten / daycare", hint: "12a" },
+            { de: "die Renovierung, -en", en: "renovation", hint: "12a" },
+            { de: "der Stadtrat, \"-e", en: "city council member (m)", hint: "12a" },
+            { de: "die Stadträtin, -nen", en: "city council member (f)", hint: "12a" },
+            { de: "unterbrechen", en: "to interrupt", hint: "12a" },
+            { de: "vermitteln", en: "to mediate", hint: "12a" },
+            { de: "ab|biegen", en: "to turn", hint: "12b" },
+            { de: "die Autowerkstatt, \"-en", en: "garage / auto repair shop", hint: "12b" },
+            { de: "das Billett, -s", en: "ticket (Swiss German)", hint: "12b" },
+            { de: "der/die Einheimische, -n", en: "native / local", hint: "12b" },
+            { de: "der Fahrschein, -e", en: "ticket", hint: "12b" },
+            { de: "der Flüchtling, -e", en: "refugee", hint: "12b" },
+            { de: "das Flussbad, \"-er", en: "river swimming pool", hint: "12b" },
+            { de: "die Gasse, -n", en: "alley", hint: "12b" },
+            { de: "schmal", en: "narrow", hint: "12b" },
+            { de: "das Velo, -s", en: "bicycle (Swiss German)", hint: "12b" },
+            { de: "das Wahrzeichen, -", en: "landmark", hint: "12b" },
+            { de: "das Denkmal, \"-er", en: "memorial / monument", hint: "13a" },
+            { de: "der Stadtbummel, -", en: "stroll through the city", hint: "13a" },
+            { de: "der Tourismus (Sg.)", en: "tourism", hint: "13a" }
+        ]
+    },
+
+    // ==========================================
+    // KAPITEL 12: GELD REGIERT DIE WELT?
+    // ==========================================
+    {
+        id: "b1-kapitel-12-1a-3bub", num: "Kapitel 12 (1a-3bÜB)", name: "Bankgeschäfte & Finanzen", emoji: "💰",
+        items: [
+            { de: "regieren", en: "to rule", hint: "1a" },
+            { de: "das Bankgeschäft, -e", en: "banking", hint: "3a" },
+            { de: "der Beleg, -e", en: "receipt / proof", hint: "3a" },
+            { de: "ein|zahlen", en: "to deposit", hint: "3a" },
+            { de: "die Rate, -n", en: "installment / rate", hint: "3a" },
+            { de: "der Kontoauszug, \"-e", en: "bank statement", hint: "3a" },
+            { de: "überziehen", en: "to overdraw", hint: "3a" },
+            { de: "der Zins, -en", en: "interest", hint: "3a" },
+            { de: "fällig", en: "due", hint: "3b ÜB" },
+            { de: "fristgerecht", en: "on time", hint: "3b ÜB" },
+            { de: "monatlich", en: "monthly", hint: "3b ÜB" },
+            { de: "die Münze, -n", en: "coin", hint: "3b ÜB" },
+            { de: "der Schein, -e", en: "bill / banknote", hint: "3b ÜB" },
+            { de: "die Schulden (Pl.)", en: "debt", hint: "3b ÜB" },
+            { de: "versäumen", en: "to miss / neglect", hint: "3c" },
+            { de: "die Kontoführungsgebühr, -en", en: "account maintenance charge", hint: "3d" }
+        ]
+    },
+    {
+        id: "b1-kapitel-12-3e-5c", num: "Kapitel 12 (3e-5c)", name: "Online-Banking & Kontoeröffnung", emoji: "📲",
+        items: [
+            { de: "das Online-Banking (Sg.)", en: "online banking", hint: "3e" },
+            { de: "der/die Bankangestellte, -n", en: "bank teller", hint: "4a" },
+            { de: "das Bargeld (Sg.)", en: "cash", hint: "4a" },
+            { de: "gering", en: "small / low", hint: "4a" },
+            { de: "auf|nehmen", en: "to take out (a loan)", hint: "5a" },
+            { de: "an|fallen", en: "to arise / accrue", hint: "5c" },
+            { de: "der Benutzername, -n", en: "username", hint: "5c" },
+            { de: "der Dauerauftrag, \"-e", en: "standing order", hint: "5c" },
+            { de: "ein|loggen (sich)", en: "to log in", hint: "5c" },
+            { de: "ein|tragen", en: "to register / enter", hint: "5c" },
+            { de: "die Fotoüberweisung, -en", en: "picture transfer", hint: "5c" },
+            { de: "die Kontodaten (Pl.)", en: "account information", hint: "5c" },
+            { de: "die Kontoübersicht, -en", en: "account overview", hint: "5c" },
+            { de: "gut|schreiben", en: "to credit", hint: "5c" },
+            { de: "die Kontoeröffnung, -en", en: "account opening", hint: "5c" },
+            { de: "umgehend", en: "immediate", hint: "5c" },
+            { de: "der Verlust, -e", en: "loss", hint: "5c" }
+        ]
+    },
+    {
+        id: "b1-kapitel-12-6a-10d", num: "Kapitel 12 (6a-10d)", name: "Globalisierung & Ethik", emoji: "🌐",
+        items: [
+            { de: "global", en: "global", hint: "6a" },
+            { de: "die Globalisierung (Sg.)", en: "globalization", hint: "6a" },
+            { de: "bedenken", en: "to consider", hint: "7a" },
+            { de: "der Konsument, -en", en: "consumer (m)", hint: "7a" },
+            { de: "die Konsumentin, -nen", en: "consumer (f)", hint: "7a" },
+            { de: "nützen", en: "to be of use", hint: "7a" },
+            { de: "der Pluspunkt, -e", en: "advantage", hint: "7a" },
+            { de: "das Produktangebot, -e", en: "range of offered products", hint: "7a" },
+            { de: "profitieren", en: "to profit", hint: "7a" },
+            { de: "überleben", en: "to survive", hint: "7a" },
+            { de: "überzeugend", en: "convincing", hint: "7a" },
+            { de: "der Verbraucher, -", en: "user / consumer (m)", hint: "7a" },
+            { de: "die Verbraucherin, -nen", en: "user / consumer (f)", hint: "7a" },
+            { de: "der Wohlstand (Sg.)", en: "prosperity", hint: "7a" },
+            { de: "betrügen", en: "to cheat / deceive", hint: "10a" },
+            { de: "das Gewissen, -", en: "conscience", hint: "10a" },
+            { de: "befürworten", en: "to agree with / support", hint: "10c" },
+            { de: "tolerieren", en: "to tolerate", hint: "10d" }
+        ]
+    },
+    {
+        id: "b1-kapitel-12-11b-11e", num: "Kapitel 12 (11b-11e)", name: "Soziales & Wohltätigkeit", emoji: "🤝",
+        items: [
+            { de: "aus|ziehen", en: "to move out", hint: "11b" },
+            { de: "beten", en: "to pray", hint: "11b" },
+            { de: "fortschrittlich", en: "progressive", hint: "11b" },
+            { de: "geraten", en: "to fall into (trouble/debt)", hint: "11b" },
+            { de: "die Immobilie, -n", en: "real estate", hint: "11b" },
+            { de: "die Jahresmiete, -n", en: "yearly rent", hint: "11b" },
+            { de: "der Nachtwächter, -", en: "night watchman", hint: "11b" },
+            { de: "die Nachtwächterin, -nen", en: "night watchwoman", hint: "11b" },
+            { de: "die Selbsthilfe (Sg.)", en: "self-help", hint: "11b" },
+            { de: "die Sozialsiedlung, -en", en: "social housing project", hint: "11b" },
+            { de: "die Stadtmauer, -n", en: "city wall", hint: "11b" },
+            { de: "stammen", en: "to originate (from)", hint: "11b" },
+            { de: "das Stiftungsvermögen, -", en: "endowment capital", hint: "11b" },
+            { de: "zusätzlich", en: "additional", hint: "11b" },
+            { de: "wohltätig", en: "benevolent / charitable", hint: "11e" }
+        ]
     }
 ];
