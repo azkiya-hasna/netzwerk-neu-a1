@@ -106,5 +106,112 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "die Selbstständigkeit (Sg.)", en: "self-employment", hint: "4c" },
             { de: "die Unternehmenskultur, -en", en: "corporate culture", hint: "4c" }
         ]
+    },
+    // ==========================================
+    // KAPITEL 3: GESUNDHEIT UND WOHLBEFINDEN
+    // ==========================================
+    {
+        id: "b2-kapitel-3-1a-2b", num: "Kapitel 3 (1a-2b)", name: "Medizin, Diagnose & Therapie", emoji: "🩺",
+        items: [
+            { de: "die Beschwerde, -n", en: "complaint / ailment", hint: "1a" },
+            { de: "die Diagnoseerstellung, -en", en: "making a diagnosis", hint: "1a" },
+            { de: "die Symptomlinderung, -en", en: "symptom relief", hint: "1a" },
+            { de: "die Therapieform, -en", en: "form of therapy", hint: "1a" },
+            { de: "das Unwohlsein (Sg.)", en: "indisposition / malaise", hint: "1a" },
+            { de: "akut", en: "acute", hint: "1b" },
+            { de: "chronisch", en: "chronic", hint: "1b" },
+            { de: "die Nebenwirkung, -en", en: "side effect", hint: "1b" },
+            { de: "die Präventionsmaßnahme, -n", en: "preventive measure", hint: "1b" },
+            { de: "die Reha-Maßnahme, -n", en: "rehabilitation measure", hint: "1b" },
+            { de: "das Schmerzmittel, -", en: "painkiller", hint: "1b" },
+            { de: "die Behandlungsmethode, -n", en: "method of treatment", hint: "2a" },
+            { de: "die Heilungschance, -n", en: "chance of recovery", hint: "2a" },
+            { de: "die Klininstudie, -n", en: "clinical trial", hint: "2a" },
+            { de: "die Schulmedizin (Sg.)", en: "conventional medicine", hint: "2a" },
+            { de: "die Alternativmedizin (Sg.)", en: "alternative medicine", hint: "2a" },
+            { de: "die Nebenwirkungsfreiheit (Sg.)", en: "absence of side effects", hint: "2b" },
+            { de: "die Wirksamkeit, -en", en: "efficacy / effectiveness", hint: "2b" },
+            { de: "das Wohlbefinden (Sg.)", en: "well-being", hint: "2b" },
+            { de: "anschlagen", en: "to take effect / respond to treatment", hint: "2b" }
+        ]
+    },
+    {
+        id: "b2-kapitel-3-3a-4c", num: "Kapitel 3 (3a-4c)", name: "Mentale Gesundheit & Lebensstil", emoji: "🧠",
+        items: [
+            { de: "die Achtsamkeit (Sg.)", en: "mindfulness", hint: "3a" },
+            { de: "das Ausgebranntsein (Sg.)", en: "burnout state", hint: "3a" },
+            { de: "die Belastungsgrenze, -n", en: "limit of resilience / tolerance", hint: "3a" },
+            { de: "die Mental Health (Sg.)", en: "mental health", hint: "3a" },
+            { de: "der Überlastungszustand, \"-e", en: "state of overload", hint: "3a" },
+            { de: "aus|gleichen", en: "to balance out / compensate", hint: "3b" },
+            { de: "die Entschleunigung, -en", en: "deceleration / slowing down", hint: "3b" },
+            { de: "die Resilienz, -en", en: "resilience", hint: "3b" },
+            { de: "die Stressbewältigung, -en", en: "stress management", hint: "3b" },
+            { de: "die Ausgewogenheit (Sg.)", en: "balance / equilibrium", hint: "3c" },
+            { de: "die Ernährungsweise, -n", en: "diet / eating habits", hint: "4a" },
+            { de: "der Mangelzustand, \"-e", en: "deficiency state", hint: "4a" },
+            { de: "der Nährstoffgehalt, -e", en: "nutrient content", hint: "4a" },
+            { de: "der Stoffwechsel, -", en: "metabolism", hint: "4a" },
+            { de: "die Vitalität (Sg.)", en: "vitality", hint: "4b" },
+            { de: "vor|beugen", en: "to prevent / obviate", hint: "4b" },
+            { de: "die Bewegungsarmut (Sg.)", en: "lack of physical activity", hint: "4c" },
+            { de: "die Konditionsverbesserung, -en", en: "improvement of stamina", hint: "4c" },
+            { de: "die Leistungsfähigkeit (Sg.)", en: "performance capacity", hint: "4c" },
+            { de: "schonen", en: "to protect / spare", hint: "4c" }
+        ]
+    },
+
+    // ==========================================
+    // KAPITEL 4: WISSENSCHAFT UND FORSCHUNG
+    // ==========================================
+    {
+        id: "b2-kapitel-4-1a-2c", num: "Kapitel 4 (1a-2c)", name: "Forschung, Experimente & Erkenntnisse", emoji: "🔬",
+        items: [
+            { de: "der Forschungsansatz, \"-e", en: "research approach", hint: "1a" },
+            { de: "der Durchbruch, \"-e", en: "breakthrough", hint: "1a" },
+            { de: "die Hypothese, -n", en: "hypothesis", hint: "1a" },
+            { de: "die Innovation, -en", en: "innovation", hint: "1a" },
+            { de: "die Versuchsreihe, -n", en: "series of experiments", hint: "1a" },
+            { de: "analysieren", en: "to analyze", hint: "1b" },
+            { de: "belegen", en: "to prove / substantiate", hint: "1b" },
+            { de: "die Datenerhebung, -en", en: "data collection", hint: "1b" },
+            { de: "die Erkenntnis, -se", en: "finding / insight", hint: "1b" },
+            { de: "nach|weisen", en: "to verify / prove", hint: "1b" },
+            { de: "die Probandengruppe, -n", en: "test group of subjects", hint: "1c" },
+            { de: "der Versuchsperson, -en", en: "test subject", hint: "1c" },
+            { de: "die Auswertung, -en", en: "evaluation / analysis", hint: "2a" },
+            { de: "das Messergebnis, -se", en: "measurement result", hint: "2a" },
+            { de: "die Plausibilität (Sg.)", en: "plausibility", hint: "2a" },
+            { de: "statistisch signifikant", en: "statistically significant", hint: "2b" },
+            { de: "verwerfen", en: "to reject / discard", hint: "2b" },
+            { de: "widerlegen", en: "to refute / disprove", hint: "2b" },
+            { de: "der Kausalzusammenhang, \"-e", en: "causal relationship", hint: "2c" },
+            { de: "die Phänomendeutung, -en", en: "interpretation of phenomena", hint: "2c" }
+        ]
+    },
+    {
+        id: "b2-kapitel-4-3a-4c", num: "Kapitel 4 (3a-4c)", name: "Ethik, Technik & Zukunft", emoji: "🤖",
+        items: [
+            { de: "die ethische Bedenken (Pl.)", en: "ethical concerns", hint: "3a" },
+            { de: "die Genmanipulation, -en", en: "genetic manipulation", hint: "3a" },
+            { de: "der Missbrauch, \"-e", en: "misuse / abuse", hint: "3a" },
+            { de: "die Risikoabwägung, -en", en: "risk assessment", hint: "3a" },
+            { de: "die Verantwortung, -en", en: "responsibility", hint: "3a" },
+            { de: "die Bedenken äußern", en: "to express concerns", hint: "3b" },
+            { de: "Eingriff in die Natur", en: "intervention in nature", hint: "3b" },
+            { de: "die Nachvollziehbarkeit (Sg.)", en: "comprehensibility / traceability", hint: "3b" },
+            { de: "die Sorgfaltspflicht, -en", en: "duty of care", hint: "3c" },
+            { de: "umstritten", en: "controversial", hint: "3c" },
+            { de: "die Algorithmensteuerung, -en", en: "algorithm control", hint: "4a" },
+            { de: "die Automatisierung, -en", en: "automation", hint: "4a" },
+            { de: "Künstliche Intelligenz (KI)", en: "Artificial Intelligence (AI)", hint: "4a" },
+            { de: "die Maschineneffizienz (Sg.)", en: "machine efficiency", hint: "4a" },
+            { de: "die Robotertechnologie, -n", en: "robotics technology", hint: "4a" },
+            { de: "die Zukunftsfähigkeit (Sg.)", en: "future viability", hint: "4b" },
+            { de: "das Anwendungsgebiet, -e", en: "field of application", hint: "4b" },
+            { de: "die Schnittstelle, -n", en: "interface", hint: "4c" },
+            { de: "voran|treiben", en: "to drive forward / promote", hint: "4c" },
+            { de: "die Zukunftsweisend", en: "pioneering / forward-looking", hint: "4c" }
+        ]
     }
 ];
