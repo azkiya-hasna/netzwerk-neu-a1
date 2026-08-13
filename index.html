@@ -36,33 +36,57 @@
             padding-bottom: 80px;
         }
 
-        /* LOGIN SCREEN STYLES */
+        /* LOGIN SCREEN STYLES WITH BACKGROUND IMAGE */
         #screen-auth {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background-color: var(--bg-base);
+            background-color: #111827; /* Dasar warna gelap jika foto belum ter-load */
             z-index: 9999;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 20px;
+            overflow: hidden;
+        }
+
+        /* FOTO BACKGROUND + KONTROL TRANSPARANSI */
+        #screen-auth::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            
+            /* Gantilah 'bg_login.jpg' dengan nama/path foto di folder GitHub kamu */
+            background-image: url('bg_login.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+            /* 🎛️ SETTING TRANSPARANSI FOTO (Range: 0.1 - 1.0) */
+            opacity: 0.55; /* Nilai 0.55 memberikan transparansi yang pas & elegan */
+            
+            z-index: 1;
         }
 
         .auth-card {
-            background: var(--bg-surface);
-            border: 1px solid var(--border);
+            background: rgba(255, 255, 255, 0.92); /* Background semi-transparan modern */
+            backdrop-filter: blur(12px); /* Efek blur latar belakang */
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
             border-radius: var(--radius-lg);
             padding: 40px;
             width: 100%;
             max-width: 420px;
-            box-shadow: var(--shadow);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
             text-align: center;
+            position: relative;
+            z-index: 2;
         }
 
         .auth-card h2 {
             font-family: 'Space Grotesk', sans-serif;
             font-size: 1.8rem;
             margin-bottom: 8px;
+            color: var(--text-main);
         }
 
         .auth-card p {
@@ -88,6 +112,7 @@
             font-weight: 600;
             outline: none;
             text-align: center;
+            background-color: #ffffff;
         }
 
         .auth-input:focus {
@@ -104,11 +129,15 @@
             font-weight: 700;
             font-size: 1rem;
             cursor: pointer;
-            transition: background-color 0.2s;
+            transition: background-color 0.2s, transform 0.1s;
         }
 
         .auth-btn:hover {
             background-color: var(--primary-dark);
+        }
+
+        .auth-btn:active {
+            transform: scale(0.98);
         }
 
         .auth-status {
@@ -576,7 +605,6 @@
                 if(querySnapshot.exists()) {
                     memoryLedger = querySnapshot.data();
                 } else {
-                    // Buat pengguna baru jika belum ada
                     memoryLedger = { masteredKeys: {}, reviewTotals: 0, quizScores: {} };
                     await setDoc(recordRef, memoryLedger);
                 }
@@ -863,7 +891,7 @@
 
             const baseCorrectAnswer = q.germanWord;
             const isMatchExact = userString.toLowerCase() === baseCorrectAnswer.toLowerCase();
-            const isMatchLoose = cleanStringForLooseMatching(userString) === cleanStringForLooseMatching(cleanStringForLooseMatching(baseCorrectAnswer));
+            const isMatchLoose = cleanStringForLooseMatching(userString) === cleanStringForLooseMatching(baseCorrectAnswer);
 
             const feedbackBanner = document.getElementById('ui-quiz-typing-feedback');
             feedbackBanner.style.display = 'block';
