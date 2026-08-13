@@ -857,5 +857,179 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "der Pfad, -e", en: "path / trail", hint: "12a" },
             { de: "visuell", en: "visual", hint: "12a" }
         ]
+    },
+    // ==========================================
+    // KAPITEL 9: KUNSTSTÜCKE
+    // ==========================================
+    {
+        id: "b1-kapitel-9-1a-3a", num: "Kapitel 9 (1a-3a)", name: "Kunstwerke, Graffiti & Galerie", emoji: "🎨",
+        items: [
+            { de: "das Kunststück, -e", en: "piece of art", hint: "1a" },
+            { de: "an|regen", en: "to inspire / encourage", hint: "1b" },
+            { de: "die Betonwand, \"-e", en: "concrete wall", hint: "1b" },
+            { de: "der Brunnen, -", en: "fountain", hint: "1b" },
+            { de: "das Graffito, Graffiti", en: "graffiti", hint: "1b" },
+            { de: "die Hauswand, \"-e", en: "exterior wall of a house", hint: "1b" },
+            { de: "die Installation, -en", en: "installation", hint: "1b" },
+            { de: "konsumieren", en: "to consume", hint: "1b" },
+            { de: "das Kunstwerk, -e", en: "artwork", hint: "1b" },
+            { de: "der Spieß, -e", en: "skewer", hint: "1b" },
+            { de: "die Statue, -n", en: "statue", hint: "1b" },
+            { de: "weich", en: "soft", hint: "1b" },
+            { de: "weiter|entwickeln", en: "to evolve / develop further", hint: "1b" },
+            { de: "steil", en: "steep", hint: "1b" },
+            { de: "das Kunstobjekt, -e", en: "artwork", hint: "2b" },
+            { de: "die Putzfrau, -en", en: "cleaner (f)", hint: "3a" },
+            { de: "der Putzmann, \"-er", en: "cleaner (m)", hint: "3a" },
+            { de: "die Auktion, -en", en: "auction", hint: "3b" },
+            { de: "begrenzt", en: "limited", hint: "3b" },
+            { de: "beschädigen", en: "to damage", hint: "3b" },
+            { de: "clever", en: "smart / clever", hint: "3b" },
+            { de: "erraten", en: "to guess", hint: "3b" },
+            { de: "die Galerie, -n", en: "gallery", hint: "3b" }
+        ]
+    },
+    {
+        id: "b1-kapitel-9-3b-7b", num: "Kapitel 9 (3b-7b)", name: "Auktion, Theater & Upcycling", emoji: "🎭",
+        items: [
+            { de: "handeln (sich)", en: "to be about", hint: "3b" },
+            { de: "der Käufer, -", en: "buyer (m)", hint: "3b" },
+            { de: "die Käuferin, -nen", en: "buyer (f)", hint: "3b" },
+            { de: "das Missgeschick, -e", en: "misfortune / accident", hint: "3b" },
+            { de: "das Original, -e", en: "original", hint: "3b" },
+            { de: "scheinbar", en: "apparent", hint: "3b" },
+            { de: "der Verkaufsraum, \"-e", en: "showroom", hint: "3b" },
+            { de: "an|wenden", en: "to use / apply", hint: "7a ÜB" },
+            { de: "auf|führen", en: "to perform", hint: "7a ÜB" },
+            { de: "auftreten", en: "to perform / appear", hint: "7a ÜB" },
+            { de: "behandeln", en: "to treat", hint: "7a ÜB" },
+            { de: "die Broschüre, -n", en: "brochure", hint: "7a ÜB" },
+            { de: "das Büfett, -s", en: "buffet", hint: "7a ÜB" },
+            { de: "die Eröffnung, -en", en: "opening", hint: "7a ÜB" },
+            { de: "das Kostüm, -e", en: "costume", hint: "7a ÜB" },
+            { de: "schminken (sich)", en: "to put make up on", hint: "7a ÜB" },
+            { de: "das Aquarell, -e", en: "watercolour", hint: "7b" },
+            { de: "künstlerisch", en: "artistic", hint: "7b" },
+            { de: "die Ölfarbe, -n", en: "oil colour", hint: "7b" },
+            { de: "um|setzen", en: "to realize / implement", hint: "7c" },
+            { de: "das Upcycling (Sg.)", en: "upcycling", hint: "7c" },
+            { de: "die Vase, -n", en: "vase", hint: "7c" }
+        ]
+    },
+    {
+        id: "b1-kapitel-9-8a-13b", num: "Kapitel 9 (8a-13b)", name: "Impro-Theater, Musik & Gesang", emoji: "🎺",
+        items: [
+            { de: "dankbar", en: "thankful", hint: "8a" },
+            { de: "der Farbstift, -e", en: "crayon", hint: "8a" },
+            { de: "die Frisur, -en", en: "hair style", hint: "8a" },
+            { de: "chaotisch", en: "chaotic", hint: "8c" },
+            { de: "das Theaterstück, -e", en: "theatre play", hint: "8c" },
+            { de: "erfinden", en: "to invent", hint: "8d" },
+            { de: "veranstalten", en: "to organize / hold", hint: "8d" },
+            { de: "ersetzen", en: "to replace", hint: "10a" },
+            { de: "improvisieren", en: "to improvise", hint: "10a" },
+            { de: "das Impro-Theater, -", en: "improv theatre", hint: "10b" },
+            { de: "der Detektiv, -e", en: "detective (m)", hint: "10d" },
+            { de: "die Detektivin, -nen", en: "detective (f)", hint: "10d" },
+            { de: "der Dieb, -e", en: "thief", hint: "10d" },
+            { de: "der Backofen, \"-", en: "oven", hint: "11a" },
+            { de: "das Missverständnis, -se", en: "misunderstanding", hint: "11a" },
+            { de: "heimlich", en: "secret", hint: "12b" },
+            { de: "musizieren", en: "to make music", hint: "12b" },
+            { de: "der Schulchor, \"-e", en: "school choir", hint: "12b" },
+            { de: "talentiert", en: "talented", hint: "12b" },
+            { de: "zeitlos", en: "timeless", hint: "12b" },
+            { de: "ein|sperren", en: "to lock sb in", hint: "13b" },
+            { de: "finster", en: "gloomy / dark", hint: "13b" },
+            { de: "der Jäger, -", en: "hunter (m)", hint: "13b" },
+            { de: "die Jägerin, -nen", en: "hunter (f)", hint: "13b" }
+        ]
+    },
+
+    // ==========================================
+    // KAPITEL 10: MITEINANDER
+    // ==========================================
+    {
+        id: "b1-kapitel-10-1a-3b", num: "Kapitel 10 (1a-3b)", name: "Demokratie, Werte & Ehrenamt", emoji: "🗳️",
+        items: [
+            { de: "die Demokratie, -n", en: "democracy", hint: "1a" },
+            { de: "die Ehrlichkeit (Sg.)", en: "honesty", hint: "1a" },
+            { de: "die Erziehung (Sg.)", en: "upbringing", hint: "1a" },
+            { de: "die Fairness (Sg.)", en: "fairness", hint: "1a" },
+            { de: "die Gerechtigkeit (Sg.)", en: "justice", hint: "1a" },
+            { de: "die Gleichberechtigung (Sg.)", en: "equality", hint: "1a" },
+            { de: "die Hilfsbereitschaft (Sg.)", en: "helpfulness", hint: "1a" },
+            { de: "der Respekt (Sg.)", en: "respect", hint: "1a" },
+            { de: "die Zivilcourage (Sg.)", en: "moral courage", hint: "1a" },
+            { de: "der/die Abgeordnete, -n", en: "MP / congress member", hint: "1c ÜB" },
+            { de: "das Bedürfnis, -se", en: "need", hint: "1c ÜB" },
+            { de: "der Bundeskanzler, -", en: "chancellor (m)", hint: "1c ÜB" },
+            { de: "die Bundeskanzlerin, -nen", en: "chancellor (f)", hint: "1c ÜB" },
+            { de: "die Flucht (Sg.)", en: "escape / flight", hint: "1c ÜB" },
+            { de: "die Integration (Sg.)", en: "integration", hint: "1c ÜB" },
+            { de: "die Minderheit, -en", en: "minority", hint: "1c ÜB" },
+            { de: "die Regierung, -en", en: "government", hint: "1c ÜB" },
+            { de: "das Vorurteil, -e", en: "prejudice", hint: "1c ÜB" },
+            { de: "die Meinungsfreiheit (Sg.)", en: "freedom of opinion", hint: "2c" },
+            { de: "sichern", en: "to secure / protect", hint: "2c" },
+            { de: "alarmieren", en: "to alert", hint: "3b" },
+            { de: "bedürftig", en: "needy", hint: "3b" },
+            { de: "ehrenamtlich", en: "voluntary", hint: "3b" },
+            { de: "die Erste Hilfe (Sg.)", en: "first aid", hint: "3b" }
+        ]
+    },
+    {
+        id: "b1-kapitel-10-3b-7c", num: "Kapitel 10 (3b-7c)", name: "Engagiert & Spielstadt", emoji: "🏙️",
+        items: [
+            { de: "die Feuerwehrleute (Pl.)", en: "firefighters", hint: "3b" },
+            { de: "das Hochwasser, -", en: "flood", hint: "3b" },
+            { de: "die Nachhilfe (Sg.)", en: "tutoring", hint: "3b" },
+            { de: "der Pate, -n", en: "godfather", hint: "3b" },
+            { de: "die Patin, -nen", en: "godmother", hint: "3b" },
+            { de: "spenden", en: "to donate", hint: "3b" },
+            { de: "das Gewürz, -e", en: "spice", hint: "3c ÜB" },
+            { de: "das Hackfleisch (Sg.)", en: "ground meat", hint: "3c ÜB" },
+            { de: "das Milchprodukt, -e", en: "milk product", hint: "3c ÜB" },
+            { de: "bundesweit", en: "nationwide", hint: "4b" },
+            { de: "verbreiten", en: "to spread", hint: "4b" },
+            { de: "das Einwohnermeldeamt, \"-er", en: "registration office", hint: "7a" },
+            { de: "verantwortlich", en: "responsible", hint: "7a" },
+            { de: "ab|stimmen", en: "to vote", hint: "7b" },
+            { de: "das Arbeitsamt, \"-er", en: "job center", hint: "7b" },
+            { de: "durch|führen", en: "to conduct / carry out", hint: "7b" },
+            { de: "entsorgen", en: "to dispose of", hint: "7c" },
+            { de: "finanzieren", en: "to finance", hint: "7c" },
+            { de: "heraus|finden", en: "to find out", hint: "7c" },
+            { de: "das Zusammenleben (Sg.)", en: "communal life", hint: "7c" },
+            { de: "zuverlässig", en: "reliable", hint: "7c" }
+        ]
+    },
+    {
+        id: "b1-kapitel-10-10a-11b", num: "Kapitel 10 (10a-11b)", name: "Europäische Union & Geschichte", emoji: "🇪🇺",
+        items: [
+            { de: "die EU (Sg.)", en: "EU (European Union)", hint: "10a" },
+            { de: "der Ausstieg, -e", en: "exit", hint: "10b" },
+            { de: "befürchten", en: "to fear", hint: "10b" },
+            { de: "bei|treten", en: "to join", hint: "10b" },
+            { de: "die Dienstleistung, -en", en: "service", hint: "10b" },
+            { de: "endgültig", en: "final", hint: "10b" },
+            { de: "die Europäische Union (EU)", en: "European Union (EU)", hint: "10b" },
+            { de: "die Gemeinschaft, -en", en: "community", hint: "10b" },
+            { de: "die Grenzkontrolle, -n", en: "border control", hint: "10b" },
+            { de: "der Krieg, -e", en: "war", hint: "10b" },
+            { de: "der Skeptiker, -", en: "sceptic (m)", hint: "10b" },
+            { de: "die Skeptikerin, -nen", en: "sceptic (f)", hint: "10b" },
+            { de: "die Vorschrift, -en", en: "regulation", hint: "10b" },
+            { de: "der Weltkrieg, -e", en: "world war", hint: "10b" },
+            { de: "wirtschaftlich", en: "economic", hint: "10b" },
+            { de: "die Atomkraft (Sg.)", en: "atomic power", hint: "11a" },
+            { de: "die Kriegswaffe, -n", en: "weapon of war", hint: "11a" },
+            { de: "der Mitgliedsstaat, -en", en: "member state", hint: "11a" },
+            { de: "regeln", en: "to regulate", hint: "11a" },
+            { de: "die Solidarität (Sg.)", en: "solidarity", hint: "11a" },
+            { de: "die Toleranz (Sg.)", en: "tolerance", hint: "11a" },
+            { de: "unterzeichnen", en: "to sign", hint: "11a" },
+            { de: "die Würde (Sg.)", en: "dignity", hint: "11a" }
+        ]
     }
 ];
