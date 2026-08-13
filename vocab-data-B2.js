@@ -427,5 +427,112 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "revitalisieren", en: "to revitalize", hint: "4c" },
             { de: "die Versorgungsengpass, \"-e", en: "supply bottleneck", hint: "4c" }
         ]
+    },
+    // ==========================================
+    // KAPITEL 9: WIRTSCHAFT UND GLOBALISIERUNG
+    // ==========================================
+    {
+        id: "b2-kapitel-9-1a-2c", num: "Kapitel 9 (1a-2c)", name: "Weltwirtschaft, Handel & Märkte", emoji: "🌐",
+        items: [
+            { de: "die Handelsbeziehung, -en", en: "trade relationship", hint: "1a" },
+            { de: "die Kaufkraft (Sg.)", en: "purchasing power", hint: "1a" },
+            { de: "das Wirtschaftswachstum (Sg.)", en: "economic growth", hint: "1a" },
+            { de: "die Marktregulierung, -en", en: "market regulation", hint: "1a" },
+            { de: "das Bruttoinlandsprodukt (BIP)", en: "Gross Domestic Product (GDP)", hint: "1a" },
+            { de: "die Exportorientierung, -en", en: "export orientation", hint: "1b" },
+            { de: "die Freihandelszone, -n", en: "free trade zone", hint: "1b" },
+            { de: "die Importabhängigkeit, -en", en: "import dependency", hint: "1b" },
+            { de: "der Leitzins, -en", en: "key interest rate", hint: "1b" },
+            { de: "die Währungsstabilität, -en", en: "currency stability", hint: "1b" },
+            { de: "die Auslagerung, -en", en: "offshoring / outsourcing", hint: "2a" },
+            { de: "die Lieferkette, -n", en: "supply chain", hint: "2a" },
+            { de: "die Rohstoffknappheit, -en", en: "raw material scarcity", hint: "2a" },
+            { de: "der Wettbewerbsvorteil, -e", en: "competitive advantage", hint: "2a" },
+            { de: "die Zollschranke, -n", en: "tariff barrier", hint: "2a" },
+            { de: "global agieren", en: "to operate globally", hint: "2b" },
+            { de: "die Marktanteilsgewinnung, -en", en: "gain in market share", hint: "2b" },
+            { de: "die Preisschwankung, -en", en: "price fluctuation", hint: "2b" },
+            { de: "die Standortverlagerung, -en", en: "relocation of site", hint: "2c" },
+            { de: "der Verdrängungswettbewerb, -e", en: "cutthroat competition", hint: "2c" }
+        ]
+    },
+    {
+        id: "b2-kapitel-9-3a-4c", num: "Kapitel 9 (3a-4c)", name: "Konsumkritik, Ethik & Wohlstand", emoji: "🛒",
+        items: [
+            { de: "der Ausbeutungsbetrieb, -e", en: "sweatshop", hint: "3a" },
+            { de: "der Fair-Trade-Handel (Sg.)", en: "fair trade", hint: "3a" },
+            { de: "die Konsumgesellschaft, -en", en: "consumer society", hint: "3a" },
+            { de: "die Ressourcenverschwendung, -en", en: "waste of resources", hint: "3a" },
+            { de: "die Wohlstandsgesellschaft, -en", en: "affluent society", hint: "3a" },
+            { de: "bewusst konsumieren", en: "to consume mindfully", hint: "3b" },
+            { de: "die Mindestlohngarantie, -n", en: "minimum wage guarantee", hint: "3b" },
+            { de: "die Nachverfolgbarkeit, -en", en: "traceability", hint: "3b" },
+            { de: "die Zertifizierung, -en", en: "certification", hint: "3b" },
+            { de: "das Siegel, -", en: "seal of quality / label", hint: "3c" },
+            { de: "die Chancengleichheit, -en", en: "equal opportunity", hint: "4a" },
+            { de: "die Einkommensungleichheit, -en", en: "income inequality", hint: "4a" },
+            { de: "die Armutsgrenze, -n", en: "poverty line", hint: "4a" },
+            { de: "die Sozialleistungen (Pl.)", en: "social benefits", hint: "4a" },
+            { de: "die Wohlstandsverteilung, -en", en: "distribution of wealth", hint: "4a" },
+            { de: "bekämpfen", en: "to combat / fight", hint: "4b" },
+            { de: "die Fördermaßnahme, -n", en: "support measure", hint: "4b" },
+            { de: "die Umverteilung, -en", en: "redistribution", hint: "4c" },
+            { de: "das Grundeinkommen (Sg.)", en: "basic income", hint: "4c" },
+            { de: "sozial ab|federn", en: "to cushion socially", hint: "4c" }
+        ]
+    },
+
+    // ==========================================
+    // KAPITEL 10: ZUKUNFT UND VISIONEN
+    // ==========================================
+    {
+        id: "b2-kapitel-10-1a-2c", num: "Kapitel 10 (1a-2c)", name: "Zukunftsszenarien & Trends", emoji: "🔮",
+        items: [
+            { de: "der Megatrend, -s", en: "megatrend", hint: "1a" },
+            { de: "die Zukunftsforschung, -en", en: "futurology / future research", hint: "1a" },
+            { de: "das Zukunftsmodell, -e", en: "future model", hint: "1a" },
+            { de: "die Prognoseerstellung, -en", en: "forecasting", hint: "1a" },
+            { de: "der Wandlungsprozess, -e", en: "process of change", hint: "1a" },
+            { de: "ab|schätzen", en: "to assess / estimate", hint: "1b" },
+            { de: "herbei|führen", en: "to bring about", hint: "1b" },
+            { de: "der Paradigmenwechsel, -", en: "paradigm shift", hint: "1b" },
+            { de: "ungewiss", en: "uncertain / tentative", hint: "1b" },
+            { de: "die Zukunftsfähigkeit, -en", en: "sustainability for the future", hint: "1b" },
+            { de: "die Raumfahrttechnologie, -n", en: "space technology", hint: "2a" },
+            { de: "die Ressourcenerschließung, -en", en: "resource development", hint: "2a" },
+            { de: "die Besiedlung, -en", en: "colonization / settlement", hint: "2a" },
+            { de: "die Erdüberwachung, -en", en: "Earth observation", hint: "2a" },
+            { de: "das Forschungsfeld, -er", en: "field of research", hint: "2a" },
+            { de: "erforschen", en: "to explore / investigate", hint: "2b" },
+            { de: "pionierhaft", en: "pioneering", hint: "2b" },
+            { de: "voran|treiben", en: "to propel / drive forward", hint: "2b" },
+            { de: "die Machbarkeit, -en", en: "feasibility", hint: "2c" },
+            { de: "die Grenze der Belastbarkeit", en: "limit of capacity / tolerance", hint: "2c" }
+        ]
+    },
+    {
+        id: "b2-kapitel-10-3a-4c", num: "Kapitel 10 (3a-4c)", name: "Utopien, Dystopien & Lebensweisen", emoji: "🛸",
+        items: [
+            { de: "die Dystopie, -n", en: "dystopia", hint: "3a" },
+            { de: "die Utopie, -n", en: "utopia", hint: "3a" },
+            { de: "das Zukunftsszenario, Szenarien", en: "future scenario", hint: "3a" },
+            { de: "die Gesellschaftsvision, -en", en: "vision of society", hint: "3a" },
+            { de: "die Überwachungsstaat, -en", en: "surveillance state", hint: "3a" },
+            { de: "düster", en: "gloomy / bleak", hint: "3b" },
+            { de: "entwerfen", en: "to draft / design", hint: "3b" },
+            { de: "idealisiert", en: "idealized", hint: "3b" },
+            { de: "warnen vor", en: "to warn against", hint: "3b" },
+            { de: "die Schreckensvision, -en", en: "scare vision / nightmare scenario", hint: "3c" },
+            { de: "das Mikrowohnen (Sg.)", en: "micro-living", hint: "4a" },
+            { de: "die Mobilität der Zukunft", en: "mobility of the future", hint: "4a" },
+            { de: "die Neue Lebensform, -en", en: "new form of living", hint: "4a" },
+            { de: "die Selbstversorgung, -en", en: "self-sufficiency", hint: "4a" },
+            { de: "die Share Economy, -s", en: "sharing economy", hint: "4a" },
+            { de: "an|passen", en: "to adapt / adjust", hint: "4b" },
+            { de: "um|denken", en: "to rethink / change one's mind", hint: "4b" },
+            { de: "die Zukunftsangst, \"-e", en: "fear of the future", hint: "4c" },
+            { de: "der Zuversicht (Sg.)", en: "confidence / optimism", hint: "4c" },
+            { de: "gestalten", en: "to shape / design", hint: "4c" }
+        ]
     }
 ];
