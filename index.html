@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>German Flashcard — Cloud Sync Trainer</title>
+    <title>German Flashcard — Trainer</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -36,48 +36,89 @@
             padding-bottom: 80px;
         }
 
-        .sync-banner {
-            background-color: #292524;
-            color: #f5f5f4;
-            padding: 10px 24px;
-            font-size: 0.85rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .sync-controls {
+        /* LOGIN SCREEN STYLES */
+        #screen-auth {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: var(--bg-base);
+            z-index: 9999;
             display: flex;
             align-items: center;
-            gap: 8px;
+            justify-content: center;
+            padding: 20px;
         }
 
-        .sync-input {
-            background-color: #44403c;
-            border: 1px solid #57534e;
-            color: #ffffff;
-            padding: 4px 12px;
-            border-radius: 6px;
+        .auth-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            width: 100%;
+            max-width: 420px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .auth-card h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+
+        .auth-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+
+        .auth-input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .auth-input {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid var(--border);
+            border-radius: var(--radius-md);
             font-family: inherit;
+            font-size: 1rem;
             font-weight: 600;
-            font-size: 0.8rem;
+            outline: none;
+            text-align: center;
         }
 
-        .sync-btn {
+        .auth-input:focus {
+            border-color: var(--primary);
+        }
+
+        .auth-btn {
+            width: 100%;
             background-color: var(--primary);
             color: white;
             border: none;
-            padding: 4px 12px;
-            border-radius: 6px;
+            padding: 14px;
+            border-radius: var(--radius-md);
+            font-weight: 700;
+            font-size: 1rem;
             cursor: pointer;
-            font-weight: 600;
-            font-size: 0.8rem;
+            transition: background-color 0.2s;
         }
 
-        .sync-btn:hover { background-color: var(--primary-dark); }
+        .auth-btn:hover {
+            background-color: var(--primary-dark);
+        }
 
+        .auth-status {
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 12px;
+            min-height: 20px;
+        }
+
+        /* HEADER & NAVIGATION */
         header {
             background-color: #1c1917;
             color: #ffffff;
@@ -102,7 +143,7 @@
 
         .brand span { color: var(--primary); }
 
-        .nav-tabs { display: flex; gap: 6px; }
+        .nav-tabs { display: flex; gap: 6px; align-items: center; }
 
         .tab-trigger {
             background: none;
@@ -126,6 +167,29 @@
             background-color: var(--primary) !important; 
             color: #ffffff !important;
         }
+
+        .user-profile-badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #292524;
+            padding: 6px 14px;
+            border-radius: 20px;
+            margin-left: 10px;
+            font-size: 0.85rem;
+            border: 1px solid #44403c;
+        }
+
+        .btn-logout {
+            background: none;
+            border: none;
+            color: #ef4444;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 0.8rem;
+        }
+
+        .btn-logout:hover { text-decoration: underline; }
 
         main {
             max-width: 860px;
@@ -251,9 +315,7 @@
             transition: transform 0.2s;
         }
 
-        .audio-listen-btn:hover {
-            transform: scale(1.04);
-        }
+        .audio-listen-btn:hover { transform: scale(1.04); }
 
         .progress-track {
             height: 6px;
@@ -291,8 +353,7 @@
 
         .card-panel {
             position: absolute;
-            width: 100%;
-            height: 100%;
+            width: 100%; height: 100%;
             backface-visibility: hidden;
             border-radius: 28px;
             border: 1px solid var(--border);
@@ -340,15 +401,20 @@
 </head>
 <body>
 
-    <div class="sync-banner">
-        <div>Cloud Sync Status: <span id="sync-status" style="font-weight: 700; color: #f59e0b;">Offline (Local Mode)</span></div>
-        <div class="sync-controls">
-            <label for="sync-key-input">Your Sync Key:</label>
-            <input type="text" id="sync-key-input" class="sync-input" placeholder="Enter key to load progress...">
-            <button class="sync-btn" onclick="loadCloudProgressFromKey()">Connect & Sync</button>
+    <!-- SCREEN LOGIN / AUTH -->
+    <div id="screen-auth">
+        <div class="auth-card">
+            <h2>Willkommen! 🇩🇪</h2>
+            <p>Masukkan username atau Sync Key kamu untuk melanjutkan progress belajar.</p>
+            <div class="auth-input-group">
+                <input type="text" id="auth-username-input" class="auth-input" placeholder="Contoh: hasna" autocomplete="off">
+                <button class="auth-btn" onclick="handleUserLogin()">Masuk / Mulai Belajar</button>
+            </div>
+            <div id="auth-status-msg" class="auth-status"></div>
         </div>
     </div>
 
+    <!-- MAIN APP HEADER -->
     <header>
         <div class="nav-inner">
             <div class="brand">German<span> Flashcard</span></div>
@@ -357,6 +423,11 @@
                 <button class="tab-trigger" id="tab-A2" onclick="switchLevelSection('A2')">A2</button>
                 <button class="tab-trigger" id="tab-B1" onclick="switchLevelSection('B1')">B1</button>
                 <button class="tab-trigger" id="tab-B2" onclick="switchLevelSection('B2')">B2</button>
+
+                <div class="user-profile-badge">
+                    <span>👤 <strong id="ui-current-username">...</strong></span>
+                    <button class="btn-logout" onclick="handleUserLogout()">Logout</button>
+                </div>
             </div>
         </div>
     </header>
@@ -441,7 +512,7 @@
                 </div>
             </div>
             <div class="footer-action-align" style="margin-top:20px;">
-                <button class="sync-btn" id="ui-quiz-next-btn" onclick="stepQuizSequence()" style="display:none; padding:12px 24px;">Next Question →</button>
+                <button class="auth-btn" id="ui-quiz-next-btn" onclick="stepQuizSequence()" style="display:none; padding:12px 24px; width:auto; float:right;">Next Question →</button>
             </div>
         </div>
 
@@ -450,7 +521,7 @@
             <div class="results-modal-box">
                 <div class="score-radial" id="ui-results-percentage">0%</div>
                 <h2>Evaluation Complete</h2>
-                <button class="sync-btn" style="margin-top:20px;" onclick="switchScreen('home')">Return to Dashboard</button>
+                <button class="auth-btn" style="margin-top:20px;" onclick="switchScreen('home')">Return to Dashboard</button>
             </div>
         </div>
     </main>
@@ -460,7 +531,7 @@
         import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
         const LEVEL_DESCRIPTIONS = {
-            'A1': 'Landung der Grundwortschatz A1 Module: Alltagsgespräche, Familie, Berufe, Einkaufen und Grundgrammatik.',
+            'A1': 'Landung der Grundwortschatz A1 Module: Alltagsgespräche, Familie, Berufe und Grundgrammatik.',
             'A2': 'Erweiterter Wortschatz A2: Reise, Arbeit, Gesundheit, Orientierung und Vergangene Ereignisse.',
             'B1': 'Mittelstufe Wortschatz B1: Meinungen ausdrücken, Berufswelt, Kultur, Umwelt und komplexe Strukturen.',
             'B2': 'Fortgeschrittene Sprachverwendung B2: Fachbegriffe, Diskussionen, Abstrakte Themen und Nuancen.'
@@ -484,6 +555,61 @@
         let currentLevel = "A1";
         let activeDataMapping = [];
 
+        window.handleUserLogin = async () => {
+            const inputVal = document.getElementById('auth-username-input').value.trim().toLowerCase();
+            const statusMsg = document.getElementById('auth-status-msg');
+            
+            if(!inputVal) {
+                statusMsg.textContent = "Ketik username terlebih dahulu!";
+                statusMsg.style.color = "#dc2626";
+                return;
+            }
+
+            activeSyncKeyStr = inputVal;
+            statusMsg.textContent = "Menghubungkan & Memuat data...";
+            statusMsg.style.color = "#2563eb";
+
+            try {
+                const recordRef = doc(db, "user_progress", activeSyncKeyStr);
+                const querySnapshot = await getDoc(recordRef);
+                
+                if(querySnapshot.exists()) {
+                    memoryLedger = querySnapshot.data();
+                } else {
+                    // Buat pengguna baru jika belum ada
+                    memoryLedger = { masteredKeys: {}, reviewTotals: 0, quizScores: {} };
+                    await setDoc(recordRef, memoryLedger);
+                }
+
+                localStorage.setItem('lf_cloud_sync_key', activeSyncKeyStr);
+                document.getElementById('ui-current-username').textContent = activeSyncKeyStr;
+                document.getElementById('screen-auth').style.display = 'none';
+                
+                loadLevelDataset("A1");
+            } catch(error) {
+                console.error(error);
+                statusMsg.textContent = "Gagal terhubung ke database. Coba lagi.";
+                statusMsg.style.color = "#dc2626";
+            }
+        };
+
+        window.handleUserLogout = () => {
+            localStorage.removeItem('lf_cloud_sync_key');
+            document.getElementById('auth-username-input').value = '';
+            document.getElementById('auth-status-msg').textContent = '';
+            document.getElementById('screen-auth').style.display = 'flex';
+        };
+
+        window.initGlobalState = () => {
+            const savedKey = localStorage.getItem('lf_cloud_sync_key');
+            if(savedKey) {
+                document.getElementById('auth-username-input').value = savedKey;
+                handleUserLogin();
+            } else {
+                document.getElementById('screen-auth').style.display = 'flex';
+            }
+        };
+
         window.loadLevelDataset = async (level) => {
             currentLevel = level;
             document.getElementById('ui-level-description').textContent = LEVEL_DESCRIPTIONS[level] || "";
@@ -505,63 +631,12 @@
             loadLevelDataset(level);
         };
 
-        window.initGlobalState = () => {
-            const locallyStoredKey = localStorage.getItem('lf_cloud_sync_key');
-            if(locallyStoredKey) {
-                activeSyncKeyStr = locallyStoredKey;
-                document.getElementById('sync-key-input').value = activeSyncKeyStr;
-                loadCloudProgressFromKey();
-            } else {
-                activeSyncKeyStr = "user-" + Math.random().toString(36).substring(2, 7).toUpperCase();
-                localStorage.setItem('lf_cloud_sync_key', activeSyncKeyStr);
-                document.getElementById('sync-key-input').value = activeSyncKeyStr;
-                readLocalStorageBackupData();
-                loadLevelDataset("A1");
-            }
-        };
-
-        function readLocalStorageBackupData() {
-            const localKeys = localStorage.getItem('nw_mastered_map');
-            const localTotals = localStorage.getItem('nw_review_count');
-            const localQuizzes = localStorage.getItem('nw_quiz_scores');
-            if (localKeys) memoryLedger.masteredKeys = JSON.parse(localKeys);
-            if (localTotals) memoryLedger.reviewTotals = parseInt(localTotals, 10);
-            if (localQuizzes) memoryLedger.quizScores = JSON.parse(localQuizzes);
-        }
-
-        window.loadCloudProgressFromKey = async () => {
-            const inputVal = document.getElementById('sync-key-input').value.trim();
-            if(!inputVal) return;
-            activeSyncKeyStr = inputVal;
-            localStorage.setItem('lf_cloud_sync_key', activeSyncKeyStr);
-
-            document.getElementById('sync-status').textContent = "Connecting...";
-            try {
-                const recordRef = doc(db, "user_progress", activeSyncKeyStr);
-                const querySnapshot = await getDoc(recordRef);
-                
-                if(querySnapshot.exists()) {
-                    memoryLedger = querySnapshot.data();
-                    document.getElementById('sync-status').textContent = "Connected & Synced ✅";
-                    document.getElementById('sync-status').style.color = "#10b981";
-                } else {
-                    document.getElementById('sync-status').textContent = "New Key Activated (Cloud Set) 🌱";
-                    document.getElementById('sync-status').style.color = "#3b82f6";
-                    await setDoc(recordRef, memoryLedger);
-                }
-                loadLevelDataset(currentLevel);
-            } catch(error) {
-                console.error(error);
-                document.getElementById('sync-status').textContent = "Sync Connection Error ❌";
-                document.getElementById('sync-status').style.color = "#dc2626";
-            }
-        };
-
         async function pushProgressUpdateToCloud() {
             localStorage.setItem('nw_mastered_map', JSON.stringify(memoryLedger.masteredKeys));
             localStorage.setItem('nw_review_count', memoryLedger.reviewTotals.toString());
             localStorage.setItem('nw_quiz_scores', JSON.stringify(memoryLedger.quizScores));
 
+            if(!activeSyncKeyStr) return;
             try {
                 const targetDocRef = doc(db, "user_progress", activeSyncKeyStr);
                 await setDoc(targetDocRef, memoryLedger);
@@ -575,7 +650,6 @@
         };
 
         function renderDashboardUi() {
-            // MENGHITUNG WORDS MASTERED KHUSUS UNTUK LEVEL YANG SEDANG DIBUKA
             let totalMasteredCount = 0;
             activeDataMapping.forEach(deck => {
                 deck.items.forEach(item => {
@@ -789,7 +863,7 @@
 
             const baseCorrectAnswer = q.germanWord;
             const isMatchExact = userString.toLowerCase() === baseCorrectAnswer.toLowerCase();
-            const isMatchLoose = cleanStringForLooseMatching(userString) === cleanStringForLooseMatching(baseCorrectAnswer);
+            const isMatchLoose = cleanStringForLooseMatching(userString) === cleanStringForLooseMatching(cleanStringForLooseMatching(baseCorrectAnswer));
 
             const feedbackBanner = document.getElementById('ui-quiz-typing-feedback');
             feedbackBanner.style.display = 'block';
