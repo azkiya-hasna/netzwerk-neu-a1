@@ -122,7 +122,6 @@
             background-color: rgba(255,255,255,0.1);
         }
 
-        /* AKCENTUASI TAB AKTIF BERWARNA ORANGE */
         .tab-trigger.active { 
             background-color: var(--primary) !important; 
             color: #ffffff !important;
@@ -145,7 +144,6 @@
             margin-bottom: 6px;
         }
 
-        /* METRICS BAR DENGAN BACKGROUND SEMULA */
         .metrics-bar {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -577,8 +575,15 @@
         };
 
         function renderDashboardUi() {
+            // MENGHITUNG WORDS MASTERED KHUSUS UNTUK LEVEL YANG SEDANG DIBUKA
             let totalMasteredCount = 0;
-            Object.values(memoryLedger.masteredKeys).forEach(val => { if (val === 'mastered') totalMasteredCount++; });
+            activeDataMapping.forEach(deck => {
+                deck.items.forEach(item => {
+                    if (memoryLedger.masteredKeys[`${deck.id}-${item.de}`] === 'mastered') {
+                        totalMasteredCount++;
+                    }
+                });
+            });
             
             const totalDecks = activeDataMapping.length || 1;
             const completedCount = Object.keys(memoryLedger.quizScores).filter(k => activeDataMapping.some(d => d.id === k)).length;
