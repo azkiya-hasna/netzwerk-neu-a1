@@ -857,5 +857,209 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "der Pfad, -e", en: "path / trail", hint: "12a" },
             { de: "visuell", en: "visual", hint: "12a" }
         ]
+    },
+    // ==========================================
+    // KAPITEL 7: ZWISCHENMENSCHLICHES
+    // ==========================================
+    {
+        id: "b1-kapitel-7-1a-2b", num: "Kapitel 7 (1a-2b)", name: "Beziehungen & Gesellschaft", emoji: "👥",
+        items: [
+            { de: "zwischenmenschlich", en: "interpersonal", hint: "1a" },
+            { de: "die Erhöhung, -en", en: "increase", hint: "1a ÜB" },
+            { de: "die Forderung, -en", en: "demand", hint: "1a ÜB" },
+            { de: "die Gelegenheit, -en", en: "opportunity", hint: "1a ÜB" },
+            { de: "die Mahnung, -en", en: "reminder", hint: "1a ÜB" },
+            { de: "die Pflicht, -en", en: "duty", hint: "1a ÜB" },
+            { de: "schätzen", en: "to value / appreciate", hint: "1a ÜB" },
+            { de: "streiken", en: "to go on strike", hint: "1a ÜB" },
+            { de: "die Versammlung, -en", en: "assembly / meeting", hint: "1a ÜB" },
+            { de: "verspäten (sich)", en: "to be late", hint: "1a ÜB" },
+            { de: "das Verständnis (Sg.)", en: "sympathy / understanding", hint: "1a ÜB" },
+            { de: "hervor|heben", en: "to highlight", hint: "2a" },
+            { de: "berufstätig", en: "working / employed", hint: "2b" },
+            { de: "beschließen", en: "to decide", hint: "2b" },
+            { de: "die Clique, -n", en: "clique / group of friends", hint: "2b" },
+            { de: "die Erwartung, -en", en: "expectation", hint: "2b" },
+            { de: "fest|stellen", en: "to realize / state", hint: "2b" },
+            { de: "gut tun", en: "to benefit / do good", hint: "2b" },
+            { de: "der Konflikt, -e", en: "conflict", hint: "2b" },
+            { de: "zusammen|wohnen", en: "to live together", hint: "2b" }
+        ]
+    },
+    {
+        id: "b1-kapitel-7-4c-9a", num: "Kapitel 7 (4c-9a)", name: "Konflikte & Streitgespräche", emoji: "🗣️",
+        items: [
+            { de: "das Netzwerk, -e", en: "network", hint: "4c" },
+            { de: "erschöpft", en: "exhausted", hint: "6c" },
+            { de: "akzeptieren", en: "to accept", hint: "8a" },
+            { de: "diplomatisch", en: "diplomatic", hint: "8a" },
+            { de: "einigen (sich)", en: "to agree", hint: "8a" },
+            { de: "erleichtern", en: "to facilitate", hint: "8c" },
+            { de: "die Harmonie, -n", en: "harmony", hint: "9a" },
+            { de: "die Kritik, -en", en: "criticism", hint: "9a" },
+            { de: "nach|geben", en: "to give in", hint: "9a" },
+            { de: "schweigen", en: "to remain silent", hint: "9a" },
+            { de: "der Streit, -e", en: "argument", hint: "9a" },
+            { de: "auf|regen (sich)", en: "to get annoyed", hint: "9a" },
+            { de: "das Streitgespräch, -e", en: "argument / dispute", hint: "9a" },
+            { de: "übertreiben", en: "to exaggerate", hint: "9a" },
+            { de: "undiplomatisch", en: "undiplomatic", hint: "9a" }
+        ]
+    },
+    {
+        id: "b1-kapitel-7-11a-11c", num: "Kapitel 7 (11a-11c)", name: "Medien, News & Biografie", emoji: "📰",
+        items: [
+            { de: "amüsieren (sich)", en: "to amuse", hint: "11a ÜB" },
+            { de: "angeblich", en: "allegedly", hint: "11a ÜB" },
+            { de: "behaupten", en: "to claim", hint: "11a ÜB" },
+            { de: "die Behauptung, -en", en: "claim", hint: "11a ÜB" },
+            { de: "beweisen", en: "to prove", hint: "11a ÜB" },
+            { de: "der Ehegatte, -n", en: "spouse (m)", hint: "11a ÜB" },
+            { de: "die Ehegattin, -nen", en: "spouse (f)", hint: "11a ÜB" },
+            { de: "der Einfluss, \"-e", en: "influence", hint: "11a ÜB" },
+            { de: "die Einzelheit, -en", en: "detail", hint: "11a ÜB" },
+            { de: "die Fake News (Pl.)", en: "fake news", hint: "11a ÜB" },
+            { de: "fürchten", en: "to be scared", hint: "11a ÜB" },
+            { de: "die Presse (Sg.)", en: "press", hint: "11a ÜB" },
+            { de: "die Scheidung, -en", en: "divorce", hint: "11a ÜB" },
+            { de: "die Schlagzeile, -n", en: "headline", hint: "11a ÜB" },
+            { de: "leidenschaftlich", en: "passionate", hint: "11b" },
+            { de: "verhindern", en: "to prevent", hint: "11b" },
+            { de: "zwingen", en: "to force", hint: "11b" },
+            { de: "komponieren", en: "to compose", hint: "11b" },
+            { de: "dokumentieren", en: "to document", hint: "11c" },
+            { de: "die Inspiration, -en", en: "inspiration", hint: "11c" }
+        ]
+    },
+    {
+        id: "b1-kapitel-7-12a-12ub", num: "Kapitel 7 (12a-12ÜB)", name: "Fabeln, Tiere & Moral", emoji: "🦊",
+        items: [
+            { de: "der Fuchs, \"-e", en: "fox", hint: "12a" },
+            { de: "die Moral (Sg.)", en: "moral", hint: "12a" },
+            { de: "beißen", en: "to bite", hint: "12b" },
+            { de: "die Beute (Sg.)", en: "prey", hint: "12b" },
+            { de: "brüllen", en: "to roar", hint: "12b" },
+            { de: "die Fabel, -n", en: "fable", hint: "12b" },
+            { de: "der Feind, -e", en: "enemy (m)", hint: "12b" },
+            { de: "die Feindin, -nen", en: "enemy (f)", hint: "12b" },
+            { de: "kraftlos", en: "powerless", hint: "12b" },
+            { de: "lügen", en: "to lie", hint: "12b" },
+            { de: "fressen", en: "to eat (animals)", hint: "12c" },
+            { de: "der Rabe, -n", en: "crow / raven", hint: "12c" },
+            { de: "der Schnabel, \"-", en: "beak", hint: "12c" },
+            { de: "stehlen", en: "to steal", hint: "12c" },
+            { de: "die Ente, -n", en: "duck", hint: "12 ÜB" },
+            { de: "loben", en: "to praise", hint: "12 ÜB" },
+            { de: "die Fliege, -n", en: "fly", hint: "12 ÜB" },
+            { de: "die Giraffe, -n", en: "giraffe", hint: "12 ÜB" },
+            { de: "das Krokodil, -e", en: "crocodile", hint: "12 ÜB" },
+            { de: "die Mücke, -n", en: "mosquito", hint: "12 ÜB" },
+            { de: "der Pinguin, -e", en: "penguin", hint: "12 ÜB" },
+            { de: "die Schildkröte, -n", en: "turtle", hint: "12 ÜB" }
+        ]
+    },
+
+    // ==========================================
+    // KAPITEL 8: RUND UM KÖRPER UND GEIST
+    // ==========================================
+    {
+        id: "b1-kapitel-8-1a-2bub", num: "Kapitel 8 (1a-2bÜB)", name: "Körper, Ernährung & Klinik", emoji: "🩺",
+        items: [
+            { de: "an|strengen (sich)", en: "to show effort", hint: "1a" },
+            { de: "ausreichend", en: "sufficient", hint: "1a" },
+            { de: "eincremen", en: "to put on lotion", hint: "1a" },
+            { de: "die Flüssigkeit, -en", en: "fluid", hint: "1a" },
+            { de: "das Gehirn, -e", en: "brain", hint: "1a" },
+            { de: "der Geist, -er", en: "soul / spirit / mind", hint: "1a" },
+            { de: "die Gymnastik (Sg.)", en: "gymnastics", hint: "1a" },
+            { de: "kühlen", en: "to cool", hint: "1a" },
+            { de: "der Schatten, -", en: "shadow", hint: "1a" },
+            { de: "spüren", en: "to sense / feel", hint: "1a" },
+            { de: "stärken", en: "to strengthen", hint: "1a" },
+            { de: "atmen", en: "to breathe", hint: "2a ÜB" },
+            { de: "auf|lösen", en: "to resolve / dissolve", hint: "2a ÜB" },
+            { de: "blass", en: "pale", hint: "2a ÜB" },
+            { de: "die Brust, \"-e", en: "chest", hint: "2a ÜB" },
+            { de: "ein|nehmen", en: "to take (medicine)", hint: "2a ÜB" },
+            { de: "kleben", en: "to stick", hint: "2a ÜB" },
+            { de: "der Krankenwagen, -", en: "ambulance", hint: "2a ÜB" },
+            { de: "krank|schreiben", en: "to take sick leave", hint: "2a ÜB" },
+            { de: "die Notaufnahme, -n", en: "emergency room", hint: "2a ÜB" },
+            { de: "das Schmerzmittel, -", en: "painkiller", hint: "2a ÜB" },
+            { de: "verschreiben", en: "to prescribe", hint: "2a ÜB" }
+        ]
+    },
+    {
+        id: "b1-kapitel-8-5a-5c", num: "Kapitel 8 (5a-5c)", name: "Krankenhausaufenthalt & Pflege", emoji: "🏥",
+        items: [
+            { de: "die Besuchszeit, -en", en: "visiting hours", hint: "5a" },
+            { de: "die Wertsachen (Pl.)", en: "valuables", hint: "5a" },
+            { de: "der Bademantel, \"-", en: "bathrobe", hint: "5b" },
+            { de: "die Bedienungsanleitung, -en", en: "instruction manual", hint: "5b" },
+            { de: "beschildert", en: "marked with signs", hint: "5b" },
+            { de: "die Entlassung, -en", en: "discharge", hint: "5b" },
+            { de: "die Fernbedienung, -en", en: "remote control", hint: "5b" },
+            { de: "das Fernsehgerät, -e", en: "television", hint: "5b" },
+            { de: "grundsätzlich", en: "in general", hint: "5b" },
+            { de: "der Haupteingang, \"-e", en: "main entrance", hint: "5b" },
+            { de: "der Hausschuh, -e", en: "slipper", hint: "5b" },
+            { de: "der Notausgang, \"-e", en: "emergency exit", hint: "5b" },
+            { de: "der Schlafanzug, \"-e", en: "pyjamas", hint: "5b" },
+            { de: "das Schließfach, \"-er", en: "safe / locker", hint: "5b" },
+            { de: "sichtbar", en: "visible", hint: "5b" },
+            { de: "untersagt sein", en: "to be forbidden", hint: "5b" },
+            { de: "die Zahnbürste, -n", en: "toothbrush", hint: "5b" },
+            { de: "die Zahnpasta, -pasten", en: "toothpaste", hint: "5b" },
+            { de: "der Zimmernachbar, -n", en: "next-door neighbour (m)", hint: "5b" },
+            { de: "die Zimmernachbarin, -nen", en: "next-door neighbour (f)", hint: "5b" },
+            { de: "zuständig", en: "responsible", hint: "5b" }
+        ]
+    },
+    {
+        id: "b1-kapitel-8-6b-7b", num: "Kapitel 8 (6b-7b)", name: "Musik, Gehirn & Forschung", emoji: "🧠",
+        items: [
+            { de: "aus|lösen", en: "to elicit / cause", hint: "6b" },
+            { de: "die Beerdigung, -en", en: "funeral", hint: "6b" },
+            { de: "beruhigend", en: "soothing", hint: "6b" },
+            { de: "empfinden", en: "to feel", hint: "6b" },
+            { de: "feierlich", en: "festive", hint: "6b" },
+            { de: "der Forscher, -", en: "researcher (m)", hint: "6b" },
+            { de: "die Forscherin, -nen", en: "researcher (f)", hint: "6b" },
+            { de: "gelangen", en: "to reach / attain", hint: "6b" },
+            { de: "leiden", en: "to suffer", hint: "6b" },
+            { de: "der Musikgeschmack (Sg.)", en: "music taste", hint: "6b" },
+            { de: "der Puls (Sg.)", en: "pulse", hint: "6b" },
+            { de: "sinken", en: "to sink / drop", hint: "6b" },
+            { de: "der Ton, \"-e", en: "tone / sound", hint: "6b" },
+            { de: "verarbeiten", en: "to process", hint: "6b" },
+            { de: "die Wirkung, -en", en: "effect", hint: "6b" },
+            { de: "die Heilung, -en", en: "cure / healing", hint: "6c" },
+            { de: "die Einschränkung, -en", en: "limitation / restriction", hint: "7a" }
+        ]
+    },
+    {
+        id: "b1-kapitel-8-10a-13a", num: "Kapitel 8 (10a-13a)", name: "Gedächtnis & Sinneserlebnisse", emoji: "🌿",
+        items: [
+            { de: "die Gedächtnisleistung, -en", en: "memory skills", hint: "10a" },
+            { de: "überfragt sein", en: "to be stumped", hint: "10a" },
+            { de: "die Zunge, -n", en: "tongue", hint: "10a" },
+            { de: "die Motivation (Sg.)", en: "motivation", hint: "11a" },
+            { de: "vermitteln", en: "to convey / teach", hint: "11a" },
+            { de: "aus|denken (sich)", en: "to think of / invent", hint: "11c" },
+            { de: "fantasievoll", en: "imaginative", hint: "11c" },
+            { de: "überprüfen", en: "to check / verify", hint: "11c" },
+            { de: "ungewöhnlich", en: "unusual", hint: "11c" },
+            { de: "alltäglich", en: "ordinary / daily", hint: "12a" },
+            { de: "aus|breiten (sich)", en: "to spread", hint: "12a" },
+            { de: "der Ausflugstipp, -s", en: "excursion tip", hint: "12a" },
+            { de: "essbar", en: "edible", hint: "12a" },
+            { de: "familienfreundlich", en: "family friendly", hint: "12a" },
+            { de: "formen", en: "to form / shape", hint: "12a" },
+            { de: "geeignet", en: "suitable", hint: "12a" },
+            { de: "interaktiv", en: "interactive", hint: "12a" },
+            { de: "der Klang, \"-e", en: "sound", hint: "12a" },
+            { de: "der Pfad, -e", en: "path / trail", hint: "12a" },
+            { de: "visuell", en: "visual", hint: "12a" }
+        ]
     }
 ];
