@@ -110,5 +110,117 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "der Olivenbaum, \"-e", en: "olive tree", hint: "13b" },
             { de: "die Abneigung, -en", en: "dislike", hint: "13c" }
         ]
+    },
+    // ==========================================
+    // KAPITEL 2: DAS IST JA PRAKTISCH!
+    // ==========================================
+    {
+        id: "b1-kapitel-2-1a-3a", num: "Kapitel 2 (1a-3a)", name: "Technik, Bedienung & Reparatur", emoji: "🔌",
+        items: [
+            { de: "benötigen", en: "to need", hint: "1a" },
+            { de: "der Fingerabdruck, \"-e", en: "fingerprint", hint: "1a" },
+            { de: "der Funkkopfhörer, -", en: "wireless headphones", hint: "1a" },
+            { de: "das Lastenfahrrad, \"-er", en: "freight bicycle", hint: "1a" },
+            { de: "der Sprachassistent, -en", en: "language assistant", hint: "1a" },
+            { de: "der Türöffner, -", en: "door opener", hint: "1a" },
+            { de: "die Taste, -n", en: "key / button", hint: "1b" },
+            { de: "der Transport, -e", en: "transport", hint: "1b" },
+            { de: "an|schließen", en: "to connect / plug in", hint: "1b ÜB" },
+            { de: "auf|laden", en: "to charge", hint: "1b ÜB" },
+            { de: "bedienen", en: "to use / operate", hint: "1b ÜB" },
+            { de: "ein|setzen", en: "to insert", hint: "1b ÜB" },
+            { de: "ein|stecken", en: "to plug (in)", hint: "1b ÜB" },
+            { de: "installieren", en: "to install", hint: "1b ÜB" },
+            { de: "stumm", en: "mute / silent", hint: "1b ÜB" },
+            { de: "die Anleitung, -en", en: "instruction", hint: "3a" },
+            { de: "an|schaffen (sich)", en: "to get / obtain", hint: "3a" },
+            { de: "herunter|fallen", en: "to fall down", hint: "3a" },
+            { de: "kaputt|gehen", en: "to break", hint: "3a" },
+            { de: "lohnen (sich)", en: "to be worth it", hint: "3a" },
+            { de: "das Sonderangebot, -e", en: "special offer", hint: "3a" },
+            { de: "der Staubsauger, -", en: "vacuum cleaner", hint: "3a" }
+        ]
+    },
+    {
+        id: "b1-kapitel-2-3e-5c", num: "Kapitel 2 (3e-5c)", name: "Einkauf, Garantie & Reklamation", emoji: "💳",
+        items: [
+            { de: "nähen", en: "to sew", hint: "3e" },
+            { de: "reinigen", en: "to clean", hint: "3e" },
+            { de: "streichen", en: "to paint", hint: "3e" },
+            { de: "der Kopfhörer, -", en: "headphones", hint: "4a" },
+            { de: "das Ladekabel, -", en: "charger cable", hint: "4a" },
+            { de: "die Powerbank, -s", en: "powerbank", hint: "4a" },
+            { de: "daher", en: "therefore", hint: "4b" },
+            { de: "darum", en: "that's why", hint: "4b" },
+            { de: "deswegen", en: "therefore", hint: "4b" },
+            { de: "der Handyakku, -s", en: "mobile phone battery", hint: "4b" },
+            { de: "sodass", en: "so that", hint: "4b" },
+            { de: "die EC-Karte, -n", en: "debit card", hint: "5a ÜB" },
+            { de: "die Gebrauchsanweisung, -en", en: "instructions", hint: "5a ÜB" },
+            { de: "die Geheimzahl, -en", en: "PIN", hint: "5a ÜB" },
+            { de: "der Geldautomat, -en", en: "ATM", hint: "5a ÜB" },
+            { de: "das Girokonto, -konten", en: "checking account", hint: "5a ÜB" },
+            { de: "gratis", en: "free", hint: "5a ÜB" },
+            { de: "der Rabatt, -e", en: "discount", hint: "5a ÜB" },
+            { de: "verraten", en: "to reveal", hint: "5a ÜB" },
+            { de: "zurück|zahlen", en: "to pay back", hint: "5a ÜB" },
+            { de: "die Garantie, -n", en: "warranty", hint: "5b" },
+            { de: "die Quittung, -en", en: "receipt", hint: "5b" },
+            { de: "reklamieren", en: "to complain / exchange", hint: "5b" }
+        ]
+    },
+    {
+        id: "b1-kapitel-2-6a-7d", num: "Kapitel 2 (6a-7d)", name: "Smart Home & Technologie", emoji: "🏠",
+        items: [
+            { de: "die Technologie, -n", en: "technology", hint: "6a" },
+            { de: "die Vorstellungen (Pl.)", en: "ideas / suggestions", hint: "6a" },
+            { de: "die Alarmanlage, -n", en: "alarm system", hint: "6b" },
+            { de: "die Ausnahme, -n", en: "exception", hint: "6b" },
+            { de: "bemerken", en: "to notice", hint: "6b" },
+            { de: "bereits", en: "already", hint: "6b" },
+            { de: "berühren", en: "to touch", hint: "6b" },
+            { de: "der Einbruch, \"-e", en: "break-in", hint: "6b" },
+            { de: "gleichzeitig", en: "simultaneous", hint: "6b" },
+            { de: "die Jalousie, -n", en: "shutter / blind", hint: "6b" },
+            { de: "steuern", en: "to control", hint: "6b" },
+            { de: "der Tagesablauf, \"-e", en: "daily routine", hint: "6b" },
+            { de: "die Wand, \"-e", en: "wall", hint: "6b" },
+            { de: "an|passen", en: "to adjust", hint: "6d" },
+            { de: "ein|schalten", en: "to switch on", hint: "6d" },
+            { de: "geschehen", en: "to happen", hint: "7a" },
+            { de: "leisten (sich)", en: "to afford", hint: "7a" },
+            { de: "entsprechen", en: "to correspond", hint: "7b" },
+            { de: "sparsam", en: "frugal / economical", hint: "7c" },
+            { de: "die Gefahr, -en", en: "danger", hint: "7d" }
+        ]
+    },
+    {
+        id: "b1-kapitel-2-9b-11", num: "Kapitel 2 (9b-11)", name: "Werbung & Konsumverhalten", emoji: "📢",
+        items: [
+            { de: "die Werbeanzeige, -n", en: "advertisement", hint: "9b" },
+            { de: "ansprechend", en: "appealing", hint: "9c" },
+            { de: "unmodern", en: "unfashionable", hint: "9c" },
+            { de: "unverständlich", en: "incomprehensible", hint: "9c" },
+            { de: "ausgezeichnet", en: "excellent", hint: "9d" },
+            { de: "frech", en: "cheeky", hint: "9d" },
+            { de: "merkwürdig", en: "strange", hint: "9d" },
+            { de: "seltsam", en: "odd", hint: "9d" },
+            { de: "der Klebefilm, -e", en: "adhesive tape", hint: "10a" },
+            { de: "der Markenname, -n", en: "brand name", hint: "10a" },
+            { de: "die Schmerztablette, -n", en: "painkiller", hint: "10a" },
+            { de: "das Taschentuch, \"-er", en: "handkerchief", hint: "10a" },
+            { de: "aufmerksam", en: "attentive", hint: "10b" },
+            { de: "beeinflussen", en: "to influence", hint: "10b" },
+            { de: "genügen", en: "to suffice", hint: "10b" },
+            { de: "das Kaufverhalten, -", en: "shopping behaviour", hint: "10b" },
+            { de: "das Unternehmen, -", en: "company", hint: "10b" },
+            { de: "das Verhalten, -", en: "behaviour", hint: "10b" },
+            { de: "vertrauen", en: "to trust", hint: "10b" },
+            { de: "der Werbetrick, -s", en: "advertising trick", hint: "10c" },
+            { de: "das Wortspiel, -e", en: "pun / play on words", hint: "10c" },
+            { de: "ungesund", en: "unhealthy", hint: "11" },
+            { de: "verbieten", en: "to forbid", hint: "11" }
+        ]
     }
+];
 ];
