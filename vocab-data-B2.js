@@ -320,5 +320,112 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "konsumieren", en: "to consume", hint: "4c" },
             { de: "kritisch hinterfragen", en: "to scrutinize / question critically", hint: "4c" }
         ]
+    },
+    // ==========================================
+    // KAPITEL 7: SPRACHE UND KOMMUNIKATION
+    // ==========================================
+    {
+        id: "b2-kapitel-7-1a-2b", num: "Kapitel 7 (1a-2b)", name: "Spracherwerb, Mehrsprachigkeit & Dialekt", emoji: "🗣️",
+        items: [
+            { de: "die Ausdrucksweise, -n", en: "manner of speech / expression", hint: "1a" },
+            { de: "die Muttersprache, -n", en: "native language / mother tongue", hint: "1a" },
+            { de: "der Sprachgebrauch (Sg.)", en: "language usage", hint: "1a" },
+            { de: "die Sprachkompetenz, -en", en: "language proficiency", hint: "1a" },
+            { de: "die Wortgewandtheit, -en", en: "eloquence", hint: "1a" },
+            { de: "akzentfrei", en: "accent-free", hint: "1b" },
+            { de: "die Dialektfärbung, -en", en: "dialectal tinge", hint: "1b" },
+            { de: "mehrsprachig aufwachsen", en: "to grow up multilingual", hint: "1b" },
+            { de: "der Spracherwerb (Sg.)", en: "language acquisition", hint: "1b" },
+            { de: "die Sprachverwirrung, -en", en: "linguistic confusion", hint: "1b" },
+            { de: "das Kommunikationsverhalten, -", en: "communication behavior", hint: "2a" },
+            { de: "die Körpersprache (Sg.)", en: "body language", hint: "2a" },
+            { de: "die Missverständnisgefahr, -en", en: "risk of misunderstanding", hint: "2a" },
+            { de: "nonverbal", en: "non-verbal", hint: "2a" },
+            { de: "die Tonebene, -n", en: "pitch / tone level", hint: "2a" },
+            { de: "deuten", en: "to interpret / construe", hint: "2b" },
+            { de: "die Empathie, -n", en: "empathy", hint: "2b" },
+            { de: "signalieren", en: "to signal", hint: "2b" },
+            { de: "die Unstimmigkeit, -en", en: "discrepancy / disagreement", hint: "2b" },
+            { de: "wahr|nehmen", en: "to perceive / notice", hint: "2b" }
+        ]
+    },
+    {
+        id: "b2-kapitel-7-3a-4c", num: "Kapitel 7 (3a-4c)", name: "Rhetorik, Argumentation & Konflikte", emoji: "💬",
+        items: [
+            { de: "die Argumentationslinie, -n", en: "line of argument", hint: "3a" },
+            { de: "die Eloquenz (Sg.)", en: "eloquence", hint: "3a" },
+            { de: "die Redekunst, \"-e", en: "oratory / rhetoric", hint: "3a" },
+            { de: "der Standpunkt, -e", en: "point of view / stance", hint: "3a" },
+            { de: "die Überzeugungskraft, \"-e", en: "persuasiveness", hint: "3a" },
+            { de: "aus|führen", en: "to elaborate / explain", hint: "3b" },
+            { de: "begründen", en: "to justify / substantiate", hint: "3b" },
+            { de: "ein|wenden", en: "to object / raise an objection", hint: "3b" },
+            { de: "relativieren", en: "to put into perspective", hint: "3b" },
+            { de: "widersprechen", en: "to contradict / disagree", hint: "3b" },
+            { de: "die Deeskalation, -en", en: "de-escalation", hint: "4a" },
+            { de: "die Debattenkultur, -en", en: "debate culture", hint: "4a" },
+            { de: "das Gegenargument, -e", en: "counter-argument", hint: "4a" },
+            { de: "der Kompromissvorschlag, \"-e", en: "compromise proposal", hint: "4a" },
+            { de: "die Schlichtung, -en", en: "arbitration / mediation", hint: "4a" },
+            { de: "einlenken", en: "to give in / yield", hint: "4b" },
+            { de: "sich verständigen", en: "to reach an agreement / communicate", hint: "4b" },
+            { de: "unsachlich", en: "unobjective / improper", hint: "4c" },
+            { de: "die Vorwurfshaltung, -en", en: "reproachful attitude", hint: "4c" },
+            { de: "zugestehen", en: "to concede / admit", hint: "4c" }
+        ]
+    },
+
+    // ==========================================
+    // KAPITEL 8: STADT, LAND UND WOHNEN
+    // ==========================================
+    {
+        id: "b2-kapitel-8-1a-2c", num: "Kapitel 8 (1a-2c)", name: "Urbanisierung, Architektur & Infrastruktur", emoji: "🏙️",
+        items: [
+            { de: "die Ballungsraum, \"-e", en: "conurbation / metropolitan area", hint: "1a" },
+            { de: "die Infrastruktur, -en", en: "infrastructure", hint: "1a" },
+            { de: "die Lebensqualität (Sg.)", en: "quality of life", hint: "1a" },
+            { de: "die Stadtentwicklung, -en", en: "urban development", hint: "1a" },
+            { de: "die Urbanisierung, -en", en: "urbanization", hint: "1a" },
+            { de: "die Anbindung, -en", en: "transport connection", hint: "1b" },
+            { de: "das Einzugsgebiet, -e", en: "catchment area", hint: "1b" },
+            { de: "die Nachverdichtung, -en", en: "urban densification", hint: "1b" },
+            { de: "der Pendlerstrom, \"-e", en: "commuter flow", hint: "1b" },
+            { de: "die Wohnraumnot, \"-e", en: "housing shortage", hint: "1b" },
+            { de: "die Architekturströmung, -en", en: "architectural movement", hint: "2a" },
+            { de: "das Bauprojekt, -e", en: "construction project", hint: "2a" },
+            { de: "die Fassadengestaltung, -en", en: "facade design", hint: "2a" },
+            { de: "das Denkmalschutz, \"-e", en: "monument protection", hint: "2a" },
+            { de: "die Sanierungsmaßnahme, -n", en: "redevelopment measure", hint: "2a" },
+            { de: "barrierefrei", en: "accessible / barrier-free", hint: "2b" },
+            { de: "begrünen", en: "to plant with greenery", hint: "2b" },
+            { de: "erschließen", en: "to develop / open up", hint: "2b" },
+            { de: "die Neugestaltung, -en", en: "redesign / remodeling", hint: "2c" },
+            { de: "substanzschonend", en: "preserving structure / gentle", hint: "2c" }
+        ]
+    },
+    {
+        id: "b2-kapitel-8-3a-4c", num: "Kapitel 8 (3a-4c)", name: "Wohnformen, Immobilien & Landleben", emoji: "🏡",
+        items: [
+            { de: "das Eigenheim, -e", en: "own home / private property", hint: "3a" },
+            { de: "die Gentrifizierung, -en", en: "gentrification", hint: "3a" },
+            { de: "der Immobilienmarkt, \"-e", en: "real estate market", hint: "3a" },
+            { de: "die Mietpreisbremse, -n", en: "rent control / rent cap", hint: "3a" },
+            { de: "die Wohnform, -en", en: "type of housing", hint: "3a" },
+            { de: "die Eigentumswohnung, -en", en: "owner-occupied flat", hint: "3b" },
+            { de: "die Genossenschaft, -en", en: "cooperative", hint: "3b" },
+            { de: "der Mietspiegel, -", en: "index of rent prices", hint: "3b" },
+            { de: "das Mehrgenerationenhaus, \"-er", en: "multi-generational house", hint: "3b" },
+            { de: "unerschwinglich", en: "unaffordable", hint: "3c" },
+            { de: "die Daseinsvorsorge, -n", en: "public services / basic provision", hint: "4a" },
+            { de: "die Dorfgemeinschaft, -en", en: "village community", hint: "4a" },
+            { de: "die Instandhaltung, -en", en: "maintenance / upkeep", hint: "4a" },
+            { de: "die Landflucht (Sg.)", en: "rural exodus", hint: "4a" },
+            { de: "der Strukturwandel, -", en: "structural change", hint: "4a" },
+            { de: "ab|gelegen", en: "remote / secluded", hint: "4b" },
+            { de: "entgegen|wirken", en: "to counteract / oppose", hint: "4b" },
+            { de: "die Entleunigung (Sg.)", en: "slowing down / deceleration", hint: "4b" },
+            { de: "revitalisieren", en: "to revitalize", hint: "4c" },
+            { de: "die Versorgungsengpass, \"-e", en: "supply bottleneck", hint: "4c" }
+        ]
     }
 ];
