@@ -221,5 +221,121 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "ungesund", en: "unhealthy", hint: "11" },
             { de: "verbieten", en: "to forbid", hint: "11" }
         ]
+    },
+    // ==========================================
+    // KAPITEL 3: VERÄNDERUNGEN
+    // ==========================================
+    {
+        id: "b1-kapitel-3-1a-2ub", num: "Kapitel 3 (1a-2ÜB)", name: "Arbeit, Gesundheit & Ernährung", emoji: "🥦",
+        items: [
+            { de: "der Arbeiter, -", en: "worker (m)", hint: "1a" },
+            { de: "die Arbeiterin, -nen", en: "worker (f)", hint: "1a" },
+            { de: "automatisiert", en: "automated", hint: "1a" },
+            { de: "die Bedingung, -en", en: "condition", hint: "1a" },
+            { de: "die Behandlung, -en", en: "treatment", hint: "1a" },
+            { de: "die Diagnose, -n", en: "diagnosis", hint: "1a" },
+            { de: "die Hygiene (Sg.)", en: "hygiene", hint: "1a" },
+            { de: "die Konkurrenz (Sg.)", en: "competition", hint: "1a" },
+            { de: "medizinisch", en: "medical", hint: "1a" },
+            { de: "monoton", en: "monotonous", hint: "1a" },
+            { de: "operieren", en: "to operate", hint: "1a" },
+            { de: "die Pflegekraft, \"-e", en: "caregiver", hint: "1a" },
+            { de: "die Schulbildung (Sg.)", en: "education", hint: "1a" },
+            { de: "die Strafe, -n", en: "punishment / penalty", hint: "1a" },
+            { de: "tolerant", en: "tolerant", hint: "1a" },
+            { de: "ausschließlich", en: "exclusive", hint: "2 ÜB" },
+            { de: "bewusst", en: "conscious", hint: "2 ÜB" },
+            { de: "biologisch", en: "biological", hint: "2 ÜB" },
+            { de: "die Diät, -en", en: "diet", hint: "2 ÜB" },
+            { de: "ernähren (sich)", en: "to eat / nourish", hint: "2 ÜB" },
+            { de: "die Ernährung (Sg.)", en: "nutrition", hint: "2 ÜB" },
+            { de: "das Nahrungsmittel, -", en: "food", hint: "2 ÜB" },
+            { de: "vegan", en: "vegan", hint: "2 ÜB" },
+            { de: "vegetarisch", en: "vegetarian", hint: "2 ÜB" }
+        ]
+    },
+    {
+        id: "a1-kapitel-3-3a-3c", num: "Kapitel 3 (3a-3c)", name: "Lebenswege & Herausforderungen", emoji: "🌱",
+        items: [
+            { de: "erben", en: "to inherit", hint: "3a" },
+            { de: "führen", en: "to lead (to)", hint: "3a" },
+            { de: "gewohnt", en: "usual", hint: "3a" },
+            { de: "die Krisensituation, -en", en: "crisis (situation)", hint: "3a" },
+            { de: "die Lebensgeschichte, -n", en: "life story", hint: "3a" },
+            { de: "der Lebensweg, -e", en: "path in life", hint: "3a" },
+            { de: "der Prozess, -e", en: "process", hint: "3a" },
+            { de: "der Todesfall, \"-e", en: "death", hint: "3a" },
+            { de: "die Trennung, -en", en: "separation", hint: "3a" },
+            { de: "der Wendepunkt, -e", en: "turning point", hint: "3a" },
+            { de: "das Anliegen, -", en: "issue", hint: "3c" },
+            { de: "der Buchautor, -en", en: "author (m)", hint: "3c" },
+            { de: "die Buchautorin, -nen", en: "author (f)", hint: "3c" },
+            { de: "ein|setzen (sich)", en: "to support", hint: "3c" },
+            { de: "die Herausforderung, -en", en: "challenge", hint: "3c" },
+            { de: "der Mut (Sg.)", en: "courage", hint: "3c" },
+            { de: "die Rückkehr (Sg.)", en: "return", hint: "3c" },
+            { de: "sammeln", en: "to gain / collect", hint: "3c" },
+            { de: "das Schutzprojekt, -e", en: "protection project", hint: "3c" },
+            { de: "die Sehnsucht, \"-e", en: "longing / desire", hint: "3c" },
+            { de: "verursachen", en: "to cause", hint: "3c" },
+            { de: "wesentlich", en: "considerable", hint: "3c" },
+            { de: "das Wildtier, -e", en: "wild animal", hint: "3c" }
+        ]
+    },
+    {
+        id: "b1-kapitel-3-4b-6d", num: "Kapitel 3 (4b-6d)", name: "Erfolge, Liebe & Beziehungen", emoji: "❤️",
+        items: [
+            { de: "ehren", en: "to honour", hint: "4b" },
+            { de: "gelähmt", en: "paralyzed", hint: "4b" },
+            { de: "der Held, -en", en: "hero (m)", hint: "4b" },
+            { de: "die Heldin, -nen", en: "hero (f)", hint: "4b" },
+            { de: "der Höhepunkt, -e", en: "peak", hint: "4b" },
+            { de: "kämpfen", en: "to fight", hint: "4b" },
+            { de: "mittlerweile", en: "meanwhile", hint: "4b" },
+            { de: "der Optimismus (Sg.)", en: "optimism", hint: "4b" },
+            { de: "politisch", en: "political", hint: "4b" },
+            { de: "das Privatleben (Sg.)", en: "private life", hint: "4b" },
+            { de: "stürzen", en: "to fall", hint: "4b" },
+            { de: "die Wirbelsäule, -n", en: "spine", hint: "4b" },
+            { de: "begeistern", en: "to delight / inspire", hint: "4d" },
+            { de: "historisch", en: "historical", hint: "4d" },
+            { de: "auf|wachen", en: "to wake up", hint: "5b" },
+            { de: "frisch", en: "newly / fresh", hint: "5b" },
+            { de: "liebevoll", en: "loving", hint: "5b" },
+            { de: "die Schwiegereltern (Pl.)", en: "parents-in-law", hint: "5b" },
+            { de: "verlieben (sich)", en: "to fall in love", hint: "5b" },
+            { de: "verschwinden", en: "to disappear", hint: "5b" },
+            { de: "das Verhältnis, -se", en: "relationship", hint: "6b" },
+            { de: "überqueren", en: "to cross", hint: "6c ÜB" },
+            { de: "auf|geben", en: "to forsake / give up", hint: "6d" }
+        ]
+    },
+    {
+        id: "b1-kapitel-3-9a-10b", num: "Kapitel 3 (9a-10b)", name: "Etikette & Höflichkeit", emoji: "🤝",
+        items: [
+            { de: "veröffentlichen", en: "to release / publish", hint: "9a" },
+            { de: "aus|suchen", en: "to choose", hint: "9c" },
+            { de: "höflich", en: "polite", hint: "10a" },
+            { de: "begrüßen", en: "to greet", hint: "10a" },
+            { de: "das Benehmen (Sg.)", en: "behaviour", hint: "10a" },
+            { de: "anwesend", en: "present", hint: "10b" },
+            { de: "auf|halten", en: "to hold open", hint: "10b" },
+            { de: "die Begrüßung, -en", en: "greeting", hint: "10b" },
+            { de: "die Beziehung, -en", en: "relationship", hint: "10b" },
+            { de: "duzen", en: "to use the informal greeting", hint: "10b" },
+            { de: "der Gastgeber, -", en: "host (m)", hint: "10b" },
+            { de: "die Gastgeberin, -nen", en: "host (f)", hint: "10b" },
+            { de: "die Gewohnheit, -en", en: "habit", hint: "10b" },
+            { de: "hierarchisch", en: "hierarchical", hint: "10b" },
+            { de: "ignorieren", en: "to ignore", hint: "10b" },
+            { de: "siezen", en: "to use the formal greeting", hint: "10b" },
+            { de: "üblich", en: "usual", hint: "10b" },
+            { de: "umarmen", en: "to hug", hint: "10b" },
+            { de: "unsicher", en: "insecure", hint: "10b" },
+            { de: "verhalten (sich)", en: "to behave", hint: "10b" },
+            { de: "vertraut", en: "familiar", hint: "10b" },
+            { de: "der/die Vorgesetzte, -n", en: "superior", hint: "10b" },
+            { de: "die Wange, -n", en: "cheek", hint: "10b" }
+        ]
     }
 ];
