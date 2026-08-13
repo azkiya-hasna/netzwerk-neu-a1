@@ -213,5 +213,112 @@ export const NETZWERK_DATA_MAPPING = [
             { de: "voran|treiben", en: "to drive forward / promote", hint: "4c" },
             { de: "die Zukunftsweisend", en: "pioneering / forward-looking", hint: "4c" }
         ]
+    },
+    // ==========================================
+    // KAPITEL 5: UMWELT UND NACHHALTIGKEIT
+    // ==========================================
+    {
+        id: "b2-kapitel-5-1a-2b", num: "Kapitel 5 (1a-2b)", name: "Klimawandel, Ressourcen & Ökologie", emoji: "🌱",
+        items: [
+            { de: "die Artenvielfalt (Sg.)", en: "biodiversity", hint: "1a" },
+            { de: "der CO2-Ausstoß, \"-e", en: "carbon emissions", hint: "1a" },
+            { de: "die Erderwärmung (Sg.)", en: "global warming", hint: "1a" },
+            { de: "das Ökosystem, -e", en: "ecosystem", hint: "1a" },
+            { de: "die Treibhausgasemission, -en", en: "greenhouse gas emission", hint: "1a" },
+            { de: "die Ausbeutung, -en", en: "exploitation", hint: "1b" },
+            { de: "die Gefährdung, -en", en: "endangerment / threat", hint: "1b" },
+            { de: "der Klimawandel (Sg.)", en: "climate change", hint: "1b" },
+            { de: "die Meeresverschmutzung, -en", en: "ocean pollution", hint: "1b" },
+            { de: "die Ressourcenknappheit, -en", en: "resource scarcity", hint: "1b" },
+            { de: "die Umweltbelastung, -en", en: "environmental burden", hint: "1b" },
+            { de: "die Abfallvermeidung, -en", en: "waste avoidance", hint: "2a" },
+            { de: "die Energieeffizienz (Sg.)", en: "energy efficiency", hint: "2a" },
+            { de: "die Kreislaufwirtschaft, -en", en: "circular economy", hint: "2a" },
+            { de: "die Nachhaltigkeit (Sg.)", en: "sustainability", hint: "2a" },
+            { de: "die Solarthermie, -n", en: "solar thermal energy", hint: "2b" },
+            { de: "umweltverträglich", en: "environmentally compatible", hint: "2b" },
+            { de: "die Wiederverwertbarkeit, -en", en: "reusability / recyclability", hint: "2b" },
+            { de: "der Felsrutsch, -e", en: "rockslide", hint: "2b" },
+            { de: "die Dürreperiode, -n", en: "drought period", hint: "2b" }
+        ]
+    },
+    {
+        id: "b2-kapitel-5-3a-4c", num: "Kapitel 5 (3a-4c)", name: "Umweltpolitik, Konsum & Energiewende", emoji: "🔋",
+        items: [
+            { de: "das Abkommen, -", en: "agreement / treaty", hint: "3a" },
+            { de: "die Emissionsrechte (Pl.)", en: "emission rights", hint: "3a" },
+            { de: "die Energiewende, -n", en: "energy transition", hint: "3a" },
+            { de: "die Klimaschutzauflage, -n", en: "climate protection requirement", hint: "3a" },
+            { de: "die Subventionierung, -en", en: "subsidization", hint: "3a" },
+            { de: "das Umweltbundesamt, \"-er", en: "Federal Environment Agency", hint: "3b" },
+            { de: "verbindlich", en: "binding / obligatory", hint: "3b" },
+            { de: "verzögern", en: "to delay / retard", hint: "3b" },
+            { de: "der Verzicht, -e", en: "relinquishment / waiver", hint: "3c" },
+            { de: "voran|treiben", en: "to drive forward", hint: "3c" },
+            { de: "das Bewusstsein (Sg.)", en: "awareness / consciousness", hint: "4a" },
+            { de: "der ökologische Fußabdruck, \"-e", en: "ecological footprint", hint: "4a" },
+            { de: "das Konsumverhalten, -", en: "consumer behavior", hint: "4a" },
+            { de: "die Plastikvermeidung, -en", en: "plastic avoidance", hint: "4a" },
+            { de: "der Rohstoffverbrauch (Sg.)", en: "raw material consumption", hint: "4b" },
+            { de: "die Umstellung, -en", en: "reorganization / transition", hint: "4b" },
+            { de: "nachhaltig agieren", en: "to act sustainably", hint: "4c" },
+            { de: "die Verpackungssteuer, -n", en: "packaging tax", hint: "4c" },
+            { de: "die Verschwendung, -en", en: "wastefulness / squandering", hint: "4c" },
+            { de: "die Umweltschutzorganisation, -en", en: "environmental organization", hint: "4c" }
+        ]
+    },
+
+    // ==========================================
+    // KAPITEL 6: KULTUR, KUNST UND MEDIEN
+    // ==========================================
+    {
+        id: "b2-kapitel-6-1a-2c", num: "Kapitel 6 (1a-2c)", name: "Kunstformen, Theater & Ästhetik", emoji: "🎭",
+        items: [
+            { de: "die Ausstrahlung, -en", en: "atmosphere / charisma / broadcast", hint: "1a" },
+            { de: "die Inszenierung, -en", en: "staging / production", hint: "1a" },
+            { de: "die Kunstepoche, -n", en: "art era / period", hint: "1a" },
+            { de: "das Meisterwerk, -e", en: "masterpiece", hint: "1a" },
+            { de: "die Stilrichtung, -en", en: "artistic style / movement", hint: "1a" },
+            { de: "ästhetisch", en: "aesthetic", hint: "1b" },
+            { de: "die Darstellungsform, -en", en: "mode of representation", hint: "1b" },
+            { de: "der Ausdruck, \"-e", en: "expression", hint: "1b" },
+            { de: "die Interpretation, -en", en: "interpretation", hint: "1b" },
+            { de: "provokant", en: "provocative", hint: "1b" },
+            { de: "die Vernissage, -n", en: "exhibition opening", hint: "1c" },
+            { de: "das Exponat, -e", en: "exhibit", hint: "2a" },
+            { de: "die Galerie, -n", en: "gallery", hint: "2a" },
+            { de: "die Kuration, -en", en: "curation", hint: "2a" },
+            { de: "der Kunstsammler, -", en: "art collector", hint: "2a" },
+            { de: "begutachten", en: "to inspect / appraise", hint: "2b" },
+            { de: "die Kritikfähigkeit (Sg.)", en: "ability to accept criticism", hint: "2b" },
+            { de: "wieder|geben", en: "to reflect / reproduce", hint: "2b" },
+            { de: "die Zeitgenössische Kunst", en: "contemporary art", hint: "2c" },
+            { de: "das Kunstverständnis (Sg.)", en: "understanding of art", hint: "2c" }
+        ]
+    },
+    {
+        id: "b2-kapitel-6-3a-4c", num: "Kapitel 6 (3a-4c)", name: "Medienlandschaft & Digitalisierung", emoji: "📺",
+        items: [
+            { de: "die Berichterstattung, -en", en: "media coverage / reporting", hint: "3a" },
+            { de: "die Falschinformation, -en", en: "misinformation", hint: "3a" },
+            { de: "die Informationsflut, -en", en: "information overload", hint: "3a" },
+            { de: "die Medienkompetenz, -en", en: "media literacy", hint: "3a" },
+            { de: "die Pressefreiheit (Sg.)", en: "freedom of the press", hint: "3a" },
+            { de: "die Zensur, -en", en: "censorship", hint: "3b" },
+            { de: "recherchieren", en: "to research / investigate", hint: "3b" },
+            { de: "die Quellenangabe, -n", en: "source attribution", hint: "3b" },
+            { de: "die Transparenz (Sg.)", en: "transparency", hint: "3b" },
+            { de: "unparteiisch", en: "unbiased / impartial", hint: "3c" },
+            { de: "die Algorithmensteuerung, -en", en: "algorithmic control", hint: "4a" },
+            { de: "die Filterblase, -n", en: "filter bubble", hint: "4a" },
+            { de: "die Meinungsbildung, -en", en: "formation of opinion", hint: "4a" },
+            { de: "die Nachrichtenseite, -n", en: "news site", hint: "4a" },
+            { de: "die Reichweite, -n", en: "coverage / reach", hint: "4a" },
+            { de: "beeinflussen", en: "to influence", hint: "4b" },
+            { de: "die Glaubwürdigkeit (Sg.)", en: "credibility", hint: "4b" },
+            { de: "die Manipulationsgefahr, -en", en: "risk of manipulation", hint: "4c" },
+            { de: "konsumieren", en: "to consume", hint: "4c" },
+            { de: "kritisch hinterfragen", en: "to scrutinize / question critically", hint: "4c" }
+        ]
     }
 ];
